@@ -4,7 +4,8 @@ body {
   margin: 0;
   padding: 0;
 }
-   
+
+
 /* HEADER */
 header {
   position: fixed;
@@ -13,34 +14,37 @@ header {
   width: 100%;
   background-color: #d6edf8;
   z-index: 1000;
-  padding: 15px 20px;
-  box-shadow: 0 2px 5px rgba(19, 92, 132, 0.1);
+  padding: 1rem 2%; /* 16px 32px circa */
+  box-shadow: 0 0.125rem 0.3125rem rgba(19, 92, 132, 0.1); /* 2px 5px */
 }
 
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 1.25rem 3%; /* 20px 50px circa */
   background-color: #d6edf8;
 }
 
 .header-logo img {
-  height: 50px;
+  height: 3.125rem; /* 50px */
 }
 
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
-  margin-right: 100px;
+  flex-wrap: nowrap; /* Evita che gli elementi vadano a capo */
+  gap: 1.25rem; /* 20px */
+  margin-right: 6.25rem; /* 100px */
+  padding:0;
+
 }
 
 .main-nav a {
   text-decoration: none;
   color: #013341;
   font-weight: 700;
-  font-size: 23px;
+  font-size: 1.25rem; /* 20px */
 }
 
 .main-nav a.active,
@@ -49,39 +53,71 @@ header {
 }
 
 
-/* HERO SECTION */
+/* FOOTER */
+.site-footer {
+  background-color: #013341;
+  color: white;
+  text-align: center;
+  padding: 1.25rem; /* 20px */
+}
+
+.footer-links {
+  margin-bottom: 0.625rem; /* 10px */
+  margin-top: 0.625rem;    /* 10px */
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.625rem; /* 10px */
+  font-size: 1rem; /* 16px testo coerente */
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* HERO SECTION PAGINA HOME */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #d6edf8; 
-  padding: 80px 60px 40;
+  padding: 5rem 4%; /* 80px 60px → rem/% */
   flex-wrap: wrap;
+   overflow: hidden
 }
+
 .hero-img {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 0px;
+  margin-right: -3.125rem; /* -50px */
+  margin-bottom: -5rem; /* -80px */
+   overflow: hidden
 }
+
 .hero-img img {
   max-width: 100%;
   height: auto;
 }
 
 .hero-text {
-  max-width: 500px;
+  max-width: 40%;
   font-family: "Inter", sans-serif;
-  margin-left: 150px;
+  margin-left: 6%;
   line-height: normal;
 }
 
 .hero-text h1 {
-  font-size: 80px;
+  font-size: 3.75rem; /* 60px */
   font-weight: 700;
   color: #013341;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem; /* 20px */
 }
 
 .hero-text h1 span {
@@ -89,22 +125,22 @@ header {
 }
 
 .hero-text p {
-  font-size: 24px;
+  font-size: 1.25rem; /* 20px */
   color: #013341;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem; /* 30px */
   line-height: normal;
-  opacity: 69%;
+  opacity: 0.69;
 }
 
 .cta-button {
-display: inline-block;
+  display: inline-block;
   background-color: #0088a9;
   color: white;
   text-decoration: none;
-  font-size: 20px;
-  padding: 12px 20px;
+  font-size: 1.25rem; /* 20px */
+  padding: 0.75rem 1.25rem; /* 12px 20px */
   font-weight: bold;
-  border-radius: 2px;
+  border-radius: 0.125rem; /* 2px */
   transition: background-color 0.3s ease;
 }
 
@@ -112,11 +148,14 @@ display: inline-block;
   background-color: #046b88;
 }
 
-/*CHI SIAMO*/
+
+
+/* CHI SIAMO PAGINA HOME */
 .about {
   background-color: white;
-  padding: 80px 40px;
-  padding-bottom: 0%;
+  padding: 5rem 2.5%; /* 80px 40px */
+  padding-bottom: 0;
+   overflow: hidden
 }
 
 .about-container {
@@ -124,49 +163,46 @@ display: inline-block;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 100px;
+  gap: 2.5rem; /* 40px */
+  margin-top: 6rem; /* 100px */
 }
 
 /* Colonna sinistra */
 .info-box {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 1.5625rem; /* 25px */
   flex: 1;
-  min-width: 220px;
-  margin-left: 120px;
-  margin-top: -10px;
+  min-width: 13.75rem; /* 220px */
+  margin-left: 6%; /* 120px ~ su 1920px */
+  margin-top: -0.625rem; /* -10px */
 }
 
-.info-item { /* linea per ogni elemento informativo */
+.info-item {
   display: flex;
   align-items: center;
-  gap: 15px;
-  border-bottom: 4px solid #92C8E2;
-  padding-bottom: 15px;
-  max-width: 220px;
-  
+  gap: 0.9375rem; /* 15px */
+  border-bottom: 0.1875rem solid #92C8E2; /* 3px */
+  padding-bottom: 0.9375rem; /* 15px */
+  max-width: 13.75rem; /* 220px */
 }
 
 .info-item img {
-  width: 40px;
-  height: 40px;
-  
+  width: 2.18rem; /* 35px */
+  height: 2.18rem;
 }
 
 .info-item strong {
-  font-size: 25px;
+  font-size: 1.25rem; /* 20px */
   color: #013341;
-  margin-left: 20px;
+  margin-left: 1.25rem; /* 20px */
 }
 
 .info-item span {
-  font-size: 18px;
+  font-size: 0.9375rem; /* 15px */
   color: #333;
-  margin-left: 20px;
+  margin-left: 1.25rem; /* 20px */
 }
-
 
 /* Colonna centrale */
 .about-image {
@@ -174,15 +210,15 @@ display: inline-block;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  min-width: 300px;
-  margin-top: -610px;
-  margin-left: 680px;
+  min-width: 18.75rem; /* 300px */
+  margin-top: -33rem; /* -480px */
+  margin-left: 50%; /* 960px su 1920px ≈ 40% */
   padding-bottom: 0;
-  margin-bottom: 0;
-  }
+  margin-bottom: 0px;
+}
 
 .about-image img {
-  max-height: 700px;
+  max-height: 37.5rem; /* 600px */
   height: auto;
   width: auto;
 }
@@ -190,84 +226,91 @@ display: inline-block;
 /* Colonna destra */
 .about-text {
   flex: 1;
-  max-width: 590px;
-  margin-left: 120px;
-  margin-bottom: 60px;
+  max-width: 36.875rem; /* 590px */
+  margin-left: 6%;
+  margin-bottom: 3.75rem; /* 60px */
 }
 
 .about-text p.highlight {
-  font-size: 25px;
-  margin-bottom: 10px;
+  font-size: 1.5625rem; /* 25px */
+  margin-bottom: 0.625rem; /* 10px */
   color: #058fae;
 }
 
-
 .about-text p {
-  font-size: 20px;
+  font-size: 1.125rem; /* 18px */
   line-height: 1.5;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem; /* 12px */
   color: #333;
 }
 
-/*CARDS*/
+
+
+/* CARDS PAGINA HOME*/
 .opportunita {
-  background-color: #d6edf8; /* colore di sfondo */
-  padding: 70px 40px;
+  background-color: #d6edf8;
+  padding: 4.375rem 2.5%; /* 70px 40px */
   text-align: center;
 }
 
 .opportunita h2 {
-  font-size: 48px;
-  margin: 10px 0;
+  font-size: 2.8125rem; /* 45px */
+  margin: 0.625rem 0; /* 10px */
   color: #013341;
-  margin-top: -35px;
+  margin-top: -2.1875rem; /* -35px */
 }
 
 .opportunita p {
-  font-size: 25px;
+  font-size: 1.375rem; /* 22px */
   color: #058FAE;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem; /* 40px */
   font-weight: 500;
 }
 
 .card-container {
   display: flex;
-  gap: 50px;
+  gap: 3.125rem; /* 50px */
   justify-content: center;
   flex-wrap: wrap;
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem; /* 40px 20px */
 }
 
 .card {
   background-color: white;
-  border-radius: 2px;
+  border-radius: 0.125rem; /* 2px */
   overflow: hidden;
-  width: 300px;
+  width: 18.75rem; /* 300px */
   text-align: left;
   color: #000;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1); /* 10px */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.625rem); /* -10px */
+  box-shadow: 0 0.5rem 0.75rem rgba(0, 0, 0, 0.2); /* 8px 12px */
 }
 
 .card img {
   width: 100%;
-  height: 220px;
+  height: 10rem; /* 160px */
   object-fit: cover;
 }
 
 .card-content {
- padding: 20px;
+  padding: 1rem; /* ~16px */
 }
 
 .card h3 {
-  font-size: 28px;
-  margin-top: 5px;
-  margin-bottom: 10px;
+  font-size: 1.375rem;   /* ~22px */
+  margin-top: 0.3125rem; /* 5px */
+  margin-bottom: 0.625rem; /* 10px */
   color: #013341;
 }
 
 .card p {
-  font-size: 20px;
-  margin-top: 5px;
+  font-size: 1rem;       /* ~16px */
+  margin-top: 0.3125rem; /* 5px */
   color: #333;
 }
 
@@ -275,84 +318,184 @@ display: inline-block;
   display: inline-block;
   background-color: #058FAE;
   color: white;
-  margin-top: 0px;
-  padding: 10px 16px;
+  margin-top: 0;
+  padding: 0.5rem 0.875rem; /* 8px 14px */
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: 0.125rem;  /* 2px */
   font-weight: bold;
+  font-size: 0.875rem;      /* ~14px */
 }
 
 .btn:hover {
   background-color: #013341;
 }
 
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+
+/* KOKO HOUSE SEZIONE PAGINA HOME e contiene anche PARCHEGGIO PAGINA CONSIGLI e POSIZIONE CASA di KOKO PAGINA*/
+.koko-house, .parcheggio-letojanni, .posizione {
+  background-color: white; 
+  padding: 5rem 2.5%; /* 80px 40px */
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+.koko-container, .contenitore-parcheggio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 75rem; /* 1200px */
+  margin: 0 auto;
+  gap: 9.375rem; /* 150px */
+  flex-wrap: wrap;
+}
+
+/* IMMAGINE */
+.koko-img, .immagine-parcheggio{
+  flex: 1;
+  max-width: none;
+}
+
+.koko-img img, .immagine-parcheggio img{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: 2rem; /* 32px */
+}
+
+/* TESTO */
+.koko-text, .testo-parcheggio{
+  max-width: 31.25rem; /* 500px */
+}
+
+.koko-text .subtitle, .testo-parcheggio .sottotitolo-parcheggio {
+  color: #058fae;
+  font-size: 1.25rem; /* 22px */
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.koko-text h2, .testo-parcheggio h2 {
+  font-size: 2.5rem; /* 40px */
+  color: #013341;
+  line-height: 1.3;
+  margin-bottom: 1.25rem; /* 20px */
+  margin-top: 0.9375rem; /* 15px */
+}
+
+.koko-text .intro, .testo-parcheggio .introduzione-parcheggio {
+  color: #058fae;
+  font-weight: 500;
+  margin-bottom: 0;
+  font-size: 1.25rem; /* 20px */
+}
+
+.koko-text p, .testo-parcheggio p {
+  color: #333;
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.6;
+  margin-bottom: 1.25rem; /* 20px */
+  margin-top: 0.3125rem; /* 5px */
+  margin-right: 1.25rem; /* 20px */
+}
+
+/* BOTTONE */
+.cta-button {
+  display: inline-block;
+  background-color: #0088a9;
+  color: white;
+  text-decoration: none;
+  font-size: 1.125rem; /* 18px */
+  padding: 0.75rem 1.25rem; /* 12px 20px */
+  font-weight: bold;
+  border-radius: 0.125rem; /* 2px */
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #025d72;
 }
 
 
 
-/*PAGINA SCOPRI LETOJANNI*/
-.hero-letojanni {
+
+
+
+
+
+
+
+/* PAGINA SCOPRI LETOJANNI e contiene anche elementi PAGINA KOKO HOUSE ed elementi PAGINA COSA FARE */
+.hero-letojanni, .hero-mangiare  {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #d6edf8; 
-  padding: 80px 60px 40;
-  flex-wrap: wrap;
+  column-gap: 2rem;           /* spazio tra testo e immagine */
+  background-color: #d6edf8;
+  flex-wrap: nowrap;          /* <— niente capo: restano affiancati */
+  overflow: hidden;
 }
-.hero-img-letojanni {
+
+
+
+.hero-img-letojanni, .hero-img-mangiare {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 0px;
+  overflow: hidden;
+  margin-top: 6rem; /* 16px circa */
+  margin-bottom: -2rem;
 }
-.hero-img-letojanni img {
-  max-width: 170%;
+
+
+.hero-img-letojanni img, .hero-img-mangiare img {
+  display: block;
+  max-width: 105%;
   height: auto;
-  margin-top: 50px;
+  margin: 0;                         /* niente margini */
+  transform: translateY(-1.25rem);   /* stesso effetto del vecchio margin-top */
+  transform-origin: center;
+  margin-right: -3rem;
+  margin-top: 1rem;
 }
 
-.hero-text-letojanni {
-  max-width: 500px;
+
+
+.hero-text-letojanni, .hero-text-mangiare {
+  max-width: 31.25rem; /* 500px */
   font-family: "Inter", sans-serif;
-  margin-left: 150px;
+  margin-left: 8rem; /* 32px */
+  margin-top: 7rem; /* 112px */
+  margin-bottom: 3.125rem; /* 50px */
   line-height: normal;
-  margin-bottom: 50px;
-  margin-top: 150px;
 }
 
-.hero-text-letojanni h1 {
-  font-size: 50px;
+.hero-text-letojanni h1, .hero-text-mangiare h1 {
+  font-size: 3rem; /* 44px */
   font-weight: 700;
   color: #013341;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem; /* 20px */
 }
 
-.hero-text-letojanni h1 span {
+.hero-text-letojanni h1 span,   .hero-text-mangiare h1 span {
   color: #058fae;
 }
 
-.hero-text-letojanni  p {
-  font-size: 24px;
+.hero-text-letojanni p, .hero-text-mangiare p {
+  font-size: 1.25rem; /* 22px */
   color: #013341;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem; /* 30px */
   line-height: normal;
-  opacity: 69%;
+  opacity: 0.69;
 }
 
 
-/*ESPERIENZE SECTION*/
-.esperienze {
+
+/* ESPERIENZE SECTION */
+.esperienze{
   position: relative;
   background-color: #f5f5f5;
-  padding: 100px 40px;
+  padding: 5rem 2%; /* 80px 30px */
   overflow: hidden;
 }
 
@@ -363,7 +506,7 @@ display: inline-block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.3; /* aumentato per visibilità */
+  opacity: 0.3;
   z-index: 0;
   pointer-events: none;
 }
@@ -373,9 +516,9 @@ display: inline-block;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 62.5rem; /* 1000px */
   margin: 0 auto;
-  gap: 60px;
+  gap: 3.125rem; /* 50px */
   z-index: 1;
   flex-wrap: wrap;
 }
@@ -384,61 +527,60 @@ display: inline-block;
 .immagini {
   position: relative;
   flex: 1;
-  min-width: 300px;
+  min-width: 15.625rem; /* 250px */
 }
 
 .img-grande,
 .img-piccola {
-  aspect-ratio: 1 / 1; /* Mantiene le immagini quadrate */
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .img-grande {
   width: 100%;
-  max-width: 550px;
-  border-radius: 50%;
+  max-width: 28.125rem; /* 450px */
   display: block;
-  margin-left: -60px;
+  margin-left: -2.5rem; /* -40px */
 }
 
 .img-piccola {
   position: absolute;
-  bottom: -20px;
+  bottom: -0.9375rem; /* -15px */
   left: 70%;
   transform: translateX(-50%);
-  width: 248px;
+  width: 12.5rem; /* 200px */
   border-radius: 50%;
-  border: 6px solid #F5F5F5;
+  border: 0.3125rem solid #F5F5F5; /* 5px */
 }
 
 /* Testo */
 .testo {
   flex: 1;
-  min-width: 300px;
+  min-width: 15.625rem; /* 250px */
   z-index: 1;
-  margin-left: 30px;
+  margin-left: 1.25rem; /* 20px */
 }
 
 .testo h2 {
-  font-size: 48px;
+  font-size: 2.25rem; /* 36px */
   color: #013341;
-  margin-bottom: 20px;
+  margin-bottom: 0.9375rem; /* 15px */
   line-height: normal;
 }
 
 .testo .sottotitolo {
   color: #058fae;
-  font-size: 24px;
+  font-size: 1.25rem; /* 20px */
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem; /* 8px */
 }
 
 .testo .descrizione {
-  font-size: 24px;
+  font-size: 1.25rem; /* 20px */
   color: #333;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 0.9375rem; /* 15px */
 }
 
 .btn-cta {
@@ -446,10 +588,10 @@ display: inline-block;
   background-color: #0088a9;
   color: white;
   text-decoration: none;
-  font-size: 20px;
-  padding: 12px 20px;
+  font-size: 1.125rem; /* 18px */
+  padding: 0.625rem 1.125rem; /* 10px 18px */
   font-weight: bold;
-  border-radius: 2px;
+  border-radius: 0.125rem; /* 2px */
   transition: background-color 0.3s ease;
 }
 
@@ -459,11 +601,12 @@ display: inline-block;
 
 
 
-/*CIBO SEZIONE*/
-.cibo {
+
+/* CIBO SEZIONE - contiene però anche CLIMA LETOJANNI DELLA PAG CONSIGLI */
+.cibo, .clima-letojanni {
   position: relative;
   background-color: #d6edf8;
-  padding: 100px 40px;
+  padding: 5rem 2.5%; /* 80px 40px */
   overflow: hidden;
 }
 
@@ -474,77 +617,78 @@ display: inline-block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.3; /* aumentato per visibilità */
+  opacity: 0.3;
   z-index: 0;
   pointer-events: none;
 }
 
-.cibo-container {
+.cibo-container, .contenitore-clima {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 62.5rem; /* 1000px */
   margin: 0 auto;
-  gap: 60px;
+  gap: 3.125rem; /* 50px */
   z-index: 1;
   flex-wrap: wrap;
 }
 
 /* Immagini */
- .sapori-img-wrapper {
+.sapori-img-wrapper, .clima-img-wrapper {
   position: relative;
-  width: 340px;
+  width: 18.75rem; /* 300px */
+  margin-right: -3rem;
 }
 
-.img-grande-cibo {
-  width: 550px;
-  margin-top: 30px;
+.img-grande-cibo, .img-grande-clima {
+  width: 28.125rem; /* 450px */
+  margin-top: 1.25rem; /* 20px */
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin-left: -250px;
+  margin-left: -12.5rem; /* -200px */
 }
 
-.img-piccola-cibo {
+.img-piccola-cibo, .img-piccola-clima {
   position: absolute;
-  top:0px;
-  right: 10px;
-  width: 240px;
+  top: 0;
+  right: 0.625rem; /* 10px */
+  width: 12.5rem; /* 200px */
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
-  border: 6px solid #d6edf8;
+  border: 0.3125rem solid #d6edf8; /* 5px */
 }
 
 /* Testo */
-.testo-cibo {
-  min-width: 300px;
+.testo-cibo, .testo-clima {
+  min-width: 15.625rem; /* 250px */
   z-index: 1;  
   line-height: normal;
 }
 
-p.subtitle-cibo {
+p.subtitle-cibo, p.subtitle-clima {
   color: #058fae;
-  font-size: 25px;
+  font-size: 1rem; /* 20px */
   font-weight: 600;
-  padding-bottom: 5px;
+  padding-bottom: 0.3125rem; /* 5px */
   line-height: normal;
 }
 
-.testo-cibo h2 {
-  font-size: 40px;
+.testo-cibo h2, .testo-clima h2 {
+  font-size: 2rem; /* 40px */
   color: #013341;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem; /* 20px */
   line-height: normal;
 }
 
-.testo-cibo p {
-  font-size: 24px;
+.testo-cibo p, .testo-clima p {
+  font-size: 1.25rem; /* 20px */
   color: #333;
   line-height: 1.6;
-  padding-right: 50px;
+  padding-right: 3.125rem; /* 50px */
 }
 
 .btn-cta {
@@ -552,10 +696,10 @@ p.subtitle-cibo {
   background-color: #0088a9;
   color: white;
   text-decoration: none;
-  font-size: 20px;
-  padding: 12px 20px;
+  font-size: 1.125rem; /* 18px */
+  padding: 0.625rem 1.125rem; /* 10px 18px */
   font-weight: bold;
-  border-radius: 2px;
+  border-radius: 0.125rem; /* 2px */
   transition: background-color 0.3s ease;
 }
 
@@ -565,11 +709,13 @@ p.subtitle-cibo {
 
 
 
-/*LUOGHI SECTION*/
+
+
+/* LUOGHI SECTION */
 .luoghi {
   position: relative;
   background-color: #f5f5f5;
-  padding: 100px 40px;
+  padding: 5rem 2.5%; /* 80px 40px */
   overflow: hidden;
 }
 
@@ -580,7 +726,7 @@ p.subtitle-cibo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.3; /* aumentato per visibilità */
+  opacity: 0.3;
   z-index: 0;
   pointer-events: none;
 }
@@ -590,9 +736,9 @@ p.subtitle-cibo {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 62.5rem; /* 1000px */
   margin: 0 auto;
-  gap: 60px;
+  gap: 3.125rem; /* 50px */
   z-index: 1;
   flex-wrap: wrap;
 }
@@ -601,7 +747,7 @@ p.subtitle-cibo {
 .immagini {
   position: relative;
   flex: 1;
-  min-width: 300px;
+  min-width: 15.625rem; /* 250px */
 }
 
 .img-grande,
@@ -613,49 +759,48 @@ p.subtitle-cibo {
 
 .img-grande {
   width: 100%;
-  max-width: 550px;
-  border-radius: 50%;
+  max-width: 28.125rem; /* 450px */
   display: block;
-  margin-left: -60px;
+  margin-left: -2.5rem; /* -40px */
 }
 
 .img-piccola {
   position: absolute;
-  bottom: -20px;
+  bottom: -0.9375rem; /* -15px */
   left: 70%;
   transform: translateX(-50%);
-  width: 248px;
+  width: 12.5rem; /* 200px */
   border-radius: 50%;
-  border: 6px solid #F5F5F5;
+  border: 0.3125rem solid #F5F5F5; /* 5px */
 }
 
 /* Testo */
 .testo {
   flex: 1;
-  min-width: 300px;
+  min-width: 15.625rem; /* 250px */
   z-index: 1;
-  margin-left: 30px;
+  margin-left: 1.25rem; /* 20px */
 }
 
 .testo h2 {
-  font-size: 48px;
+  font-size: 2.5rem; /* 40px */
   color: #013341;
-  margin-bottom: 20px;
+  margin-bottom: 0.9375rem; /* 15px */
   line-height: normal;
 }
 
 .testo .sottotitolo {
   color: #058fae;
-  font-size: 24px;
+  font-size: 1.25rem; /* 20px */
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem; /* 8px */
 }
 
 .testo .descrizione {
-  font-size: 24px;
+  font-size: 1.25rem; /* 20px */
   color: #333;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 0.9375rem; /* 15px */
 }
 
 .btn-cta {
@@ -663,10 +808,10 @@ p.subtitle-cibo {
   background-color: #0088a9;
   color: white;
   text-decoration: none;
-  font-size: 20px;
-  padding: 12px 20px;
+  font-size: 1.125rem; /* 18px */
+  padding: 0.625rem 1.125rem; /* 10px 18px */
   font-weight: bold;
-  border-radius: 2px;
+  border-radius: 0.125rem; /* 2px */
   transition: background-color 0.3s ease;
 }
 
@@ -674,428 +819,349 @@ p.subtitle-cibo {
   background-color: #025d72;
 }
 
-/* FOOTER */
-.site-footer {
-  background-color: #013341;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-.footer-links {
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
 
 
 
 
-/*PAGINA CONSIGLI UTILI*/
 
-.consigli {
+/* PAGINA CONSIGLI UTILI */
+.consigli, .cosa-fare {
   position: relative;
   background-color: #d6edf8;
-  padding: 1px 40px;
+  padding: 0.0625rem 2.5%; /* 1px 40px */
   overflow: hidden;
 }
 
-.consigli-container {
+.consigli-container, .cosa-fare-container {
   position: relative;
-  max-width: 1200px;
+  max-width: 75rem; /* 1200px */
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 3.75rem; /* 60px */
   z-index: 1;
 }
 
 /* IMMAGINE */
 .consigli-img img {
-  width: 105%;
-  max-width: 1200px;
+  width: 83%;
+  max-width: 60rem;     /* 960px */
   height: auto;
   display: block;
-  margin-left: -250px;
-  margin-top: 90px;
+  margin-left: -4rem; /* -250px */
+  margin-top: 5.625rem;    /* 90px */
 }
 
 /* TESTO */
-.consigli-testo {
+.consigli-testo, .cosa-fare-testo {
   flex: 1;
-  min-width: 300px;
-  margin-left: -300px;
-  margin-right: -100px;
-  margin-top: 100px;
+  min-width: 18.75rem;    /* 300px */
+  margin-left: -19.85rem; /* -300px */
+  margin-right: 3rem; /* -100px */
+  margin-top: 6.25rem;    /* 100px */
 }
 
-.consigli-testo h2 {
-  font-size: 50px;
+.consigli-testo h2, .cosa-fare-testo h2 {
+  font-size: 2.5rem;   /* 40px */
   color: #013341;
   line-height: 1.3;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem; /* 20px */
 }
 
-.consigli-testo .evidenza {
+.consigli-testo .evidenza, .cosa-fare-testo .evidenza {
   color: #058fae;
 }
 
-.consigli-testo .descrizione {
-  font-size: 24px;
+.consigli-testo .descrizione, .cosa-fare-testo .descrizione {
+  font-size: 1.25rem;   /* 24px */
   color: #013341;
   line-height: 1.6;
-  opacity: 69%;
+  opacity: 0.69;       /* 69% */
 }
 
 
-/*CARDS*/
-.mezzi {
-  background-color: #F5F5F5;
-  padding: 70px 40px;
+/* CARD SECTION — TRASPORTI */
+.trasporti {
+  background-color: #f5f5f5;
+  padding: 4.375rem 2.5%; /* 70px 40px */
   text-align: center;
 }
 
-.mezzi h2 {
-  font-size: 48px;
-  margin: 10px 0;
+.trasporti-titolo h2 {
+  font-size: 3rem;
+  margin: 0.625rem 0;
   color: #013341;
-  margin-top: -35px;
+  margin-top: -2.1875rem;
 }
 
-.mezzi p {
-  font-size: 30px;
+.trasporti-titolo p {
+  font-size: 1.5rem;   /* 24px */
   color: #058FAE;
-  margin-bottom: 40px;
+  margin-bottom: 2rem; /* 32px */
 }
 
-.card-container {
+/* Card Container */
+.trasporticard-container {
   display: flex;
-  gap: 50px;
+  gap: 3.125rem;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem;
+  align-items: stretch; /* <- allinea le card alla stessa altezza */
 }
 
-.card {
+
+/* Individual Card */
+.trasporticard {
   background-color: white;
-  border-radius: 5px;
+  border-radius: 0.125rem; /* 2px */
   overflow: hidden;
-  width: 300px;
+  width: 18.75rem; /* 300px */
   text-align: left;
   color: #000;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1); /* 10px */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+.trasporticard:hover {
+  transform: translateY(-0.625rem); /* -10px */
+  box-shadow: 0 0.5rem 0.75rem rgba(0, 0, 0, 0.2); /* 8px 12px */
 }
 
-.card img {
+/* Card Image */
+.trasporticard img {
   width: 100%;
-  height: 220px;
+  height: 13.75rem; /* 220px */
   object-fit: cover;
 }
 
-.card-content {
-  padding: 20px;
+/* Card Content */
+.trasporticard-content {
+  padding: 1.25rem; /* 20px */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
-
-.card h3 {
-  font-size: 28px;
-  margin-top: 5px;
-  margin-bottom: 10px;
+.trasporticard-content h3 {
+  font-size: 1.5rem;       /* 24px */
+  margin-top: 0.25rem;     /* 4px */
+  margin-bottom: 0.5rem;   /* 8px */
   color: #013341;
 }
 
-.card p {
-  font-size: 20px;
-  margin-top: 5px;
+.trasporticard-content p {
+  font-size: 1.125rem;   /* 18px */
+  line-height: 1.6;
+  margin-top: 0.25rem;   /* 4px */
   color: #333;
 }
 
-/* BOTTONE CON FRECCIA */
+/* Card Button */
 .btn-card {
   display: inline-flex;
-  gap: 10px;
+  align-items: center;       /* allinea icona + testo */
+  gap: 0.625rem;             /* 10px */
   background-color: #013341;
-  color: white;
-  padding: 10px 16px;
-  padding-right: 20px;
-  border-radius: 2px;
-  font-size: 18px;
+  color: #fff;
+  padding: 0.625rem 1rem;    /* 10px 16px */
+  padding-right: 1.25rem;    /* 20px */
+  border-radius: 0.125rem;   /* 2px */
+  font-size: 1.125rem;       /* 18px */
   transition: background-color 0.3s ease;
-  margin-top: 20px;
+  margin-top: 1.25rem;       /* 20px */
   font-family: 'Inter', Arial, sans-serif;
+  text-decoration: none !important; 
+  margin-top: auto;
+  align-self: flex-start;  /* evita che si allarghi a tutta la riga */
+  white-space: nowrap;     /* impedisce l’andare a capo dentro il bottone */
 }
+
+
+
+.btn-card span {
+  display: inline-block;
+}
+
 
 .btn-card:hover {
   background-color: #025d72;
 }
 
-.btn-card img.icon-freccia {
-  width: 20px;
-  height: 20px;
+.btn-card .icon-freccia {
+  width: 1.25rem;  /* 20px */
+  height: 1.25rem; /* 20px */
   object-fit: contain;
-  padding-right: 5px;
+  padding-right: 0.3125rem;
 }
 
-.btn-card span {
-  display: inline-block;
-  text-decoration: underline;
-  line-height: 1;
+.trasporticard .btn-card {
+  font-size: 1rem;       /* 16px */
+  padding: 0.5rem 0.875rem; /* 8px 14px */
 }
 
-/* KOKO HOUSE */
-.koko-house {
-  background-color: white; 
-  padding: 80px 40px;
-}
 
-.koko-container {
+
+
+/* KOKO HOUSE PAGINA */
+.hero-kokohouse {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 150px;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 2rem;           /* spazio tra testo e immagine */
+  background-color: #d6edf8;
+  flex-wrap: nowrap;          /* <— niente capo: restano affiancati */
+  overflow: hidden;
 }
 
-/* IMMAGINE */
-.koko-img {
-  flex: 1;
-  max-width: none;
-}
-.koko-img img {
-  width: 100%;
+.hero-img-kokohouse img {
+  max-width: 100%;
   height: auto;
-  display: block;
+  margin-bottom: -3.8rem; /* -61px */
+  overflow: hidden
 }
 
-/* TESTO */
-.koko-text {
-  max-width: 500px;
+.hero-text-kokohouse {
+  max-width: 31.25rem;     /* 500px */
+  font-family: "Inter", sans-serif;
+  margin-left: 7rem;   /* 150px */
+  line-height: normal;
+  margin-bottom: 3.125rem; /* 50px */
+  margin-top: 6.25rem;     /* 100px */
 }
 
-.koko-text .subtitle {
-  color: #058fae;
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 0px;
-}
-
-.koko-text h2 {
-  font-size: 48px;
+.hero-text-kokohouse h1 {
+  font-size: 2.7rem;     /* 50px */
+  font-weight: 700;
   color: #013341;
-  line-height: 1.3;
-  margin-bottom: 20px;
-  margin-top: 15px;
+  margin-bottom: 1.25rem;  /* 20px */
 }
 
-.koko-text .intro {
-  color: #058fae;
-  font-weight: 500;
-  margin-bottom: 0px;
-  font-size: 22px;
-}
+.hero-text-kokohouse h1 span { color: #058fae; }
 
-.koko-text p {
-  color: #333;
-  font-size: 22px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  margin-top: 5px;
-}
-
-/* BOTTONE */
-.cta-button {
-  display: inline-block;
-  background-color: #0088a9;
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 12px 20px;
-  font-weight: bold;
-  border-radius: 2px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #025d72;
-}
-
-/* FOOTER */
-.site-footer {
-  background-color: #013341;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-.footer-links {
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
+.hero-text-kokohouse p {
+  font-size: 1.25rem;       /* 24px */
+  color: #013341;
+  margin-bottom: 1.875rem; /* 30px */
+  line-height: normal;
+  opacity: 0.69;
 }
 
 
-
-
-/*KOKO HOUSE*/
-.hero-koko {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #d6edf8; 
-  padding: 80px 60px 40;
-  flex-wrap: wrap;
-}
-.hero-img-koko {
-  flex: 1;
+.hero-img-kokohouse {
+flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 0px;
+  overflow: hidden;
+  margin-top: 2rem; /* 16px circa */
+  margin-bottom: -2rem;
 }
-.hero-img-koko img {
-  max-width: 105%;
+
+/* (solo in questa sezione) stile del bottone con icona */
+.hero-kokohouse .btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;            /* 10px */
+  text-decoration: none;
+  padding: 0.75rem 1.25rem; /* 12px 20px */
+  font-size: 1.25rem;       /* 20px */
+  border-radius: 0.125rem;  /* 2px */
+}
+
+.hero-kokohouse .btn-cta .icon-freccia {
+  width: 1.5rem;            /* 24px */
+  height: 1.5rem;           /* 24px */
+  object-fit: contain;
+}
+
+.hero-img-kokohouse img {
+  display: block;
+  max-width: 100%;         /* <- niente 50% */
   height: auto;
-  margin-right: 50px;
-  margin-top: 120px;
+  margin: 0;
+  transform: translateY(3.75rem); /* valore “intero” (≈60px) per evitare hairline */
+  transform-origin: center;
 }
 
-.hero-text-koko {
-  max-width: 500px;
-  font-family: "Inter", sans-serif;
-  margin-left: 150px;
-  line-height: normal;
-  margin-bottom: 50px;
-  margin-top: 100px;
-}
-
-.hero-text-koko h1 {
-  font-size: 50px;
-  font-weight: 700;
-  color: #013341;
-  margin-bottom: 20px;
-}
-
-.hero-text-koko h1 span {
-  color: #058fae;
-}
-
-.hero-text-koko p {
-  font-size: 24px;
-  color: #013341;
-  margin-bottom: 30px;
-  line-height: normal;
-  opacity: 69%;
-}
-
-
-/*CAROSELLO CASA*/
-/* TITOLO SEZIONE */
+/* CAROSELLO CASA */
 .casa-sezione {
-  padding: 100px 40px;
+  padding: 6.25rem 2.5%; /* 100px 40px */
   background-color: #f5f5f5;
   text-align: center;
 }
 
 .casa-sezione h2 {
-  font-size: 42px;
+  font-size: 2.625rem; /* 42px */
   color: #013341;
-  margin-bottom: 40px;
-  margin-top: 0px;
+  margin-bottom: 2.5rem; /* 40px */
+  margin-top: 0;
   line-height: 1.2;
 }
 
 .casa-sezione h2 span {
   color: #058FAE;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 /* GRID CARD */
 .casa-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colonne fisse */
-  gap: 30px;
-  max-width: 1000px; /* restringe l'intera griglia */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.875rem;           /* 30px */
+  max-width: 62.5rem;      /* 1000px */
   margin: 0 auto;
-  margin-top: 40px;
-  padding: 60px 20px;
+  margin-top: 2.5rem;      /* 40px */
+  padding: 3.75rem 1.25rem;/* 60px 20px */
 }
 
 /* Card */
 .casa-card {
   background-color: white;
-  border-radius: 2px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 0.125rem;               /* 2px */
+  box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.08); /* 4px 10px */
   overflow: hidden;
   text-align: left;
   transition: transform 0.2s ease;
 }
 
-.casa-card:hover {
-  transform: translateY(-5px);
-}
-
 /* Immagine */
 .casa-card img {
   width: 100%;
-  height: 160px;
+  height: 10rem; /* 160px */
   object-fit: cover;
   display: block;
 }
 
 /* Titolo e testo */
 .casa-card h3 {
-  font-size: 22px;
-  margin: 15px 20px 5px;
+  font-size: 1.375rem;                 /* 22px */
+  margin: 0.9375rem 1.25rem 0.3125rem; /* 15px 20px 5px */
   color: #013341;
 }
 
 .casa-card p {
-  font-size: 16px;
-  margin: 0 20px 15px;
+  font-size: 1rem;                     /* 16px */
+  margin: 0 1.25rem 0.9375rem;         /* 0 20px 15px */
   color: #058FAE;
 }
 
-
 /* COMFORT SECTION */
 .comfort {
-  padding: 100px 40px;
+  padding: 6.25rem 2.5%; /* 100px 40px */
   background-color: #d6edf8;
   text-align: center;
 }
 
 /* Titolo della sezione */
 .comfort h2 {
-  font-size: 38px;
+  font-size: 2.375rem;     /* 38px */
   color: #013341;
-  margin-bottom: 60px;
-  margin-left: 50px;
+  margin-bottom: 3.75rem;  /* 60px */
+  margin-left: 3.125rem;   /* 50px */
 }
 
 .comfort h2 span {
@@ -1106,9 +1172,9 @@ p.subtitle-cibo {
 /* Griglia generale */
 .comfort-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px 60px;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr)); /* 250px */
+  gap: 2.5rem 3.75rem;    /* 40px 60px */
+  max-width: 62.5rem;     /* 1000px */
   margin: 0 auto;
   text-align: left;
 }
@@ -1117,16 +1183,16 @@ p.subtitle-cibo {
 .comfort-item {
   display: flex;
   align-items: flex-start;
-  gap: 15px;
-  margin-left: 65px;
+  gap: 0.9375rem;         /* 15px */
+  margin-left: 4.0625rem; /* 65px */
 }
 
 /* Icona PNG */
 .comfort-item img {
-  width: 80px;
-  height: 80px;
+  width: 5rem;            /* 80px */
+  height: 5rem;           /* 80px */
   object-fit: contain;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;/* 30px */
 }
 
 /* Testi */
@@ -1134,99 +1200,119 @@ p.subtitle-cibo {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 20px;
+  margin-left: 1.25rem;   /* 20px */
 }
 
 .comfort-text .titolo {
   font-weight: 600;
   color: #013341;
-  font-size: 20px;
-  margin-bottom: 2px;
-  margin-top: -1px;
+  font-size: 1.25rem;     /* 20px */
+  margin-bottom: 0.125rem;/* 2px */
+  margin-top: -0.0625rem; /* -1px */
   line-height: 1.3;
 }
 
 .comfort-text .sottotitolo {
-  font-size: 15px;
+  font-size: 0.9375rem;   /* 15px */
   color: #666;
   margin: 0;
 }
 
-
-/* SEZIONE POSIZIONE */
-.posizione {
+/* SEZIONE POSIZIONE (Ubicazione Letojanni) */
+.ubicazione-letojanni {
   background-color: #f5f5f5;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
-  padding: 120px 40px;
+  gap: 3.125rem;          /* 50px */
+  padding: 7.5rem 2.5%;   /* 120px 40px */
   flex-wrap: wrap;
 }
 
-.posizione-testo {
-  flex: 1 1 400px;
-  max-width: 600px;
-  margin-left: 100px;
+.testo-ubicazione {
+  flex: 1 1 25rem;        /* 400px */
+  max-width: 37.5rem;     /* 600px */
+  margin-left: 6.25rem;   /* 100px */
 }
 
-.posizione .sottotitolo {
-  font-size: 28px;
+.sottotitolo-ubicazione {
+  font-size: 1.5rem;     /* 24px */
   color: #058FAE;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;/* 10px */
   font-weight: bold;
 }
 
-.posizione h2 {
-  font-size: 40px;
+.ubicazione-letojanni h2 {
+  font-size: 2rem;      /* 36px */
   line-height: 1.3;
   color: #013341;
-  margin-bottom: 25px;
-  padding-right: 100px;
+  margin-bottom: 1.5625rem;/* 25px */
+  padding-right: 6.25rem; /* 100px */
 }
 
-.posizione h2 span {
+.ubicazione-letojanni h2 span {
   color: #058FAE;
   font-weight: bold;
 }
 
-.posizione .testo-azzurro {
-  font-size: 25px;
+.testo-blu-ubicazione {
+  font-size: 1.35rem;   /* 25px */
   color: #058FAE;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem; /* 20px */
 }
 
-.posizione .testo-scuro {
-  font-size: 25px;
+.testo-scuro-ubicazione {
+  font-size: 1.40rem;   /* 25px */
   color: #013341;
 }
 
-.posizione-mappa {
-  flex: 1 1 300px;
+.mappa-ubicazione {
+  flex: 1 1 18.75rem;     /* 300px */
   display: flex;
   justify-content: center;
 }
 
-.posizione-mappa img {
-  width: 520px;
-  height: 520px;
+.mappa-ubicazione img {
+  width: 100%;
+  max-width: 32.5rem;     /* 520px */
+  aspect-ratio: 1 / 1;    /* mantiene 520x520 */
   object-fit: cover;
 }
 
 
-/*PRENOTAZIONE */
+/* Ubicazione: icona a sinistra dentro il bottone */
+.ubicazione-letojanni .btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;         /* 10px tra icona e testo */
+  white-space: nowrap;   /* evita che il testo vada a capo */
+}
+
+/* Copre sia .icon-freccia che .icon-freccia-ubicazione */
+.ubicazione-letojanni .btn-cta .icon-freccia,
+.ubicazione-letojanni .btn-cta .icon-freccia-ubicazione {
+  width: 1.5rem;         /* 24px */
+  height: 1.5rem;        /* 24px */
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+
+
+/* PRENOTAZIONE */
 .prenotazione {
-  background-color: #d6edf8; 
-  padding: 160px 40px;
+  background-color: #d6edf8;
+  padding: 10rem 2.5%;        /* 160px 40px */
+  overflow: hidden;            /* evita scrollbar orizzontale */
 }
 
 .prenotazione-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 75rem;            /* 1200px */
   margin: 0 auto;
-  gap: 150px;
+  gap: 9.375rem;               /* 150px */
   flex-wrap: wrap;
 }
 
@@ -1234,148 +1320,98 @@ p.subtitle-cibo {
 .prenotazione-img {
   flex: 1;
   max-width: none;
+  overflow: hidden;            /* taglia l’eccesso quando ingrandiamo */
 }
 .prenotazione-img img {
-  width: 180%;
-  height: auto;
   display: block;
-  margin-left: -50px;;
+  max-width: 80%;
+  height: auto;
+  transform-origin: left center;
+  margin-left: 4rem;
 }
 
 /* TESTO */
 .prenotazione-text {
-  max-width: 500px;
-  margin-left: 200px;
+  max-width: 31.25rem;  
+  margin-left: -10rem; 
 }
 
 .prenotazione-text .subtitle {
   color: #013341;
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 0px;
+  font-size: 2.5rem;         
+  font-weight: 700;
+  margin-bottom: 0;
   line-height: normal;
+  padding-right: 1rem;
 }
 
 .prenotazione-text h2 {
-  font-size: 35px;
+  font-size: 2rem;        /* 35px */
   color: #058FAE;
   line-height: 1.3;
-  margin-bottom: 20px;
-  margin-top: 15px;
+  margin: 0.9375rem 0 1.25rem; /* 15px top, 20px bottom */
 }
 
 .prenotazione-text .intro {
   color: #058fae;
   font-weight: 500;
-  margin-bottom: 0px;
-  font-size: 22px;
+  margin-bottom: 0;
+  font-size: 1.25rem;         /* 22px */
 }
 
 .prenotazione-text p {
   color: #333;
-  font-size: 22px;
+  font-size: 1.375rem;         /* 22px */
   line-height: 1.6;
-  margin-bottom: 20px;
-  margin-top: 5px;
+  margin: 0.3125rem 0 1.25rem; /* 5px top, 20px bottom */
 }
 
-.btn-cta {
+/* Bottone (scoped alla sezione per non toccare gli altri) */
+.prenotazione .btn-cta {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;               /* 10px */
   background-color: #058FAE;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 4px;
-  font-size: 18px;
+  color: #fff;
+  padding: 0.75rem 1.25rem;    /* 12px 20px */
+  border-radius: 0.25rem;      /* 4px */
+  font-size: 1.125rem;         /* 18px */
   font-family: 'Inter', sans-serif;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   transition: background-color 0.3s ease;
-  margin-top: 20px;
+  margin-top: 1.25rem;         /* 20px */
 }
 
-.btn-cta:hover {
-  background-color: #046f8c;
-}
+.prenotazione .btn-cta:hover { background-color: #046f8c; }
 
-.btn-cta .icon-freccia {
-  width: 24px;
-  height: 24px;
+.prenotazione .btn-cta .icon-freccia {
+  width: 1.5rem;               /* 24px */
+  height: 1.5rem;              /* 24px */
   object-fit: contain;
 }
 
-.btn-cta span {
-  display: inline-block;
-  line-height: 1;
-}
 
-
-
-
-/* PAGINA COSA FARE*/
-.cosa-fare {
-  position: relative;
-  background-color: #d6edf8;
-  padding: 100px 40px;
-  overflow: hidden;
-}
-
-.cosa-fare-container {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 60px;
-  z-index: 1;
-}
-
-/* IMMAGINE */
+/*PAGINA COSA FARE*/
 .cosa-fare-img img {
-  width: 100%;
-  max-width: 1040px;
+  width: 65%;
+  max-width: 60rem;     /* 960px */
   height: auto;
   display: block;
-  margin-left: -250px;
-  margin-top: 20px;
-  margin-bottom: -100px;
-}
-
-/* TESTO */
-.cosa-fare-testo {
-  flex: 1;
-  min-width: 300px;
-  margin-left: -200px;
-  margin-right: -20px;
-}
-
-.cosa-fare-testo h2 {
-  font-size: 50px;
-  color: #013341;
-  line-height: 1.3;
-  margin-bottom: 20px;
-}
-
-.cosa-fare-testo .evidenza {
-  color: #058fae;
-}
-
-.cosa-fare-testo .descrizione {
-  font-size: 24px;
-  color: #013341;
-  line-height: 1.6;
-  opacity: 69%;
+  margin-left: -1.9rem; /* -250px */
+  margin-top: 5.625rem;    /* 90px */
+  margin-bottom: -0.125rem;    /* -20px */
 }
 
 
-/*SEZIONE MARE ED ESCURSIONI*/
+
+
+
+/* SEZIONE MARE ED ESCURSIONI */
 .mare {
   position: relative;
   background-color: #f5f5f5;
-  padding: 120px 40px;
+  padding: 7.5rem 2.5%;          /* 120px 40px */
   overflow: hidden;
 }
 
@@ -1384,626 +1420,819 @@ p.subtitle-cibo {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 75rem;              /* 1200px */
   margin: 0 auto;
-  gap: 60px;
+  gap: 3.75rem;                  /* 60px */
   z-index: 1;
   flex-wrap: wrap;
 }
 
 /* Immagini */
- .mare-img-wrapper {
+.mare-img-wrapper {
   position: relative;
-  width: 340px;
+  width: 21.25rem;               /* 340px */
 }
 
 .img-grande-mare {
-  width: 550px;
-  margin-top: 30px;
+  width: 28rem;              /* 550px */
+  margin-top: 1.875rem;          /* 30px */
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin-left: -250px;
+  margin-left: -12.625rem;       /* -250px */
 }
 
 .img-piccola-mare {
   position: absolute;
-  top:0px;
-  right: 10px;
-  width: 240px;
+  top: -2.5rem;               /* -40px */
+  right: 5rem;               /* 10px */
+  width: 13rem;                  /* 240px */
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
-  border: 6px solid #f5f5f5;
+  border: 0.375rem solid #f5f5f5;/* 6px */
 }
 
 /* Testo */
 .testo-mare {
-  min-width: 300px;
+  min-width: 18.75rem;           /* 300px */
   z-index: 1;  
   line-height: normal;
+  margin-left: 8rem;
 }
 
 p.subtitle-mare {
   color: #058fae;
-  font-size: 25px;
+  font-size: 1rem;          /* 25px */
   font-weight: 600;
-  padding-bottom: 5px;
+  padding-bottom: 0.3125rem;     /* 5px */
   line-height: normal;
 }
 
 .testo-mare h2 {
-  font-size: 40px;
+  font-size: 2.5rem;             /* 40px */
   color: #013341;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;        /* 20px */
   line-height: normal;
 }
 
 .testo-mare p {
-  font-size: 24px;
+  font-size: 1.25rem;             /* 24px */
   color: #333;
   line-height: 1.6;
-  padding-right: 50px;
+  padding-right: 3.125rem;       /* 50px */
 }
 
 
-/*ESPERIENZE SECTION*/
-.escursioni {
-  position: relative;
-  background-color: #d6edf8;
-  padding: 100px 40px;
-  overflow: hidden;
-}
 
-.escursioni-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 60px;
-  z-index: 1;
-  flex-wrap: wrap;
-}
+/* --- ESCURSIONI: regole scoperte (niente conflitti con altre sezioni) --- */
+.escursioni { 
+  position: relative; 
+  background:#d6edf8; 
+  padding: 8rem 2.5%; 
+  overflow:hidden;
+  gap: 5rem;                  /* 80px */
+ }
+  
+
+.escursioni .escursioni-container{
+  position:relative; 
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between;
+  max-width:75rem; 
+  margin:0 auto; 
+  flex-wrap:wrap;
+  gap: 5rem;                  /* 80px */
+ }
+
 
 /* Immagini */
-.immagini {
-  position: relative;
-  flex: 1;
-  min-width: 300px;
+.escursioni .immagini { 
+  position:relative; 
+  flex:1 1 18.75rem; 
+  padding-left: 0rem;
+ }
+  
+
+.escursioni .img-grande,
+.escursioni .img-piccola { 
+  aspect-ratio:1/1; 
+  border-radius:50%; 
+  object-fit:cover; }
+
+.escursioni .img-grande{
+  width:90%;
+  max-width:34.375rem;      /* <-- modifica qui e vedrai l'effetto */
+  display:block;
+  margin-left:4rem;
+
 }
 
-.img-grande,
-.img-piccola {
-  aspect-ratio: 1 / 1; /* Mantiene le immagini quadrate */
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.img-grande {
-  width: 100%;
-  max-width: 550px;
-  border-radius: 50%;
-  display: block;
-  margin-left: -60px;
-}
-
-.img-piccola {
-  position: absolute;
-  bottom: -20px;
-  left: 70%;
-  transform: translateX(-50%);
-  width: 248px;
-  border-radius: 50%;
-  border: 6px solid #d6edf8;
+.escursioni .img-piccola{
+  position:absolute;
+   bottom:-1.25rem; left:100%; 
+   transform:translateX(-50%);
+  width:13rem;               /* <-- modifica qui */
+  border:0.375rem solid #d6edf8;
+  left: 90%
 }
 
 /* Testo */
-.testo {
-  flex: 1;
-  min-width: 300px;
-  z-index: 1;
-  margin-left: 30px;
+.escursioni .testo { 
+  flex:1 1 18.75rem; 
+  z-index:1; 
+  margin-left:5rem; 
+  padding-right:9rem; 
 }
 
-.testo h2 {
-  font-size: 48px;
-  color: #013341;
-  margin-bottom: 20px;
-  line-height: normal;
+.escursioni .testo h2 { 
+  font-size:2.5rem; 
+  color:#013341; 
+  margin-bottom:1.25rem;
+   line-height:normal; }
+
+.escursioni .testo .sottotitolo { 
+  color:#058fae; 
+  font-size:1.25rem; 
+  font-weight:500; 
+  margin-bottom:.625rem;
 }
 
-.testo .sottotitolo {
-  color: #058fae;
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.testo .descrizione {
-  font-size: 24px;
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
+.escursioni .testo .descrizione { 
+  font-size:1.25rem; color:#333; 
+  line-height:1.6;
+   margin-bottom:1.25rem; 
+  }
 
 
 
 
-/*PAGINA COSA VEDERE*/
-.hero-vedere {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #d6edf8; 
-  padding: 80px 60px 40;
-  flex-wrap: wrap;
-}
-.hero-img-vedere {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 0px;
-}
-.hero-img-vedere img {
-  max-width: 120%;
-  height: auto;
-  margin-top: 100px;
-  margin-right: -130px;
-}
-
-.hero-text-vedere {
-  max-width: 500px;
-  font-family: "Inter", sans-serif;
-  margin-left: 150px;
-  line-height: normal;
-  margin-bottom: 50px;
-}
-
-.hero-text-vedere h1 {
-  font-size: 50px;
-  font-weight: 700;
-  color: #013341;
-  margin-bottom: 20px;
-}
-
-.hero-text-vedere h1 span {
-  color: #058fae;
-}
-
-.hero-text-vedere  p {
-  font-size: 24px;
-  color: #013341;
-  margin-bottom: 30px;
-  line-height: normal;
-  opacity: 69%;
-}
-
-.descrizione-sottotitolo {
-  color: #058fae;
-  font-size: 24px;
-  font-weight: 400;
-  margin-bottom: 10px;
-  line-height: normal;
-}
-
-.descrizione {
-  font-size: 24px;
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
 
 
-/*PAGINA DOVE MANGIARE*/
-.hero-mangiare {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #d6edf8; 
-  padding: 80px 60px 40;
-  flex-wrap: wrap;
-}
-.hero-img-mangiare {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 0px;
-}
-.hero-img-mangiare img {
-  max-width: 80%;
-  height: auto;
-  margin-top: 130px;
-  margin-right: -260px;
-}
 
-.hero-text-mangiare {
-  max-width: 500px;
-  font-family: "Inter", sans-serif;
-  margin-left: 150px;
-  line-height: normal;
-  margin-top: 130px;
-  margin-bottom: 50px;
-}
-
-.hero-text-mangiare h1 {
-  font-size: 50px;
-  font-weight: 700;
-  color: #013341;
-  margin-bottom: 20px;
-}
-
-.hero-text-mangiare h1 span {
-  color: #058fae;
-}
-
-.hero-text-mangiare  p {
-  font-size: 24px;
-  color: #013341;
-  margin-bottom: 30px;
-  line-height: normal;
-  opacity: 69%;
-}
+/* PAGINA DOVE MANGIARE */
 
 
 /* CARDS */
 .mangiare {
   background-color: #F5F5F5;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 0.625rem;            /* 10px */
 }
 
 .mangiare h2 {
-  font-size: 48px;
-  margin: 10px 0;
+  font-size: 3rem;                  /* 48px */
+  margin: 0.625rem 0;               /* 10px 0 */
   color: #013341;
-  margin-top: 100px;
-  margin-bottom: -20px
+  margin-top: 6.25rem;              /* 100px */
+  margin-bottom: -1.25rem;          /* -20px */
 }
 
 .mangiare-section {
-  padding: 100px 40px;
+  padding: 6.25rem 2.5%;            /* 100px 40px */
   background-color: #f5f5f5;
 }
 
 .mangiare-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, 18.75rem); /* 300px fissi */
+  justify-content: center;        /* centra le colonne */
+  gap: 1.875rem;                  /* 30px */
+  max-width: 75rem;               /* 1200px */
   margin: 0 auto;
 }
 
+
 .card-mangiare {
   background-color: #ffffff;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0.125rem;                 /* 2px (come home) */
+  box-shadow: 0 0 0.625rem rgba(0,0,0,0.1);/* 10px (come home) */
   overflow: hidden;
   font-family: 'Inter', sans-serif;
   display: flex;
   flex-direction: column;
+  width: 18.75rem;                         /* 300px */
 }
 
 .card-mangiare img {
   width: 100%;
-  height: auto;
+  height: 13rem;       /* 160px (come home) */
+  object-fit: cover;
   display: block;
 }
 
+
 .card-mangiare-content {
-  padding: 20px;
+  padding: 1rem;       /* come home */
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
+
 .card-mangiare .localita {
   color: #058FAE;
   font-weight: bold;
-  font-size: 14px;
-  margin-left: -250px;
-  margin-top: -1px;
-  margin-bottom: 10px;
+  font-size: 0.875rem;              /* 14px */
+  margin-left: -15.625rem;          /* -250px */
+  margin-top: -0.0625rem;           /* -1px */
+  margin-bottom: 0.625rem;          /* 10px */
   text-transform: uppercase;
+  padding-left: 4.5rem;
 }
 
 .card-mangiare .mongiuffi {
   color: #058FAE;
   font-weight: bold;
-  font-size: 14px;
-  margin-left: -200px;
-  margin-top: -1px;
-  margin-bottom: 10px;
+  font-size: 0.875rem;              /* 14px */
+  margin-left: -7rem;            /* -200px */
+  margin-top: -0.0625rem;           /* -1px */
+  margin-bottom: 0.625rem;          /* 10px */
   text-transform: uppercase;
 }
 
 .card-mangiare hr {
   border: none;
-  border-top: 2px solid #C9E1ED;
-  margin: 8px 0 16px;
+  border-top: 0.125rem solid #C9E1ED;/* 2px */
+  margin: 0.5rem 0 1rem;            /* 8px 0 16px */
 }
 
 .card-mangiare h3 {
-  margin-left: -240px;
-  margin-top: 3px;
-  font-size: 22px;
+  margin-left: -14rem;              /* -240px */
+  margin-top: 0.1875rem;            /* 3px */
+  font-size: 1.375rem;              /* 22px */
   color: #013341;
+  padding-left: 3.5rem;
 }
 
 .card-mangiare h4 {
-  margin-left: -180px;
-  margin-top: 3px;
-  font-size: 22px;
+  margin-left: -6rem;           /* -180px */
+  margin-top: 0.1875rem;            /* 3px */
+  font-size: 1.375rem;              /* 22px */
   color: #013341;
 }
 
 .card-mangiare .descrizione {
-   font-size: 16px;
-   line-height: normal;
+  font-size: 1rem;                  /* 16px */
+  line-height: normal;
   color: #2d3e4f;
-  margin-bottom: 25px;
+  margin-bottom: 1.5625rem;         /* 25px */
   text-align: justify;
-  margin-left: 8px;
-  margin-right: 30px;
-  margin-top: -4px;
+  margin-right: 1.875rem;           /* 30px */
+  margin-top: -0.25rem;             /* -4px */
+  margin-left: 0.5rem;
 }
 
 
 /* TRIPADVISOR */
 .link-trip a {
   text-decoration: underline;
-  color: #058FAE; /* colore coerente con il sito */
+  color: #058FAE;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;                  /* 16px */
   transition: color 0.2s ease;
-  margin-left: -160px;
+  margin-left: -5.5rem
 }
 
-.link-trip a:hover {
-  color: #013341; /* cambia colore al passaggio */
+.link-trip a:hover { color: #013341; }
+
+
+/* TAORMINA */
+/* ========== MANGIARE TAORMINA & CENA — stile come "escursioni" ========== */
+.mangiare-taormina,
+.cena{
+  background-color:#d6edf8;
+  padding:8rem 2.5%;
+  overflow:hidden;
 }
 
-.mangiare-taormina {
-  position: relative;
+.mangiare-taormina .mangiare-taormina-container,
+.cena .cena-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:75rem;   /* 1200px */
+  margin:0 auto;
+  flex-wrap:wrap;
+  gap:5rem;          /* respiro tra immagini e testo */
+}
+
+/* Colonna immagini */
+.mangiare-taormina .immagini,
+.cena .immagini{
+  position:relative;
+  flex:1;
+  min-width:18.75rem; /* 300px */
+}
+
+.mangiare-taormina .immagini .img-grande,
+.cena .immagini .img-grande,
+.mangiare-taormina .immagini .img-piccola,
+.cena .immagini .img-piccola{
+  aspect-ratio:1/1;
+  border-radius:50%;
+  object-fit:cover;
+  display:block;
+}
+
+.mangiare-taormina .immagini .img-grande,
+.cena .immagini .img-grande{
+  width:90%;
+  max-width:34.375rem; /* 550px */
+  margin-left:4rem;
+}
+
+.mangiare-taormina .immagini .img-piccola,
+.cena .immagini .img-piccola{
+  position:absolute;
+  bottom:-1.25rem;      /* -20px */
+  left: 90%;
+  transform:translateX(-50%);
+  width:13rem;          /* ~208px */
+  border:0.375rem solid #d6edf8;
+}
+
+/* Colonna testo */
+.mangiare-taormina .testo-mangiare-taormina,
+.cena .testo-cena{
+  flex:1;
+  min-width:18.75rem;   /* 300px */
+  margin:0;
+  z-index:1;
+  text-align:left;
+}
+
+.mangiare-taormina .testo-mangiare-taormina h2,
+.cena .testo-cena h2{
+  font-size:2.5rem;     /* 40px */
+  color:#013341;
+  margin:0 0 1.25rem;
+  line-height:normal;
+  margin-bottom: -0.5rem;
+}
+
+.mangiare-taormina .sottotitolo,
+.cena .sottotitolo-cena{
+  color:#058fae;
+  font-size:1.25rem;    /* 20px */
+  font-weight:500;
+  margin:0 0 0.625rem;
+}
+
+.mangiare-taormina .descrizione,
+.cena .descrizione-cena{
+  font-size:1.25rem;    /* 20px */
+  color:#333;
+  line-height:1.6;
+  margin:0;
+}
+
+
+
+/* ========== MANGIARE LETOJANNI — uguale a "escursioni" ========== */
+.mangiare-letojanni{
+  background-color:#f5f5f5;
+  padding:8rem 2.5%;
+  overflow:hidden;
+}
+
+.mangiare-letojanni .mangiare-letojanni-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:75rem;          /* 1200px */
+  margin:0 auto;
+  flex-wrap:wrap;
+  gap:5rem;                 /* spazio tra testo e immagini */
+}
+
+/* Colonna testo (sx) */
+.mangiare-letojanni .testo-mangiare-letojanni{
+  flex:1;
+  min-width:18.75rem;       /* 300px */
+  text-align:left;
+  margin-left: 4rem;
+  z-index:1;
+}
+
+.mangiare-letojanni .titolo-mangiare-letojanni{
+  font-size:2.5rem;         /* 40px */
+  color:#013341;
+  margin:0 0 1.25rem;
+  line-height:normal;
+}
+
+.mangiare-letojanni .descrizione-blu-letojanni{
+  color:#058fae;
+  font-size:1.25rem;        /* 20px */
+  font-weight:600;
+  margin:0 0 .5rem;
+  line-height:1.6;
+}
+
+.mangiare-letojanni .descrizione-mangiare-letojanni{
+  font-size:1.25rem;        /* 20px */
+  color:#333;
+  line-height:1.6;
+  margin:0;
+}
+
+/* Colonna immagini (dx) */
+.mangiare-letojanni .leto-img-wrapper{
+  position:relative;
+  flex:1;
+  min-width:18.75rem;       /* 300px */
+}
+
+.mangiare-letojanni .img-grande-mare,
+.mangiare-letojanni .img-piccola-mare{
+  aspect-ratio:1/1;
+  border-radius:50%;
+  object-fit:cover;
+  display:block;
+}
+
+.mangiare-letojanni .img-grande-mare{
+  width:90%;
+  max-width:34.375rem;      /* 550px */
+  margin:0;
+}
+
+.mangiare-letojanni .img-piccola-mare{
+  position:absolute;
+  bottom:-1.25rem;          /* -20px */
+  left:80%;
+  transform:translateX(-50%);
+  width:13rem;              /* ~208px */
+  border:0.375rem solid #f5f5f5; /* uguale al bg della sezione */
+}
+
+
+
+/* HERO — PAGINA COSA VEDERE (allineato a "Dove mangiare") */
+.hero-vedere {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 2rem;             /* spazio tra testo e immagine */
   background-color: #d6edf8;
-  padding: 120px 40px;
+  flex-wrap: nowrap;            /* niente capo: affiancati */
   overflow: hidden;
 }
 
-.mangiare-taormina-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 60px;
-  z-index: 1;
-  flex-wrap: wrap;
-}
-
-/* Immagini */
-.immagini {
-  position: relative;
-  flex: 1;
-  min-width: 300px;
-}
-
-.immagini .img-grande,
-.immagini .img-piccola {
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.immagini .img-grande {
-  width: 100%;
-  max-width: 550px;
-  display: block;
-  margin-left: -60px;
-}
-
-.immagini .img-piccola {
-  position: absolute;
-  bottom: -20px;
-  left: 70%;
-  transform: translateX(-50%);
-  width: 248px;
-  border: 6px solid #d6edf8;
-}
-
-/* Testo */
-.testo-mangiare-taormina {
-  flex: 1;
-  min-width: 300px;
-  z-index: 1;
-  margin-left: 30px;
-  text-align: left; 
-}
-
-
-.testo-mangiare-taormina h2 {
-  font-size: 48px;
-  color: #013341;
-  margin-bottom: 20px;
+.hero-text-vedere {
+  order: 1;     
+  flex: 0.8;                /* testo a sinistra */
+  max-width: 31.25rem;          /* 500px */
+  font-family: "Inter", sans-serif;
+  margin-left: 8rem;            /* simile a ‘mangiare’ */
+  margin-top: 6.5rem;
+  margin-bottom: 3.125rem;      /* 50px */
   line-height: normal;
 }
 
-.testo-mangiare-taormina .sottotitolo {
-  color: #058fae;
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 10px;
+.hero-text-vedere h1 {
+  font-size: 2.7rem;            /* ~43px (coerente con altri hero) */
+  font-weight: 700;
+  color: #013341;
+  margin-bottom: 1.25rem;       /* 20px */
 }
 
-.testo-mangiare-taormina .descrizione {
-  font-size: 24px;
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 20px;
+.hero-text-vedere h1 span { color: #058fae; }
+
+.hero-text-vedere p {
+  font-size: 1.25rem;           /* 20px */
+  color: #013341;
+  margin-bottom: 1.875rem;      /* 30px */
+  line-height: normal;
+  opacity: 0.69;
 }
 
-
-.mangiare-letojanni {
-  position: relative;
-  background-color: #f5f5f5;
-  padding: 120px 40px;
+.hero-img-vedere {
+  order: 2;                     /* immagine a destra */
+  flex: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  text-align: left;
+  margin-top: 2rem;
 }
 
-.mangiare-letojanni-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 60px;
-  z-index: 1;
-  flex-wrap: wrap;
-}
-
-/* Immagini */
-.leto-img-wrapper {
-  position: relative;
-  width: 340px;
-  margin-right: -70px;
-}
-
-.img-grande-leto {
-  width: 550px;
-  margin-top: 30px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  object-fit: cover;
+.hero-img-vedere img {
   display: block;
-  margin-left: -250px;
-}
-
-.img-piccola-leto {
-  position: absolute;
-  top: 0px;
-  right: 10px;
-  width: 240px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 6px solid #f5f5f5;
-}
-
-/* Testo */
-.testo-mangiare-letojanni {
-  min-width: 300px;
-  z-index: 1;
-  line-height: normal;
-  margin-left: -50px;
-}
-
-.titolo-mangiare-letojanni {
-  font-size: 40px;
-  color: #013341;
-  margin-bottom: 20px;
-  line-height: normal;
-}
-
-.descrizione-blu-letojanni {
-  color: #058fae;
-  font-size: 25px;
-  font-weight: 600;
-  padding-bottom: 5px;
-  line-height: normal;
-  margin-top: 40px;
-}
-
-.descrizione-mangiare-letojanni {
-  font-size: 24px;
-  color: #333;
-  line-height: 1.6;
-  padding-right: 50px;
+  max-width: 130%;              /* evita >100% */
+  height: auto;
+  margin: 0;
+  transform: translateY(2rem);  /* piccolo “abbassamento” come negli altri */
+  transform-origin: center;
 }
 
 
-.cena {
-  position: relative;
-  background-color: #d6edf8;
-  padding: 100px 40px;
-  overflow: hidden;
+
+
+
+/* ============ TABLET (≤ 1024px) ============ */
+@media (max-width: 1024px) {
+  /* Spaziatura generale */
+  .hero,
+  .about,
+  .opportunita,
+  .koko-house,
+  .cibo,
+  .luoghi,
+  .esperienze,
+  .consigli,
+  .trasporti,
+  .casa-sezione,
+  .comfort,
+  .ubicazione-letojanni,
+  .prenotazione,
+  .cosa-fare,
+  .mare,
+  .escursioni,
+  .mangiare-section,
+  .mangiare-taormina,
+  .mangiare-letojanni,
+  .cena {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  /* Header nav un po' più compatto */
+  .main-nav ul {
+    gap: 0.75rem;
+    margin-right: 2rem;
+  }
+  .main-nav a { font-size: 1rem; }
+
+  /* HERO — blocchi affiancati ma più stretti */
+  .hero,
+  .hero-letojanni,
+  .hero-kokohouse,
+  .hero-vedere {
+    column-gap: 1.25rem;
+  }
+  .hero-text,
+  .hero-text-letojanni,
+  .hero-text-kokohouse,
+  .hero-text-vedere {
+    max-width: 36rem;
+    margin-left: 3rem;
+  }
+  .hero-img,
+  .hero-img-letojanni,
+  .hero-img-kokohouse,
+  .hero-img-vedere {
+    margin: 0;
+  }
+  .hero-img-letojanni img,
+  .hero-img-kokohouse img,
+  .hero-img-vedere img {
+    max-width: 95%;
+    transform: none;
+    margin: 0;
+  }
+
+  /* ABOUT: riduco hack di posizionamento */
+  .about-image {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  /* Sezioni 2-col con immagini rotonde: un po’ più compatte */
+  .esperienze-container,
+  .cibo-container,
+  .luoghi-container,
+  .mangiare-taormina-container,
+  .mangiare-letojanni-container,
+  .cena-container {
+    gap: 2rem;
+  }
+  .img-grande,
+  .img-grande-mare,
+  .img-grande-cibo,
+  .img-grande-leto,
+  .immagini .img-grande {
+    max-width: 24rem;
+    margin-left: 0;
+  }
+  .img-piccola,
+  .img-piccola-mare,
+  .img-piccola-cibo,
+  .img-piccola-leto,
+  .immagini .img-piccola {
+    width: 10.5rem;
+    left: 75%;
+  }
+
+  /* Cards generiche */
+  .card,
+  .card-mangiare,
+  .trasporticard {
+    width: 18rem;
+  }
+  .mangiare-grid {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+
+  /* Casa grid */
+  .casa-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Comfort */
+  .comfort-item {
+    margin-left: 0;
+  }
+
+  /* Ubicazione (posizione) */
+  .testo-ubicazione { margin-left: 2rem; }
+  .mappa-ubicazione img { max-width: 28rem; }
+
+  /* Prenotazione */
+  .prenotazione-container { gap: 3rem; }
+  .prenotazione-img img { width: 120%; margin-left: 0; }
+  .prenotazione-text { margin-left: 0; }
 }
 
-.cena-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 60px;
-  z-index: 1;
-  flex-wrap: wrap;
-}
+/* ============ MOBILE (≤ 600px) ============ */
+@media (max-width: 600px) {
+  /* Tipografia più piccola */
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  .hero-text p,
+  .testo p,
+  .testo .descrizione,
+  .testo-cibo p,
+  .testo-clima p,
+  .testo-cena .descrizione-cena,
+  .testo-mangiare-taormina .descrizione,
+  .descrizione-mangiare-letojanni,
+  .testo-scuro-ubicazione,
+  .testo-blu-ubicazione { font-size: 1rem; }
 
-/* Immagini */
-.immagini {
-  position: relative;
-  flex: 1;
-  min-width: 300px;
-}
+  /* Header nav: permetto a capo e centro */
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 0;
+    gap: 0.5rem;
+  }
+  .main-nav a { font-size: 0.95rem; }
 
-.img-grande,
-.img-piccola {
-  aspect-ratio: 1 / 1; /* Mantiene le immagini quadrate */
-  border-radius: 50%;
-  object-fit: cover;
-}
+  /* HERO: stack verticale, testo sopra immagine */
+  .hero,
+  .hero-letojanni,
+  .hero-kokohouse,
+  .hero-vedere {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+  .hero-text,
+  .hero-text-letojanni,
+  .hero-text-kokohouse,
+  .hero-text-vedere {
+    max-width: 100%;
+    margin: 4.5rem 0 1.25rem 0; /* spazio sotto header fisso */
+  }
+  .hero-img,
+  .hero-img-letojanni,
+  .hero-img-kokohouse,
+  .hero-img-vedere {
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-img img,
+  .hero-img-letojanni img,
+  .hero-img-kokohouse img,
+  .hero-img-vedere img {
+    max-width: 100%;
+    margin: 0 auto;
+    transform: none;
+  }
 
-.img-grande {
-  width: 100%;
-  max-width: 550px;
-  display: block;
-  margin-left: -60px;
-}
+  /* ABOUT: colonne in colonna */
+  .about-container { gap: 1.5rem; }
+  .info-box { margin-left: 0; align-items: flex-start; }
+  .about-image { order: 3; margin: 0 auto; }
+  .about-text { margin-left: 0; }
 
-.img-piccola {
-  position: absolute;
-  bottom: -20px;
-  left: 70%;
-  transform: translateX(-50%);
-  width: 248px;
-  border-radius: 50%;
-  border: 6px solid #d6edf8;
-}
+  /* Sezioni 2-col: diventano 1-col (testo sopra, immagini sotto) */
+  .esperienze-container,
+  .cibo-container,
+  .luoghi-container,
+  .mangiare-taormina-container,
+  .mangiare-letojanni-container,
+  .cena-container {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .testo,
+  .testo-cibo,
+  .testo-clima,
+  .testo-cena,
+  .testo-mangiare-taormina,
+  .testo-mangiare-letojanni {
+    margin-left: 0;
+    padding-right: 0;
+  }
+  .immagini,
+  .sapori-img-wrapper,
+  .clima-img-wrapper,
+  .leto-img-wrapper,
+  .mare-img-wrapper {
+    width: 100%;
+    padding-left: 0;
+    margin: 0 auto;
+  }
 
-/* Testo */
-.testo-cena {
-  flex: 1;
-  min-width: 300px;
-  z-index: 1;
-  margin-left: 30px;
-  text-align: left;
-}
+  /* Immagini rotonde centrali e più piccole */
+  .img-grande,
+  .img-grande-mare,
+  .img-grande-cibo,
+  .img-grande-leto,
+  .immagini .img-grande {
+    max-width: 18.75rem; /* 300px */
+    margin: 0 auto;
+  }
+  .img-piccola,
+  .img-piccola-mare,
+  .img-piccola-cibo,
+  .img-piccola-leto,
+  .immagini .img-piccola {
+    position: absolute;
+    width: 8.75rem; /* 140px */
+    bottom: -0.5rem;
+    left: 70%;
+    transform: translateX(-50%);
+    border-width: 0.25rem;
+  }
 
-.testo-cena h2 {
-  font-size: 48px;
-  color: #013341;
-  margin-bottom: 20px;
-  line-height: normal;
-}
+  /* Sezioni “mangiare” cards: una colonna full width */
+  .mangiare-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .card-mangiare { width: 100%; }
+  .card-mangiare img { height: 12rem; }
 
-.sottotitolo-cena {
-  color: #058fae;
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
+  /* Cards generiche (home e trasporti) */
+  .card-container { gap: 1rem; padding: 1.5rem 0; }
+  .card,
+  .trasporticard { width: 100%; max-width: 26rem; }
+  .card img,
+  .trasporticard img { height: 12rem; }
 
-.descrizione-cena {
-  font-size: 24px;
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  /* Casa grid: 1 colonna */
+  .casa-grid { grid-template-columns: 1fr; padding: 2rem 0; }
+
+  /* Comfort: 1 colonna, icone più piccole */
+  .comfort-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .comfort-item { margin-left: 0; }
+  .comfort-item img { width: 3rem; height: 3rem; }
+  .comfort h2 { margin-left: 0; font-size: 1.75rem; }
+
+  /* Ubicazione: colonna e mappa centrata */
+  .ubicazione-letojanni {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  .testo-ubicazione { margin-left: 0; max-width: 100%; }
+  .mappa-ubicazione { width: 100%; justify-content: center; }
+  .mappa-ubicazione img { max-width: 20rem; }
+
+  /* Bottone stile “hero” ovunque */
+  .btn-cta,
+  .hero-kokohouse .btn-cta,
+  .ubicazione-letojanni .btn-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    padding: 0.625rem 1rem;
+    white-space: nowrap;
+  }
+  .btn-cta .icon-freccia,
+  .icon-freccia-ubicazione {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  /* Prenotazione: stack e immagine full */
+  .prenotazione-container { flex-direction: column; gap: 1rem; }
+  .prenotazione-img img { width: 100%; margin: 0; }
+  .prenotazione-text { margin-left: 0; max-width: 100%; }
+
+  /* Sezioni hero “cosa mangiare/vedere” (stesse regole dei hero) */
+  .hero-text-mangiare,
+  .hero-text-vedere { margin: 4.5rem 0 1rem; max-width: 100%; }
+  .hero-img-mangiare,
+  .hero-img-vedere { margin: 0; width: 100%; }
+  .hero-img-mangiare img,
+  .hero-img-vedere img { max-width: 100%; margin: 0 auto; }
 }
