@@ -1933,136 +1933,50 @@ p.subtitle-mare {
 
 
 
-/* ======= Mobile phones (iPhone 14 & co) ======= */
-/* ===== MOBILE — HOME (≤ 600px) ===== */
+/* ============================
+   HEADER — FIX GENERALE
+   ============================ */
+
+/* usa solo .site-header come fixed */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background-color: #d6edf8;
+}
+
+/* spazio sotto l’header fisso (desktop fallback) */
+:root { --headerH: 88px; }
+body { padding-top: var(--headerH); }
+
+/* iOS notch safe-area */
+@supports (padding: max(0px)) {
+  body { padding-top: max(var(--headerH), env(safe-area-inset-top)); }
+}
+
+/* MOBILE HEADER (≤600px) */
 @media (max-width: 600px) {
+  :root { --headerH: 104px; }          /* più margine se il menu va a capo */
+  /* se avevamo dato padding al <main> in precedenza, lo annullo per evitare doppio spazio */
+  main { padding-top: 0 !important; }
 
-  /* Evita qualsiasi scroll orizzontale accidentale */
-  html, body { overflow-x: hidden; }
-
-  /* Header: evita che il main parta sotto il fisso (se serve, alza il padding) */
-  main { padding-top: 72px; }
-
-  /* HERO */
-  .hero {
-    flex-direction: column;         /* testo sopra, immagine sotto */
-    align-items: flex-start;
-    padding: 4.5rem 1.25rem 2rem;   /* spazio comodo ai lati */
-    gap: 1rem;
+  .site-header {
+    padding: .75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
   }
 
-  .hero-text {
-    max-width: 100%;
-    margin: 0;                      /* rimuove i margini desktop */
-    text-align: left;
+  .header-logo img { height: 40px; }   /* logo più piccolo */
+
+  .main-nav ul {
+    margin: 0; padding: 0;
+    gap: .5rem .75rem;                 /* meno spazio tra voci */
+    flex-wrap: wrap;                   /* permette 2 righe se serve */
+    justify-content: flex-start;
   }
-
-  .hero-text h1 {
-    font-size: 2rem;                /* ~32px */
-    line-height: 1.2;
-    margin-bottom: 0.75rem;
-  }
-
-  .hero-text p {
-    font-size: 1rem;                /* ~16px */
-    margin-bottom: 1rem;
-  }
-
-  .cta-button {
-    font-size: 1rem;
-    padding: 0.65rem 1rem;
-  }
-
-  .hero-img {
-    order: 2;                       /* immagine sotto il testo */
-    margin: 0;                      /* via margini negativi desktop */
-    width: 100%;
-    justify-content: center;
-  }
-
-  .hero-img img {
-    max-width: 420px;               /* non esagerare su mobile largo */
-    width: 100%;
-    height: auto;
-    margin: 0 auto;                 /* centra l’immagine */
-    display: block;
-  }
-
-  /* ABOUT */
-  .about {
-    padding: 3.5rem 1.25rem 0;      /* compattata sui lati */
-  }
-
-  .about-container,
-  .about-wrapper,
-  .about-content {
-    gap: 1.25rem;
-  }
-
-  .about-text {
-    margin: 0;
-    max-width: 100%;
-  }
-
-  .info-box {
-    margin: 0;
-    max-width: 100%;
-  }
-
-  .about-image {
-    margin: 0;
-    min-width: auto;
-    justify-content: center;
-  }
-
-  .about-image img {
-    max-width: 420px;
-    width: 100%;
-    height: auto;
-  }
-
-  /* CARDS (stesse dimensioni della home desktop ma in colonna) */
-  .opportunita {
-    padding: 3.5rem 1.25rem;
-  }
-
-  .card-container {
-    gap: 1.25rem;
-    padding: 1.25rem 0;
-  }
-
-  .card {
-    width: 18.75rem;                /* 300px, come definito */
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .card img { height: 10rem; }      /* 160px, come home */
-
-  /* KOKO section (home) */
-  .koko-house {
-    padding: 3.5rem 1.25rem;
-  }
-
-  .koko-container {
-    gap: 1.5rem;
-  }
-
-  .koko-text {
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .koko-img {
-    margin: 0;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .koko-img img {
-    max-width: 420px;
-    width: 100%;
-    height: auto;
-    margin-left: 0;                 /* rimuove shift desktop */
+  .main-nav a {
+    font-size: .95rem;                 /* testo più compatto */
+    white-space: nowrap;
   }
 }
