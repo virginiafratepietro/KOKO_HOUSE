@@ -1933,50 +1933,291 @@ p.subtitle-mare {
 
 
 
-/* ============================
-   HEADER — FIX GENERALE
-   ============================ */
-
-/* usa solo .site-header come fixed */
-.site-header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;
-  background-color: #d6edf8;
-}
-
-/* spazio sotto l’header fisso (desktop fallback) */
-:root { --headerH: 88px; }
-body { padding-top: var(--headerH); }
-
-/* iOS notch safe-area */
-@supports (padding: max(0px)) {
-  body { padding-top: max(var(--headerH), env(safe-area-inset-top)); }
-}
-
-/* MOBILE HEADER (≤600px) */
+/* ======= Mobile phones (iPhone 14 & co) ======= */
+/* ===== MOBILE — HOME (≤ 600px) ===== */
 @media (max-width: 600px) {
-  :root { --headerH: 104px; }          /* più margine se il menu va a capo */
-  /* se avevamo dato padding al <main> in precedenza, lo annullo per evitare doppio spazio */
-  main { padding-top: 0 !important; }
 
-  .site-header {
-    padding: .75rem 1rem;
+  /* Evita qualsiasi scroll orizzontale accidentale */
+  html, body { overflow-x: hidden; }
+
+  /* Header: evita che il main parta sotto il fisso (se serve, alza il padding) */
+  main { padding-top: 72px; }
+
+  /* HERO */
+  .hero {
+    flex-direction: column;         /* testo sopra, immagine sotto */
+    align-items: flex-start;
+    padding: 4.5rem 1.25rem 2rem;   /* spazio comodo ai lati */
+    gap: 1rem;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin: 0;                      /* rimuove i margini desktop */
+    text-align: left;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;                /* ~32px */
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;                /* ~16px */
+    margin-bottom: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.65rem 1rem;
+  }
+
+  .hero-img {
+    order: 2;                       /* immagine sotto il testo */
+    margin: 0;                      /* via margini negativi desktop */
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-img img {
+    max-width: 420px;               /* non esagerare su mobile largo */
+    width: 100%;
+    height: auto;
+    margin: 0 auto;                 /* centra l’immagine */
+    display: block;
+  }
+
+  /* ABOUT */
+  .about {
+    padding: 3.5rem 1.25rem 0;      /* compattata sui lati */
+  }
+
+  .about-container,
+  .about-wrapper,
+  .about-content {
+    gap: 1.25rem;
+  }
+
+  .about-text {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .info-box {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .about-image {
+    margin: 0;
+    min-width: auto;
+    justify-content: center;
+  }
+
+  .about-image img {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+  }
+
+  /* CARDS (stesse dimensioni della home desktop ma in colonna) */
+  .opportunita {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .card-container {
+    gap: 1.25rem;
+    padding: 1.25rem 0;
+  }
+
+  .card {
+    width: 18.75rem;                /* 300px, come definito */
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .card img { height: 10rem; }      /* 160px, come home */
+
+  /* KOKO section (home) */
+  .koko-house {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .koko-container {
+    gap: 1.5rem;
+  }
+
+  .koko-text {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .koko-img {
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .koko-img img {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    margin-left: 0;                 /* rimuove shift desktop */
+  }
+}
+
+
+
+
+
+/* =========================================================
+   SCOPRI LETOJANNI — FIX MOBILE (≤ 600px)
+   Incolla in fondo al file. Desktop invariato.
+   ========================================================= */
+@media (max-width: 600px) {
+
+  /* ---------- HERO ---------- */
+  .hero-letojanni {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4.5rem 1.25rem 2rem;   /* spazio per header fisso + aria */
+    column-gap: 0;
+    row-gap: 1rem;
+  }
+  .hero-text-letojanni {
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+  .hero-text-letojanni h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: .75rem;
+  }
+  .hero-text-letojanni p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    opacity: .85;
+  }
+  .hero-img-letojanni {
+    order: 2;                    /* immagine sotto al testo */
+    width: 100%;
+    margin: 0 !important;
+    justify-content: center;
+  }
+  .hero-img-letojanni img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: min(560px, 92vw);
+    height: auto;
+    transform: none !important;
+  }
+
+  /* ---------- ESPERIENZE ---------- */
+  .esperienze { padding: 3.5rem 1.25rem; }
+  .esperienze-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .esperienze .immagini {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    padding-left: 0;
     display: flex;
-    align-items: center;
-    gap: .5rem;
+    justify-content: center;
+  }
+  .esperienze .img-grande {
+    max-width: 75vw;
+    margin-left: 0;
+  }
+  .esperienze .img-piccola {
+    width: 34vw;
+    min-width: 120px;
+    position: absolute;
+    right: 10vw;
+    bottom: -8px;
+    left: auto;
+    transform: none;
+    border-width: 5px;
+  }
+  .esperienze .testo {
+    margin-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+  }
+  .esperienze .testo h2 { font-size: 1.8rem; }
+  .esperienze .testo .sottotitolo,
+  .esperienze .testo .descrizione { font-size: 1rem; }
+
+  /* ---------- CIBO ---------- */
+  .cibo { padding: 3.5rem 1.25rem; }
+  .cibo-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .testo-cibo {
+    margin: 0;
+    max-width: 100%;
+  }
+  .sapori-img-wrapper {
+    position: relative;
+    width: 100% !important;
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: center;
+  }
+  .img-grande-cibo {
+    width: 75vw !important;
+    margin-left: 0 !important;
+  }
+  .img-piccola-cibo {
+    width: 33vw !important;
+    position: absolute;
+    right: 10vw;
+    top: -8px;
+    border-width: 5px;
   }
 
-  .header-logo img { height: 40px; }   /* logo più piccolo */
-
-  .main-nav ul {
-    margin: 0; padding: 0;
-    gap: .5rem .75rem;                 /* meno spazio tra voci */
-    flex-wrap: wrap;                   /* permette 2 righe se serve */
-    justify-content: flex-start;
+  /* ---------- LUOGHI ---------- */
+  .luoghi { padding: 3.5rem 1.25rem; }
+  .luoghi-container {
+    flex-direction: column;
+    gap: 1.5rem;
   }
-  .main-nav a {
-    font-size: .95rem;                 /* testo più compatto */
-    white-space: nowrap;
+  .luoghi .immagini {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .luoghi .img-grande {
+    max-width: 75vw;
+    margin-left: 0;
+  }
+  .luoghi .img-piccola {
+    width: 34vw;
+    position: absolute;
+    right: 10vw;
+    bottom: -8px;
+    left: auto;
+    transform: none;
+    border-width: 5px;
+  }
+  .luoghi .testo {
+    margin-left: 0;
+    max-width: 100%;
+  }
+  .luoghi .testo h2 { font-size: 1.9rem; }
+  .luoghi .testo .sottotitolo,
+  .luoghi .testo .descrizione { font-size: 1rem; }
+
+  /* ---------- Decorazioni di sfondo: assicurati che non coprano ---------- */
+  .sfondo-decorativo {
+    opacity: .25;
+    pointer-events: none;
   }
 }
