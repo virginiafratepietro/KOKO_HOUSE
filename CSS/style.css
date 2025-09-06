@@ -1934,87 +1934,135 @@ p.subtitle-mare {
 
 
 /* ======= Mobile phones (iPhone 14 & co) ======= */
-@media (max-width: 430px) {
+/* ===== MOBILE — HOME (≤ 600px) ===== */
+@media (max-width: 600px) {
+
+  /* Evita qualsiasi scroll orizzontale accidentale */
   html, body { overflow-x: hidden; }
 
-  /* Header un po' più compatto */
-  header { padding: .5rem 4%; }
-  .site-header { padding: .75rem 4%; }
-  .main-nav ul { gap: .6rem; margin-right: 0; }
-  .main-nav a { font-size: .95rem; }
+  /* Header: evita che il main parta sotto il fisso (se serve, alza il padding) */
+  main { padding-top: 72px; }
 
-  /* ---------- HERO HOME ---------- */
+  /* HERO */
   .hero {
-    flex-direction: column;
+    flex-direction: column;         /* testo sopra, immagine sotto */
     align-items: flex-start;
+    padding: 4.5rem 1.25rem 2rem;   /* spazio comodo ai lati */
     gap: 1rem;
-    padding: 6.25rem 5% 2rem; /* spazio sotto l'header fisso */
   }
+
   .hero-text {
     max-width: 100%;
-    margin: 0 0 1rem 0;
+    margin: 0;                      /* rimuove i margini desktop */
+    text-align: left;
   }
-  .hero-text h1 { font-size: 2.1rem; line-height: 1.15; }
-  .hero-text p  { font-size: 1rem; }
-  .hero-img { margin: 0; }
-  .hero-img img {
+
+  .hero-text h1 {
+    font-size: 2rem;                /* ~32px */
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;                /* ~16px */
+    margin-bottom: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.65rem 1rem;
+  }
+
+  .hero-img {
+    order: 2;                       /* immagine sotto il testo */
+    margin: 0;                      /* via margini negativi desktop */
     width: 100%;
-    max-width: 100%;
+    justify-content: center;
+  }
+
+  .hero-img img {
+    max-width: 420px;               /* non esagerare su mobile largo */
+    width: 100%;
     height: auto;
-    transform: none !important;
+    margin: 0 auto;                 /* centra l’immagine */
+    display: block;
   }
 
-  /* ---------- ABOUT HOME ---------- */
-  .about { padding: 3rem 5% 0; }
-  .about-container { flex-direction: column; gap: 1.5rem; margin-top: 3rem; }
-  .info-box { margin-left: 0; }
-  .about-image {
-    margin: 0 auto;
-    max-width: 90%;
-    min-width: 0;
-    order: 2;
+  /* ABOUT */
+  .about {
+    padding: 3.5rem 1.25rem 0;      /* compattata sui lati */
   }
-  .about-image img { width: 100%; height: auto; max-height: none; }
-  .about-text { margin: 0 0 2rem 0; max-width: none; }
 
-  /* ---------- CARDS HOME ---------- */
-  .card-container { gap: 1rem; padding: 1.25rem 5%; }
-  .card { width: 100%; max-width: 22rem; margin: 0 auto; }
-  .card img { height: 9.5rem; }
-
-  /* ---------- TUTTE LE ALTRE HERO ---------- */
-  .hero-letojanni,
-  .hero-kokohouse,
-  .hero-vedere,
-  .hero-mangiare {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 6rem 5% 2rem;
-    overflow: hidden;
+  .about-container,
+  .about-wrapper,
+  .about-content {
+    gap: 1.25rem;
   }
-  .hero-text-letojanni,
-  .hero-text-kokohouse,
-  .hero-text-vedere,
-  .hero-text-mangiare {
+
+  .about-text {
+    margin: 0;
     max-width: 100%;
-    margin: 0 0 1rem 0;
   }
-  .hero-img-letojanni,
-  .hero-img-kokohouse,
-  .hero-img-vedere,
-  .hero-img-mangiare {
+
+  .info-box {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .about-image {
+    margin: 0;
+    min-width: auto;
+    justify-content: center;
+  }
+
+  .about-image img {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+  }
+
+  /* CARDS (stesse dimensioni della home desktop ma in colonna) */
+  .opportunita {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .card-container {
+    gap: 1.25rem;
+    padding: 1.25rem 0;
+  }
+
+  .card {
+    width: 18.75rem;                /* 300px, come definito */
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .card img { height: 10rem; }      /* 160px, come home */
+
+  /* KOKO section (home) */
+  .koko-house {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .koko-container {
+    gap: 1.5rem;
+  }
+
+  .koko-text {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .koko-img {
     margin: 0;
     width: 100%;
+    justify-content: center;
   }
-  /* Azzera margini/translate personalizzati che rompono su mobile */
-  .hero-img-letojanni img,
-  .hero-img-kokohouse img,
-  .hero-img-vedere img,
-  .hero-img-mangiare img {
+
+  .koko-img img {
+    max-width: 420px;
     width: 100%;
-    max-width: 100%;
     height: auto;
-    margin: 0 !important;
-    transform: none !important;
+    margin-left: 0;                 /* rimuove shift desktop */
   }
 }
