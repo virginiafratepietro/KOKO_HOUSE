@@ -1933,306 +1933,88 @@ p.subtitle-mare {
 
 
 
-/* ============ TABLET (≤ 1024px) ============ */
-@media (max-width: 1024px) {
-  /* Spaziatura generale */
-  .hero,
-  .about,
-  .opportunita,
-  .koko-house,
-  .cibo,
-  .luoghi,
-  .esperienze,
-  .consigli,
-  .trasporti,
-  .casa-sezione,
-  .comfort,
-  .ubicazione-letojanni,
-  .prenotazione,
-  .cosa-fare,
-  .mare,
-  .escursioni,
-  .mangiare-section,
-  .mangiare-taormina,
-  .mangiare-letojanni,
-  .cena {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
+/* ======= Mobile phones (iPhone 14 & co) ======= */
+@media (max-width: 430px) {
+  html, body { overflow-x: hidden; }
 
-  /* Header nav un po' più compatto */
-  .main-nav ul {
-    gap: 0.75rem;
-    margin-right: 2rem;
-  }
-  .main-nav a { font-size: 1rem; }
+  /* Header un po' più compatto */
+  header { padding: .5rem 4%; }
+  .site-header { padding: .75rem 4%; }
+  .main-nav ul { gap: .6rem; margin-right: 0; }
+  .main-nav a { font-size: .95rem; }
 
-  /* HERO — blocchi affiancati ma più stretti */
-  .hero,
-  .hero-letojanni,
-  .hero-kokohouse,
-  .hero-vedere {
-    column-gap: 1.25rem;
-  }
-  .hero-text,
-  .hero-text-letojanni,
-  .hero-text-kokohouse,
-  .hero-text-vedere {
-    max-width: 36rem;
-    margin-left: 3rem;
-  }
-  .hero-img,
-  .hero-img-letojanni,
-  .hero-img-kokohouse,
-  .hero-img-vedere {
-    margin: 0;
-  }
-  .hero-img-letojanni img,
-  .hero-img-kokohouse img,
-  .hero-img-vedere img {
-    max-width: 95%;
-    transform: none;
-    margin: 0;
-  }
-
-  /* ABOUT: riduco hack di posizionamento */
-  .about-image {
-    margin-left: 0;
-    margin-top: 0;
-  }
-
-  /* Sezioni 2-col con immagini rotonde: un po’ più compatte */
-  .esperienze-container,
-  .cibo-container,
-  .luoghi-container,
-  .mangiare-taormina-container,
-  .mangiare-letojanni-container,
-  .cena-container {
-    gap: 2rem;
-  }
-  .img-grande,
-  .img-grande-mare,
-  .img-grande-cibo,
-  .img-grande-leto,
-  .immagini .img-grande {
-    max-width: 24rem;
-    margin-left: 0;
-  }
-  .img-piccola,
-  .img-piccola-mare,
-  .img-piccola-cibo,
-  .img-piccola-leto,
-  .immagini .img-piccola {
-    width: 10.5rem;
-    left: 75%;
-  }
-
-  /* Cards generiche */
-  .card,
-  .card-mangiare,
-  .trasporticard {
-    width: 18rem;
-  }
-  .mangiare-grid {
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  }
-
-  /* Casa grid */
-  .casa-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Comfort */
-  .comfort-item {
-    margin-left: 0;
-  }
-
-  /* Ubicazione (posizione) */
-  .testo-ubicazione { margin-left: 2rem; }
-  .mappa-ubicazione img { max-width: 28rem; }
-
-  /* Prenotazione */
-  .prenotazione-container { gap: 3rem; }
-  .prenotazione-img img { width: 120%; margin-left: 0; }
-  .prenotazione-text { margin-left: 0; }
-}
-
-/* ============ MOBILE (≤ 600px) ============ */
-@media (max-width: 600px) {
-  /* Tipografia più piccola */
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  .hero-text p,
-  .testo p,
-  .testo .descrizione,
-  .testo-cibo p,
-  .testo-clima p,
-  .testo-cena .descrizione-cena,
-  .testo-mangiare-taormina .descrizione,
-  .descrizione-mangiare-letojanni,
-  .testo-scuro-ubicazione,
-  .testo-blu-ubicazione { font-size: 1rem; }
-
-  /* Header nav: permetto a capo e centro */
-  .main-nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-right: 0;
-    gap: 0.5rem;
-  }
-  .main-nav a { font-size: 0.95rem; }
-
-  /* HERO: stack verticale, testo sopra immagine */
-  .hero,
-  .hero-letojanni,
-  .hero-kokohouse,
-  .hero-vedere {
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-  }
-  .hero-text,
-  .hero-text-letojanni,
-  .hero-text-kokohouse,
-  .hero-text-vedere {
-    max-width: 100%;
-    margin: 4.5rem 0 1.25rem 0; /* spazio sotto header fisso */
-  }
-  .hero-img,
-  .hero-img-letojanni,
-  .hero-img-kokohouse,
-  .hero-img-vedere {
-    margin: 0;
-    width: 100%;
-    justify-content: center;
-  }
-  .hero-img img,
-  .hero-img-letojanni img,
-  .hero-img-kokohouse img,
-  .hero-img-vedere img {
-    max-width: 100%;
-    margin: 0 auto;
-    transform: none;
-  }
-
-  /* ABOUT: colonne in colonna */
-  .about-container { gap: 1.5rem; }
-  .info-box { margin-left: 0; align-items: flex-start; }
-  .about-image { order: 3; margin: 0 auto; }
-  .about-text { margin-left: 0; }
-
-  /* Sezioni 2-col: diventano 1-col (testo sopra, immagini sotto) */
-  .esperienze-container,
-  .cibo-container,
-  .luoghi-container,
-  .mangiare-taormina-container,
-  .mangiare-letojanni-container,
-  .cena-container {
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-  .testo,
-  .testo-cibo,
-  .testo-clima,
-  .testo-cena,
-  .testo-mangiare-taormina,
-  .testo-mangiare-letojanni {
-    margin-left: 0;
-    padding-right: 0;
-  }
-  .immagini,
-  .sapori-img-wrapper,
-  .clima-img-wrapper,
-  .leto-img-wrapper,
-  .mare-img-wrapper {
-    width: 100%;
-    padding-left: 0;
-    margin: 0 auto;
-  }
-
-  /* Immagini rotonde centrali e più piccole */
-  .img-grande,
-  .img-grande-mare,
-  .img-grande-cibo,
-  .img-grande-leto,
-  .immagini .img-grande {
-    max-width: 18.75rem; /* 300px */
-    margin: 0 auto;
-  }
-  .img-piccola,
-  .img-piccola-mare,
-  .img-piccola-cibo,
-  .img-piccola-leto,
-  .immagini .img-piccola {
-    position: absolute;
-    width: 8.75rem; /* 140px */
-    bottom: -0.5rem;
-    left: 70%;
-    transform: translateX(-50%);
-    border-width: 0.25rem;
-  }
-
-  /* Sezioni “mangiare” cards: una colonna full width */
-  .mangiare-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .card-mangiare { width: 100%; }
-  .card-mangiare img { height: 12rem; }
-
-  /* Cards generiche (home e trasporti) */
-  .card-container { gap: 1rem; padding: 1.5rem 0; }
-  .card,
-  .trasporticard { width: 100%; max-width: 26rem; }
-  .card img,
-  .trasporticard img { height: 12rem; }
-
-  /* Casa grid: 1 colonna */
-  .casa-grid { grid-template-columns: 1fr; padding: 2rem 0; }
-
-  /* Comfort: 1 colonna, icone più piccole */
-  .comfort-grid { grid-template-columns: 1fr; gap: 1.25rem; }
-  .comfort-item { margin-left: 0; }
-  .comfort-item img { width: 3rem; height: 3rem; }
-  .comfort h2 { margin-left: 0; font-size: 1.75rem; }
-
-  /* Ubicazione: colonna e mappa centrata */
-  .ubicazione-letojanni {
+  /* ---------- HERO HOME ---------- */
+  .hero {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.25rem;
+    gap: 1rem;
+    padding: 6.25rem 5% 2rem; /* spazio sotto l'header fisso */
   }
-  .testo-ubicazione { margin-left: 0; max-width: 100%; }
-  .mappa-ubicazione { width: 100%; justify-content: center; }
-  .mappa-ubicazione img { max-width: 20rem; }
-
-  /* Bottone stile “hero” ovunque */
-  .btn-cta,
-  .hero-kokohouse .btn-cta,
-  .ubicazione-letojanni .btn-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1rem;
-    padding: 0.625rem 1rem;
-    white-space: nowrap;
+  .hero-text {
+    max-width: 100%;
+    margin: 0 0 1rem 0;
   }
-  .btn-cta .icon-freccia,
-  .icon-freccia-ubicazione {
-    width: 1.25rem;
-    height: 1.25rem;
+  .hero-text h1 { font-size: 2.1rem; line-height: 1.15; }
+  .hero-text p  { font-size: 1rem; }
+  .hero-img { margin: 0; }
+  .hero-img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transform: none !important;
   }
 
-  /* Prenotazione: stack e immagine full */
-  .prenotazione-container { flex-direction: column; gap: 1rem; }
-  .prenotazione-img img { width: 100%; margin: 0; }
-  .prenotazione-text { margin-left: 0; max-width: 100%; }
+  /* ---------- ABOUT HOME ---------- */
+  .about { padding: 3rem 5% 0; }
+  .about-container { flex-direction: column; gap: 1.5rem; margin-top: 3rem; }
+  .info-box { margin-left: 0; }
+  .about-image {
+    margin: 0 auto;
+    max-width: 90%;
+    min-width: 0;
+    order: 2;
+  }
+  .about-image img { width: 100%; height: auto; max-height: none; }
+  .about-text { margin: 0 0 2rem 0; max-width: none; }
 
-  /* Sezioni hero “cosa mangiare/vedere” (stesse regole dei hero) */
-  .hero-text-mangiare,
-  .hero-text-vedere { margin: 4.5rem 0 1rem; max-width: 100%; }
-  .hero-img-mangiare,
-  .hero-img-vedere { margin: 0; width: 100%; }
-  .hero-img-mangiare img,
-  .hero-img-vedere img { max-width: 100%; margin: 0 auto; }
+  /* ---------- CARDS HOME ---------- */
+  .card-container { gap: 1rem; padding: 1.25rem 5%; }
+  .card { width: 100%; max-width: 22rem; margin: 0 auto; }
+  .card img { height: 9.5rem; }
+
+  /* ---------- TUTTE LE ALTRE HERO ---------- */
+  .hero-letojanni,
+  .hero-kokohouse,
+  .hero-vedere,
+  .hero-mangiare {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 6rem 5% 2rem;
+    overflow: hidden;
+  }
+  .hero-text-letojanni,
+  .hero-text-kokohouse,
+  .hero-text-vedere,
+  .hero-text-mangiare {
+    max-width: 100%;
+    margin: 0 0 1rem 0;
+  }
+  .hero-img-letojanni,
+  .hero-img-kokohouse,
+  .hero-img-vedere,
+  .hero-img-mangiare {
+    margin: 0;
+    width: 100%;
+  }
+  /* Azzera margini/translate personalizzati che rompono su mobile */
+  .hero-img-letojanni img,
+  .hero-img-kokohouse img,
+  .hero-img-vedere img,
+  .hero-img-mangiare img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 !important;
+    transform: none !important;
+  }
 }
