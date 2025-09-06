@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
 }
-
+   
 /* HEADER */
 header {
   position: fixed;
@@ -48,103 +48,47 @@ header {
   color: #058FAE;
 }
 
+
 /* HERO SECTION */
-.hero,
-.hero-letojanni,
-.hero-koko {
+.hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #d6edf8;
+  background-color: #d6edf8; 
   padding: 80px 60px 40;
   flex-wrap: wrap;
 }
-
-.hero-img,
-.hero-img-letojanni,
-.hero-img-koko {
+.hero-img {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 0px;
 }
-
-.hero-img img,
-.hero-img-letojanni img,
-.hero-img-koko img {
+.hero-img img {
   max-width: 100%;
   height: auto;
 }
 
-.hero-img-letojanni img {
-  max-width: 170%;
-  margin-top: 50px;
-}
-
-.hero-img-koko img {
-  max-width: 105%;
-  margin-right: 50px;
-  margin-top: 120px;
-}
-
-.hero-text,
-.hero-text-letojanni,
-.hero-text-koko,
-.hero-text-vedere,
-.hero-text-mangiare {
+.hero-text {
   max-width: 500px;
   font-family: "Inter", sans-serif;
   margin-left: 150px;
   line-height: normal;
 }
 
-.hero-text-letojanni {
-  margin-bottom: 50px;
-  margin-top: 150px;
-}
-
-.hero-text-koko {
-  margin-bottom: 50px;
-  margin-top: 100px;
-}
-
-.hero-text-mangiare {
-  margin-top: 130px;
-  margin-bottom: 50px;
-}
-
-.hero-text h1,
-.hero-text-letojanni h1,
-.hero-text-koko h1,
-.hero-text-vedere h1,
-.hero-text-mangiare h1 {
+.hero-text h1 {
   font-size: 80px;
   font-weight: 700;
   color: #013341;
   margin-bottom: 20px;
 }
 
-.hero-text-letojanni h1,
-.hero-text-koko h1,
-.hero-text-vedere h1,
-.hero-text-mangiare h1 {
-  font-size: 50px;
-}
-
-.hero-text h1 span,
-.hero-text-letojanni h1 span,
-.hero-text-koko h1 span,
-.hero-text-vedere h1 span,
-.hero-text-mangiare h1 span {
+.hero-text h1 span {
   color: #058fae;
 }
 
-.hero-text p,
-.hero-text-letojanni p,
-.hero-text-koko p,
-.hero-text-vedere p,
-.hero-text-mangiare p {
+.hero-text p {
   font-size: 24px;
   color: #013341;
   margin-bottom: 30px;
@@ -152,9 +96,8 @@ header {
   opacity: 69%;
 }
 
-.cta-button,
-.btn-cta {
-  display: inline-block;
+.cta-button {
+display: inline-block;
   background-color: #0088a9;
   color: white;
   text-decoration: none;
@@ -165,13 +108,8 @@ header {
   transition: background-color 0.3s ease;
 }
 
-.cta-button:hover,
-.btn-cta:hover {
+.cta-button:hover {
   background-color: #046b88;
-}
-
-.btn-cta:hover {
-  background-color: #025d72;
 }
 
 /*CHI SIAMO*/
@@ -201,18 +139,20 @@ header {
   margin-top: -10px;
 }
 
-.info-item {
+.info-item { /* linea per ogni elemento informativo */
   display: flex;
   align-items: center;
   gap: 15px;
   border-bottom: 4px solid #92C8E2;
   padding-bottom: 15px;
   max-width: 220px;
+  
 }
 
 .info-item img {
   width: 40px;
   height: 40px;
+  
 }
 
 .info-item strong {
@@ -227,6 +167,7 @@ header {
   margin-left: 20px;
 }
 
+
 /* Colonna centrale */
 .about-image {
   flex: 1;
@@ -238,7 +179,7 @@ header {
   margin-left: 680px;
   padding-bottom: 0;
   margin-bottom: 0;
-}
+  }
 
 .about-image img {
   max-height: 700px;
@@ -260,6 +201,7 @@ header {
   color: #058fae;
 }
 
+
 .about-text p {
   font-size: 20px;
   line-height: 1.5;
@@ -268,35 +210,24 @@ header {
 }
 
 /*CARDS*/
-.opportunita,
-.mezzi {
-  background-color: #d6edf8;
+.opportunita {
+  background-color: #d6edf8; /* colore di sfondo */
   padding: 70px 40px;
   text-align: center;
 }
 
-.mezzi {
-  background-color: #F5F5F5;
-}
-
-.opportunita h2,
-.mezzi h2 {
+.opportunita h2 {
   font-size: 48px;
   margin: 10px 0;
   color: #013341;
   margin-top: -35px;
 }
 
-.opportunita p,
-.mezzi p {
+.opportunita p {
   font-size: 25px;
   color: #058FAE;
   margin-bottom: 40px;
   font-weight: 500;
-}
-
-.mezzi p {
-  font-size: 30px;
 }
 
 .card-container {
@@ -315,12 +246,6 @@ header {
   text-align: left;
   color: #000;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
@@ -330,7 +255,7 @@ header {
 }
 
 .card-content {
-  padding: 20px;
+ padding: 20px;
 }
 
 .card h3 {
@@ -361,64 +286,74 @@ header {
   background-color: #013341;
 }
 
-/* BOTTONE CON FRECCIA */
-.btn-card {
-  display: inline-flex;
-  gap: 10px;
-  background-color: #013341;
-  color: white;
-  padding: 10px 16px;
-  padding-right: 20px;
-  border-radius: 2px;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
-  font-family: 'Inter', Arial, sans-serif;
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn-card:hover {
-  background-color: #025d72;
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.btn-card img.icon-freccia {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  padding-right: 5px;
+
+
+/*PAGINA SCOPRI LETOJANNI*/
+.hero-letojanni {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d6edf8; 
+  padding: 80px 60px 40;
+  flex-wrap: wrap;
+}
+.hero-img-letojanni {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0px;
+}
+.hero-img-letojanni img {
+  max-width: 170%;
+  height: auto;
+  margin-top: 50px;
 }
 
-.btn-card span {
-  display: inline-block;
-  text-decoration: underline;
-  line-height: 1;
+.hero-text-letojanni {
+  max-width: 500px;
+  font-family: "Inter", sans-serif;
+  margin-left: 150px;
+  line-height: normal;
+  margin-bottom: 50px;
+  margin-top: 150px;
 }
+
+.hero-text-letojanni h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #013341;
+  margin-bottom: 20px;
+}
+
+.hero-text-letojanni h1 span {
+  color: #058fae;
+}
+
+.hero-text-letojanni  p {
+  font-size: 24px;
+  color: #013341;
+  margin-bottom: 30px;
+  line-height: normal;
+  opacity: 69%;
+}
+
 
 /*ESPERIENZE SECTION*/
-.esperienze,
-.cibo,
-.luoghi,
-.escursioni,
-.cena,
-.mangiare-taormina {
+.esperienze {
   position: relative;
+  background-color: #f5f5f5;
   padding: 100px 40px;
   overflow: hidden;
-}
-
-.esperienze,
-.luoghi,
-.escursioni {
-  background-color: #f5f5f5;
-}
-
-.cibo,
-.cena {
-  background-color: #d6edf8;
-}
-
-.mangiare-taormina {
-  background-color: #d6edf8;
-  padding: 120px 40px;
 }
 
 .sfondo-decorativo {
@@ -428,17 +363,12 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.3;
+  opacity: 0.3; /* aumentato per visibilità */
   z-index: 0;
   pointer-events: none;
 }
 
-.esperienze-container,
-.cibo-container,
-.luoghi-container,
-.escursioni-container,
-.cena-container,
-.mangiare-taormina-container {
+.esperienze-container {
   position: relative;
   display: flex;
   align-items: center;
@@ -459,7 +389,7 @@ header {
 
 .img-grande,
 .img-piccola {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1; /* Mantiene le immagini quadrate */
   border-radius: 50%;
   object-fit: cover;
 }
@@ -467,6 +397,7 @@ header {
 .img-grande {
   width: 100%;
   max-width: 550px;
+  border-radius: 50%;
   display: block;
   margin-left: -60px;
 }
@@ -477,27 +408,96 @@ header {
   left: 70%;
   transform: translateX(-50%);
   width: 248px;
+  border-radius: 50%;
   border: 6px solid #F5F5F5;
 }
 
-.escursioni .img-piccola {
-  border: 6px solid #d6edf8;
+/* Testo */
+.testo {
+  flex: 1;
+  min-width: 300px;
+  z-index: 1;
+  margin-left: 30px;
 }
 
-.cena .img-piccola {
-  border: 6px solid #d6edf8;
+.testo h2 {
+  font-size: 48px;
+  color: #013341;
+  margin-bottom: 20px;
+  line-height: normal;
 }
 
-.sapori-img-wrapper,
-.mare-img-wrapper,
-.leto-img-wrapper {
+.testo .sottotitolo {
+  color: #058fae;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.testo .descrizione {
+  font-size: 24px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: #0088a9;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #025d72;
+}
+
+
+
+/*CIBO SEZIONE*/
+.cibo {
+  position: relative;
+  background-color: #d6edf8;
+  padding: 100px 40px;
+  overflow: hidden;
+}
+
+.sfondo-decorativo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3; /* aumentato per visibilità */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cibo-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+/* Immagini */
+ .sapori-img-wrapper {
   position: relative;
   width: 340px;
 }
 
-.img-grande-cibo,
-.img-grande-mare,
-.img-grande-leto {
+.img-grande-cibo {
   width: 550px;
   margin-top: 30px;
   aspect-ratio: 1 / 1;
@@ -507,11 +507,9 @@ header {
   margin-left: -250px;
 }
 
-.img-piccola-cibo,
-.img-piccola-mare,
-.img-piccola-leto {
+.img-piccola-cibo {
   position: absolute;
-  top: 0px;
+  top:0px;
   right: 10px;
   width: 240px;
   aspect-ratio: 1 / 1;
@@ -520,92 +518,190 @@ header {
   border: 6px solid #d6edf8;
 }
 
-.img-piccola-mare,
-.img-piccola-leto {
-  border: 6px solid #f5f5f5;
-}
-
 /* Testo */
-.testo,
-.testo-cibo,
-.testo-mare,
-.testo-cena,
-.testo-mangiare-taormina,
-.testo-mangiare-letojanni {
+.testo-cibo {
   min-width: 300px;
-  z-index: 1;
+  z-index: 1;  
   line-height: normal;
 }
 
+p.subtitle-cibo {
+  color: #058fae;
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  line-height: normal;
+}
+
+.testo-cibo h2 {
+  font-size: 40px;
+  color: #013341;
+  margin-bottom: 20px;
+  line-height: normal;
+}
+
+.testo-cibo p {
+  font-size: 24px;
+  color: #333;
+  line-height: 1.6;
+  padding-right: 50px;
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: #0088a9;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #025d72;
+}
+
+
+
+/*LUOGHI SECTION*/
+.luoghi {
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 100px 40px;
+  overflow: hidden;
+}
+
+.sfondo-decorativo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3; /* aumentato per visibilità */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.luoghi-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+/* Immagini */
+.immagini {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+}
+
+.img-grande,
+.img-piccola {
+  aspect-ratio: 1 / 1; /* Mantiene le immagini quadrate */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.img-grande {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 50%;
+  display: block;
+  margin-left: -60px;
+}
+
+.img-piccola {
+  position: absolute;
+  bottom: -20px;
+  left: 70%;
+  transform: translateX(-50%);
+  width: 248px;
+  border-radius: 50%;
+  border: 6px solid #F5F5F5;
+}
+
+/* Testo */
 .testo {
+  flex: 1;
+  min-width: 300px;
+  z-index: 1;
   margin-left: 30px;
 }
 
-.testo h2,
-.testo-cibo h2,
-.testo-mare h2,
-.testo-cena h2,
-.testo-mangiare-taormina h2,
-.titolo-mangiare-letojanni {
+.testo h2 {
   font-size: 48px;
   color: #013341;
   margin-bottom: 20px;
   line-height: normal;
 }
 
-.testo-mare h2,
-.titolo-mangiare-letojanni {
-  font-size: 40px;
-}
-
-.testo .sottotitolo,
-.testo-cibo .subtitle-cibo,
-.testo-mare .subtitle-mare,
-.sottotitolo-cena,
-.testo-mangiare-taormina .sottotitolo,
-.descrizione-blu-letojanni {
+.testo .sottotitolo {
   color: #058fae;
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 10px;
 }
 
-.testo-cibo .subtitle-cibo,
-.testo-mare .subtitle-mare,
-.descrizione-blu-letojanni {
-  font-size: 25px;
-  font-weight: 600;
-  padding-bottom: 5px;
-}
-
-.testo .descrizione,
-.testo-cibo p,
-.testo-mare p,
-.descrizione-cena,
-.testo-mangiare-taormina .descrizione,
-.descrizione-mangiare-letojanni {
+.testo .descrizione {
   font-size: 24px;
   color: #333;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.testo-cibo p,
-.descrizione-mangiare-letojanni {
-  padding-right: 50px;
+.btn-cta {
+  display: inline-block;
+  background-color: #0088a9;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
 }
 
-/* CIBO SEZIONE */
-.testo-cibo {
-  text-align: left;
+.btn-cta:hover {
+  background-color: #025d72;
 }
 
-/* LUOGHI SECTION */
-.luoghi-container {
-  position: relative;
+/* FOOTER */
+.site-footer {
+  background-color: #013341;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
+
+.footer-links {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+
 
 /*PAGINA CONSIGLI UTILI*/
+
 .consigli {
   position: relative;
   background-color: #d6edf8;
@@ -662,9 +758,109 @@ header {
   opacity: 69%;
 }
 
+
+/*CARDS*/
+.mezzi {
+  background-color: #F5F5F5;
+  padding: 70px 40px;
+  text-align: center;
+}
+
+.mezzi h2 {
+  font-size: 48px;
+  margin: 10px 0;
+  color: #013341;
+  margin-top: -35px;
+}
+
+.mezzi p {
+  font-size: 30px;
+  color: #058FAE;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 300px;
+  text-align: left;
+  color: #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h3 {
+  font-size: 28px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #013341;
+}
+
+.card p {
+  font-size: 20px;
+  margin-top: 5px;
+  color: #333;
+}
+
+/* BOTTONE CON FRECCIA */
+.btn-card {
+  display: inline-flex;
+  gap: 10px;
+  background-color: #013341;
+  color: white;
+  padding: 10px 16px;
+  padding-right: 20px;
+  border-radius: 2px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.btn-card:hover {
+  background-color: #025d72;
+}
+
+.btn-card img.icon-freccia {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  padding-right: 5px;
+}
+
+.btn-card span {
+  display: inline-block;
+  text-decoration: underline;
+  line-height: 1;
+}
+
 /* KOKO HOUSE */
 .koko-house {
-  background-color: white;
+  background-color: white; 
   padding: 80px 40px;
 }
 
@@ -683,7 +879,6 @@ header {
   flex: 1;
   max-width: none;
 }
-
 .koko-img img {
   width: 100%;
   height: auto;
@@ -725,7 +920,103 @@ header {
   margin-top: 5px;
 }
 
+/* BOTTONE */
+.cta-button {
+  display: inline-block;
+  background-color: #0088a9;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #025d72;
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #013341;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/*KOKO HOUSE*/
+.hero-koko {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d6edf8; 
+  padding: 80px 60px 40;
+  flex-wrap: wrap;
+}
+.hero-img-koko {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0px;
+}
+.hero-img-koko img {
+  max-width: 105%;
+  height: auto;
+  margin-right: 50px;
+  margin-top: 120px;
+}
+
+.hero-text-koko {
+  max-width: 500px;
+  font-family: "Inter", sans-serif;
+  margin-left: 150px;
+  line-height: normal;
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+
+.hero-text-koko h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #013341;
+  margin-bottom: 20px;
+}
+
+.hero-text-koko h1 span {
+  color: #058fae;
+}
+
+.hero-text-koko p {
+  font-size: 24px;
+  color: #013341;
+  margin-bottom: 30px;
+  line-height: normal;
+  opacity: 69%;
+}
+
+
 /*CAROSELLO CASA*/
+/* TITOLO SEZIONE */
 .casa-sezione {
   padding: 100px 40px;
   background-color: #f5f5f5;
@@ -745,16 +1036,18 @@ header {
   font-weight: normal;
 }
 
+/* GRID CARD */
 .casa-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* 3 colonne fisse */
   gap: 30px;
-  max-width: 1000px;
+  max-width: 1000px; /* restringe l'intera griglia */
   margin: 0 auto;
   margin-top: 40px;
   padding: 60px 20px;
 }
 
+/* Card */
 .casa-card {
   background-color: white;
   border-radius: 2px;
@@ -768,6 +1061,7 @@ header {
   transform: translateY(-5px);
 }
 
+/* Immagine */
 .casa-card img {
   width: 100%;
   height: 160px;
@@ -775,6 +1069,7 @@ header {
   display: block;
 }
 
+/* Titolo e testo */
 .casa-card h3 {
   font-size: 22px;
   margin: 15px 20px 5px;
@@ -787,6 +1082,7 @@ header {
   color: #058FAE;
 }
 
+
 /* COMFORT SECTION */
 .comfort {
   padding: 100px 40px;
@@ -794,6 +1090,7 @@ header {
   text-align: center;
 }
 
+/* Titolo della sezione */
 .comfort h2 {
   font-size: 38px;
   color: #013341;
@@ -806,6 +1103,7 @@ header {
   font-weight: normal;
 }
 
+/* Griglia generale */
 .comfort-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -815,6 +1113,7 @@ header {
   text-align: left;
 }
 
+/* Ogni elemento comfort */
 .comfort-item {
   display: flex;
   align-items: flex-start;
@@ -822,6 +1121,7 @@ header {
   margin-left: 65px;
 }
 
+/* Icona PNG */
 .comfort-item img {
   width: 80px;
   height: 80px;
@@ -829,6 +1129,7 @@ header {
   margin-bottom: 30px;
 }
 
+/* Testi */
 .comfort-text {
   display: flex;
   flex-direction: column;
@@ -850,6 +1151,7 @@ header {
   color: #666;
   margin: 0;
 }
+
 
 /* SEZIONE POSIZIONE */
 .posizione {
@@ -911,9 +1213,10 @@ header {
   object-fit: cover;
 }
 
+
 /*PRENOTAZIONE */
 .prenotazione {
-  background-color: #d6edf8;
+  background-color: #d6edf8; 
   padding: 160px 40px;
 }
 
@@ -927,18 +1230,19 @@ header {
   flex-wrap: wrap;
 }
 
+/* IMMAGINE */
 .prenotazione-img {
   flex: 1;
   max-width: none;
 }
-
 .prenotazione-img img {
   width: 180%;
   height: auto;
   display: block;
-  margin-left: -50px;
+  margin-left: -50px;;
 }
 
+/* TESTO */
 .prenotazione-text {
   max-width: 500px;
   margin-left: 200px;
@@ -991,6 +1295,10 @@ header {
   margin-top: 20px;
 }
 
+.btn-cta:hover {
+  background-color: #046f8c;
+}
+
 .btn-cta .icon-freccia {
   width: 24px;
   height: 24px;
@@ -1001,6 +1309,9 @@ header {
   display: inline-block;
   line-height: 1;
 }
+
+
+
 
 /* PAGINA COSA FARE*/
 .cosa-fare {
@@ -1022,6 +1333,7 @@ header {
   z-index: 1;
 }
 
+/* IMMAGINE */
 .cosa-fare-img img {
   width: 100%;
   max-width: 1040px;
@@ -1032,6 +1344,7 @@ header {
   margin-bottom: -100px;
 }
 
+/* TESTO */
 .cosa-fare-testo {
   flex: 1;
   min-width: 300px;
@@ -1057,6 +1370,7 @@ header {
   opacity: 69%;
 }
 
+
 /*SEZIONE MARE ED ESCURSIONI*/
 .mare {
   position: relative;
@@ -1077,16 +1391,156 @@ header {
   flex-wrap: wrap;
 }
 
-/* PAGINA COSA VEDERE*/
+/* Immagini */
+ .mare-img-wrapper {
+  position: relative;
+  width: 340px;
+}
+
+.img-grande-mare {
+  width: 550px;
+  margin-top: 30px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin-left: -250px;
+}
+
+.img-piccola-mare {
+  position: absolute;
+  top:0px;
+  right: 10px;
+  width: 240px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #f5f5f5;
+}
+
+/* Testo */
+.testo-mare {
+  min-width: 300px;
+  z-index: 1;  
+  line-height: normal;
+}
+
+p.subtitle-mare {
+  color: #058fae;
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  line-height: normal;
+}
+
+.testo-mare h2 {
+  font-size: 40px;
+  color: #013341;
+  margin-bottom: 20px;
+  line-height: normal;
+}
+
+.testo-mare p {
+  font-size: 24px;
+  color: #333;
+  line-height: 1.6;
+  padding-right: 50px;
+}
+
+
+/*ESPERIENZE SECTION*/
+.escursioni {
+  position: relative;
+  background-color: #d6edf8;
+  padding: 100px 40px;
+  overflow: hidden;
+}
+
+.escursioni-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+/* Immagini */
+.immagini {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+}
+
+.img-grande,
+.img-piccola {
+  aspect-ratio: 1 / 1; /* Mantiene le immagini quadrate */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.img-grande {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 50%;
+  display: block;
+  margin-left: -60px;
+}
+
+.img-piccola {
+  position: absolute;
+  bottom: -20px;
+  left: 70%;
+  transform: translateX(-50%);
+  width: 248px;
+  border-radius: 50%;
+  border: 6px solid #d6edf8;
+}
+
+/* Testo */
+.testo {
+  flex: 1;
+  min-width: 300px;
+  z-index: 1;
+  margin-left: 30px;
+}
+
+.testo h2 {
+  font-size: 48px;
+  color: #013341;
+  margin-bottom: 20px;
+  line-height: normal;
+}
+
+.testo .sottotitolo {
+  color: #058fae;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.testo .descrizione {
+  font-size: 24px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+
+
+/*PAGINA COSA VEDERE*/
 .hero-vedere {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #d6edf8;
+  background-color: #d6edf8; 
   padding: 80px 60px 40;
   flex-wrap: wrap;
 }
-
 .hero-img-vedere {
   flex: 1;
   display: flex;
@@ -1094,12 +1548,38 @@ header {
   align-items: center;
   margin-right: 0px;
 }
-
 .hero-img-vedere img {
   max-width: 120%;
   height: auto;
   margin-top: 100px;
   margin-right: -130px;
+}
+
+.hero-text-vedere {
+  max-width: 500px;
+  font-family: "Inter", sans-serif;
+  margin-left: 150px;
+  line-height: normal;
+  margin-bottom: 50px;
+}
+
+.hero-text-vedere h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #013341;
+  margin-bottom: 20px;
+}
+
+.hero-text-vedere h1 span {
+  color: #058fae;
+}
+
+.hero-text-vedere  p {
+  font-size: 24px;
+  color: #013341;
+  margin-bottom: 30px;
+  line-height: normal;
+  opacity: 69%;
 }
 
 .descrizione-sottotitolo {
@@ -1117,379 +1597,9 @@ header {
   margin-bottom: 20px;
 }
 
+
 /*PAGINA DOVE MANGIARE*/
 .hero-mangiare {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #d6edf8;
-  padding: 80px 60px 40;
-  flex-wrap: wrap;
-}
-
-.hero-img-mangiare {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 0px;
-}
-
-.hero-img-mangiare img {
-  max-width: 80%;
-  height: auto;
-  margin-top: 130px;
-  margin-right: -260px;
-}
-
-/* CARDS */
-.mangiare {
-  background-color: #F5F5F5;
-  text-align: center;
-  padding-top: 10px;
-}
-
-.mangiare h2 {
-  font-size: 48px;
-  margin: 10px 0;
-  color: #013341;
-  margin-top: 100px;
-  margin-bottom: -20px;
-}
-
-.mangiare-section {
-  padding: 100px 40px;
-  background-color: #f5f5f5;
-}
-
-.mangiare-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.card-mangiare {
-  background-color: #ffffff;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-mangiare img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.card-mangiare-content {
-  padding: 20px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-mangiare .localita {
-  color: #058FAE;
-  font-weight: bold;
-  font-size: 14px;
-  margin-left: -250px;
-  margin-top: -1px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.card-mangiare .mongiuffi {
-  color: #058FAE;
-  font-weight: bold;
-  font-size: 14px;
-  margin-left: -200px;
-  margin-top: -1px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.card-mangiare hr {
-  border: none;
-  border-top: 2px solid #C9E1ED;
-  margin: 8px 0 16px;
-}
-
-.card-mangiare h3 {
-  margin-left: -240px;
-  margin-top: 3px;
-  font-size: 22px;
-  color: #013341;
-}
-
-.card-mangiare h4 {
-  margin-left: -180px;
-  margin-top: 3px;
-  font-size: 22px;
-  color: #013341;
-}
-
-.card-mangiare .descrizione {
-  font-size: 16px;
-  line-height: normal;
-  color: #2d3e4f;
-  margin-bottom: 25px;
-  text-align: justify;
-  margin-left: 8px;
-  margin-right: 30px;
-  margin-top: -4px;
-}
-
-/* TRIPADVISOR */
-.link-trip a {
-  text-decoration: underline;
-  color: #058FAE;
-  font-weight: 500;
-  font-size: 16px;
-  transition: color 0.2s ease;
-  margin-left: -160px;
-}
-
-.link-trip a:hover {
-  color: #013341;
-}
-
-.mangiare-letojanni {
-  position: relative;
-  background-color: #f5f5f5;
-  padding: 120px 40px;
-  overflow: hidden;
-  text-align: left;
-}
-
-.mangiare-letojanni-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 60px;
-  z-index: 1;
-  flex-wrap: wrap;
-}
-
-.testo-mangiare-letojanni {
-  min-width: 300px;
-  z-index: 1;
-  line-height: normal;
-  margin-left: -50px;
-}
-
-/* FOOTER */
-.site-footer {
-  background-color: #013341;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-.footer-links {
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-/* PAGINA COSA FARE*/
-.cosa-fare, .escursioni, .cena {
-  position: relative;
-  background-color: #d6edf8;
-  padding: 100px 40px;
-  overflow: hidden;
-}
-
-.cosa-fare-container, .mare-container, .escursioni-container, .mangiare-taormina-container, .mangiare-letojanni-container, .cena-container {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
-  z-index: 1;
-  flex-wrap: wrap;
-}
-
-/* IMMAGINE */
-.cosa-fare-img img {
-  width: 100%;
-  max-width: 1040px;
-  height: auto;
-  display: block;
-  margin-left: -250px;
-  margin-top: 20px;
-  margin-bottom: -100px;
-}
-
-/* TESTO */
-.cosa-fare-testo {
-  flex: 1;
-  min-width: 300px;
-  margin-left: -200px;
-  margin-right: -20px;
-}
-
-.cosa-fare-testo h2, .testo-mangiare-taormina h2, .testo-cena h2 {
-  font-size: 50px;
-  color: #013341;
-  line-height: 1.3;
-  margin-bottom: 20px;
-}
-
-.cosa-fare-testo .evidenza, .hero-text-vedere h1 span, .hero-text-mangiare h1 span {
-  color: #058fae;
-}
-
-.cosa-fare-testo .descrizione, .hero-text-vedere p, .hero-text-mangiare p {
-  font-size: 24px;
-  color: #013341;
-  line-height: 1.6;
-  opacity: 69%;
-}
-
-/*SEZIONE MARE ED ESCURSIONI*/
-.mare, .mangiare-letojanni {
-  position: relative;
-  background-color: #f5f5f5;
-  padding: 120px 40px;
-  overflow: hidden;
-}
-
-/* Immagini */
-.mare-img-wrapper, .leto-img-wrapper {
-  position: relative;
-  width: 340px;
-}
-
-.img-grande-mare, .img-grande-leto {
-  width: 550px;
-  margin-top: 30px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin-left: -250px;
-}
-
-.img-piccola-mare, .img-piccola-leto {
-  position: absolute;
-  top: 0px;
-  right: 10px;
-  width: 240px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 6px solid #f5f5f5;
-}
-
-/* Testo */
-.testo-mare, .testo-mangiare-letojanni {
-  min-width: 300px;
-  z-index: 1;  
-  line-height: normal;
-}
-
-p.subtitle-mare, .descrizione-blu-letojanni {
-  color: #058fae;
-  font-size: 25px;
-  font-weight: 600;
-  padding-bottom: 5px;
-  line-height: normal;
-}
-
-.testo-mare h2, .titolo-mangiare-letojanni {
-  font-size: 40px;
-  color: #013341;
-  margin-bottom: 20px;
-  line-height: normal;
-}
-
-.testo-mare p, .descrizione-mangiare-letojanni {
-  font-size: 24px;
-  color: #333;
-  line-height: 1.6;
-  padding-right: 50px;
-}
-
-/*ESPERIENZE SECTION*/
-.immagini {
-  position: relative;
-  flex: 1;
-  min-width: 300px;
-}
-
-.img-grande, .img-piccola, .immagini .img-grande, .immagini .img-piccola {
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.img-grande, .immagini .img-grande {
-  width: 100%;
-  max-width: 550px;
-  display: block;
-  margin-left: -60px;
-}
-
-.img-piccola, .immagini .img-piccola {
-  position: absolute;
-  bottom: -20px;
-  left: 70%;
-  transform: translateX(-50%);
-  width: 248px;
-  border: 6px solid #d6edf8;
-}
-
-/* Testo */
-.testo, .testo-mangiare-taormina, .testo-cena {
-  flex: 1;
-  min-width: 300px;
-  z-index: 1;
-  margin-left: 30px;
-  text-align: left;
-}
-
-.testo h2 {
-  font-size: 48px;
-  color: #013341;
-  margin-bottom: 20px;
-  line-height: normal;
-}
-
-.testo .sottotitolo, .testo-mangiare-taormina .sottotitolo, .sottotitolo-cena {
-  color: #058fae;
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.testo .descrizione, .testo-mangiare-taormina .descrizione, .descrizione-cena {
-  font-size: 24px;
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-/*PAGINA COSA VEDERE*/
-.hero-vedere, .hero-mangiare {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1497,22 +1607,13 @@ p.subtitle-mare, .descrizione-blu-letojanni {
   padding: 80px 60px 40;
   flex-wrap: wrap;
 }
-
-.hero-img-vedere, .hero-img-mangiare {
+.hero-img-mangiare {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 0px;
 }
-
-.hero-img-vedere img {
-  max-width: 120%;
-  height: auto;
-  margin-top: 100px;
-  margin-right: -130px;
-}
-
 .hero-img-mangiare img {
   max-width: 80%;
   height: auto;
@@ -1520,36 +1621,34 @@ p.subtitle-mare, .descrizione-blu-letojanni {
   margin-right: -260px;
 }
 
-.hero-text-vedere, .hero-text-mangiare {
+.hero-text-mangiare {
   max-width: 500px;
   font-family: "Inter", sans-serif;
   margin-left: 150px;
   line-height: normal;
-}
-
-.hero-text-vedere {
-  margin-bottom: 50px;
-}
-
-.hero-text-mangiare {
   margin-top: 130px;
   margin-bottom: 50px;
 }
 
-.hero-text-vedere h1, .hero-text-mangiare h1 {
+.hero-text-mangiare h1 {
   font-size: 50px;
   font-weight: 700;
   color: #013341;
   margin-bottom: 20px;
 }
 
-.descrizione-sottotitolo {
+.hero-text-mangiare h1 span {
   color: #058fae;
-  font-size: 24px;
-  font-weight: 400;
-  margin-bottom: 10px;
-  line-height: normal;
 }
+
+.hero-text-mangiare  p {
+  font-size: 24px;
+  color: #013341;
+  margin-bottom: 30px;
+  line-height: normal;
+  opacity: 69%;
+}
+
 
 /* CARDS */
 .mangiare {
@@ -1653,10 +1752,11 @@ p.subtitle-mare, .descrizione-blu-letojanni {
   margin-top: -4px;
 }
 
+
 /* TRIPADVISOR */
 .link-trip a {
   text-decoration: underline;
-  color: #058FAE;
+  color: #058FAE; /* colore coerente con il sito */
   font-weight: 500;
   font-size: 16px;
   transition: color 0.2s ease;
@@ -1664,175 +1764,246 @@ p.subtitle-mare, .descrizione-blu-letojanni {
 }
 
 .link-trip a:hover {
-  color: #013341;
+  color: #013341; /* cambia colore al passaggio */
+}
+
+.mangiare-taormina {
+  position: relative;
+  background-color: #d6edf8;
+  padding: 120px 40px;
+  overflow: hidden;
+}
+
+.mangiare-taormina-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+/* Immagini */
+.immagini {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+}
+
+.immagini .img-grande,
+.immagini .img-piccola {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.immagini .img-grande {
+  width: 100%;
+  max-width: 550px;
+  display: block;
+  margin-left: -60px;
+}
+
+.immagini .img-piccola {
+  position: absolute;
+  bottom: -20px;
+  left: 70%;
+  transform: translateX(-50%);
+  width: 248px;
+  border: 6px solid #d6edf8;
+}
+
+/* Testo */
+.testo-mangiare-taormina {
+  flex: 1;
+  min-width: 300px;
+  z-index: 1;
+  margin-left: 30px;
+  text-align: left; 
 }
 
 
+.testo-mangiare-taormina h2 {
+  font-size: 48px;
+  color: #013341;
+  margin-bottom: 20px;
+  line-height: normal;
+}
 
-/* --- RESPONSIVE PER TABLET E SMARTPHONE --- */
-@media (max-width: 991px) {
-  /* HEADER */
-  .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #d6edf8;
-    padding: 20px 0;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
+.testo-mangiare-taormina .sottotitolo {
+  color: #058fae;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
 
-  .site-header img {
-    max-width: 80px;
-    height: auto;
-  }
+.testo-mangiare-taormina .descrizione {
+  font-size: 24px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
 
-  .main-nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-  }
 
-  /* LAYOUT SEZIONI */
-  .hero,
-  .hero-letojanni,
-  .hero-koko,
-  .hero-vedere,
-  .hero-mangiare,
-  .esperienze-container,
-  .cibo-container,
-  .luoghi-container,
-  .escursioni-container,
-  .cena-container,
-  .mangiare-taormina-container,
-  .koko-container,
-  .prenotazione-container,
-  .mare-container,
-  .cosa-fare-container,
-  .consigli-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
-    padding: 160px 20px 60px;
-  }
+.mangiare-letojanni {
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 120px 40px;
+  overflow: hidden;
+  text-align: left;
+}
 
-  /* TESTI */
-  .hero-text h1,
-  .hero-text-letojanni h1,
-  .hero-text-koko h1,
-  .hero-text-vedere h1,
-  .hero-text-mangiare h1 {
-    font-size: 28px;
-    line-height: 1.3;
-    margin-bottom: 10px;
-    padding: 0 20px;
-  }
+.mangiare-letojanni-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+  z-index: 1;
+  flex-wrap: wrap;
+}
 
-  .hero-text p,
-  .hero-text-letojanni p,
-  .hero-text-koko p,
-  .hero-text-vedere p,
-  .hero-text-mangiare p {
-    font-size: 18px;
-    line-height: 1.5;
-    padding: 0 20px;
-  }
+/* Immagini */
+.leto-img-wrapper {
+  position: relative;
+  width: 340px;
+  margin-right: -70px;
+}
 
-  .hero-text,
-  .hero-text-letojanni,
-  .hero-text-koko,
-  .hero-text-vedere,
-  .hero-text-mangiare,
-  .testo,
-  .testo-cibo,
-  .testo-cena,
-  .testo-mangiare-taormina,
-  .testo-mare,
-  .testo-mangiare-letojanni,
-  .about-text,
-  .prenotazione-text,
-  .koko-text {
-    margin: 0 auto;
-    text-align: center;
-  }
+.img-grande-leto {
+  width: 550px;
+  margin-top: 30px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin-left: -250px;
+}
 
-  /* IMMAGINI CIRCOLARI */
-  .img-grande,
-  .img-grande-cibo,
-  .img-grande-mare,
-  .img-grande-leto {
-    margin: 0 auto;
-    max-width: 90%;
-    display: block;
-  }
+.img-piccola-leto {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  width: 240px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #f5f5f5;
+}
 
-  .img-piccola,
-  .img-piccola-cibo,
-  .img-piccola-mare,
-  .img-piccola-leto {
-    position: static;
-    margin: 20px auto 0;
-    transform: none;
-    display: block;
-    width: 180px;
-  }
+/* Testo */
+.testo-mangiare-letojanni {
+  min-width: 300px;
+  z-index: 1;
+  line-height: normal;
+  margin-left: -50px;
+}
 
-  /* SEZIONE ABOUT */
-  .about-container {
-    flex-direction: column;
-  }
+.titolo-mangiare-letojanni {
+  font-size: 40px;
+  color: #013341;
+  margin-bottom: 20px;
+  line-height: normal;
+}
 
-  .about-image {
-    margin: 0 auto;
-  }
+.descrizione-blu-letojanni {
+  color: #058fae;
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  line-height: normal;
+  margin-top: 40px;
+}
 
-  .info-box {
-    margin-left: 0;
-    align-items: center;
-  }
+.descrizione-mangiare-letojanni {
+  font-size: 24px;
+  color: #333;
+  line-height: 1.6;
+  padding-right: 50px;
+}
 
-  /* GRIGLIE */
-  .card-container,
-  .mangiare-grid,
-  .comfort-grid,
-  .casa-grid {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
 
-  /* SEZIONE POSIZIONE */
-  .posizione {
-    flex-direction: column;
-    padding: 60px 20px;
-  }
+.cena {
+  position: relative;
+  background-color: #d6edf8;
+  padding: 100px 40px;
+  overflow: hidden;
+}
 
-  .posizione-testo,
-  .posizione-mappa {
-    margin: 0 auto;
-    text-align: center;
-  }
+.cena-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+  z-index: 1;
+  flex-wrap: wrap;
+}
 
-  .posizione h2 {
-    padding-right: 0;
-  }
+/* Immagini */
+.immagini {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+}
 
-  .prenotazione-img img {
-    margin-left: 0;
-    width: 100%;
-  }
+.img-grande,
+.img-piccola {
+  aspect-ratio: 1 / 1; /* Mantiene le immagini quadrate */
+  border-radius: 50%;
+  object-fit: cover;
+}
 
-  /* ALTRE IMMAGINI */
-  .consigli-img img,
-  .cosa-fare-img img,
-  .hero-img-vedere img,
-  .hero-img-mangiare img {
-    margin: 0 auto;
-    max-width: 100%;
-  }
+.img-grande {
+  width: 100%;
+  max-width: 550px;
+  display: block;
+  margin-left: -60px;
+}
+
+.img-piccola {
+  position: absolute;
+  bottom: -20px;
+  left: 70%;
+  transform: translateX(-50%);
+  width: 248px;
+  border-radius: 50%;
+  border: 6px solid #d6edf8;
+}
+
+/* Testo */
+.testo-cena {
+  flex: 1;
+  min-width: 300px;
+  z-index: 1;
+  margin-left: 30px;
+  text-align: left;
+}
+
+.testo-cena h2 {
+  font-size: 48px;
+  color: #013341;
+  margin-bottom: 20px;
+  line-height: normal;
+}
+
+.sottotitolo-cena {
+  color: #058fae;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.descrizione-cena {
+  font-size: 24px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
