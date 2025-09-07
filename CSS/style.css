@@ -1,21 +1,10 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
 body {
   font-family: 'Inter', Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  }
 
 /* HEADER */
 header {
@@ -3184,6 +3173,7 @@ html, body {
   margin-right: auto;      /* sposta il collage verso sinistra */
   justify-self: start;     /* se il container è una grid */
 }
+}
 
   /* Mobile */
 @media (max-width: 767px) {
@@ -3211,3 +3201,4 @@ margin-bottom: 4rem;
     margin-top: -100px; 
     margin-bottom: 1rem;
   }
+}
