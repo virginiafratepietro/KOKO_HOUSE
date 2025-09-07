@@ -6,7 +6,6 @@ body {
   padding: 0;
 }
 
-
 /* HEADER */
 header {
   position: fixed;
@@ -1931,4 +1930,67 @@ p.subtitle-mare {
 }
 
 
+/* Spazio sotto l'header fisso */
+body { padding-top: 96px; }
+
+/* Desktop/Tablet di default */
+header.site-header {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  background-color: #d6edf8;
+  z-index: 1000;
+  padding: 1rem 2%;
+  box-shadow: 0 0.125rem 0.3125rem rgba(19, 92, 132, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header.site-header .header-logo img { height: 3.125rem; } /* 50px */
+
+header.site-header .main-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.25rem;
+  margin: 0 6.25rem 0 0; /* 100px a destra */
+  padding: 0;
+}
+
+header.site-header .main-nav a {
+  text-decoration: none;
+  color: #013341;
+  font-weight: 700;
+  font-size: 1.25rem; /* 20px */
+}
+
+header.site-header .main-nav a.active,
+header.site-header .main-nav a:hover {
+  color: #058FAE;
+}
+
+/* --- MOBILE: applica sotto i 768px --- */
+@media (max-width: 768px) {
+  body { padding-top: 80px; }
+
+  header.site-header {
+    padding: 0.75rem 3%;
+    flex-direction: column;   /* logo sopra, menu sotto */
+    gap: 0.75rem;
+  }
+
+  header.site-header .header-logo img { height: 2.5rem; } /* ~40px */
+
+  header.site-header .main-nav ul {
+    flex-wrap: wrap;          /* può andare a capo */
+    gap: 0.75rem;
+    margin-right: 0;          /* niente 100px su mobile */
+    justify-content: center;  /* centrato su mobile */
+  }
+
+  header.site-header .main-nav a {
+    font-size: 1rem;          /* ~16px su mobile */
+    padding: 0.4rem 0.2rem;   /* tap più comodo */
+  }
+}
 
