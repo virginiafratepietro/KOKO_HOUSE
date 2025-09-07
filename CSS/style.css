@@ -1935,64 +1935,264 @@ p.subtitle-mare {
 
 
 /*RESPONSIVE / MOBILE*/
-/* ===== FIX HEADER per iPhone / mobile stretti ===== */
+/* ==== RESPONSIVE OVERRIDES (aggiungi in fondo al file) ==== */
 
-/* Mantieni l'header compatto */
+/* HEADER */
 .site-header{
-  padding: .65rem .9rem;
-  gap: .5rem;
+  padding: .75rem 1rem;
+  gap: .75rem;
 }
-
-/* logo un filo più piccolo su telefoni */
-.header-logo img{
-  height: 40px;
-  max-width: 160px;
-  object-fit: contain;
-}
-
-/* nav: una sola riga, scrollabile, niente a capo dentro i link */
+.header-logo img{ height: 42px; }
 .main-nav ul{
-  display: flex;
+  gap: .75rem;
+  margin-right: 0;
+  padding: 0;
+  overflow-x: auto;          /* scorrimento orizzontale se non ci sta tutto */
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+.main-nav a{
+  display:inline-block;
+  padding:.25rem .5rem;
+  font-size: 1rem;
+}
+
+/* HERO (tutte le varianti) */
+.hero,
+.hero-letojanni, .hero-mangiare,
+.hero-vedere, .hero-kokohouse{
+  flex-wrap: wrap;
+  padding: 3.5rem 1rem 2rem;
+  row-gap: 1.25rem;
+}
+.hero-text,
+.hero-text-letojanni, .hero-text-mangiare,
+.hero-text-vedere, .hero-text-kokohouse{
+  max-width: 100%;
+  margin: 0;
+  text-align: center;
+  padding: 0 .5rem;
+}
+.hero-text h1,
+.hero-text-letojanni h1, .hero-text-mangiare h1,
+.hero-text-vedere h1, .hero-text-kokohouse h1{
+  font-size: clamp(1.8rem, 6vw, 2.4rem);
+}
+.hero-text p,
+.hero-text-letojanni p, .hero-text-mangiare p,
+.hero-text-vedere p, .hero-text-kokohouse p{
+  font-size: 1.05rem;
+}
+.cta-button, .btn-cta{ font-size: 1rem; }
+
+.hero-img,
+.hero-img-letojanni, .hero-img-mangiare,
+.hero-img-vedere, .hero-img-kokohouse{
+  margin: 0 auto;
+  flex: 1 1 100%;
+  justify-content: center;
   align-items: center;
-  gap: .6rem;
+}
+.hero-img img,
+.hero-img-letojanni img, .hero-img-mangiare img,
+.hero-img-vedere img, .hero-img-kokohouse img{
+  max-width: 88%;
+  transform: none !important;
+  margin: 0 auto;
+}
+
+/* ABOUT (home) */
+.about{ padding: 3rem 1rem 0; }
+.info-box{
+  margin: 0;
+  min-width: auto;
+  gap: 1rem;
+}
+.info-item{ max-width: none; }
+.about-text{
+  margin: 1rem 0 2rem;
+  max-width: none;
+}
+.about-image{
+  margin: 1rem auto 0;
+  min-width: 0;
+}
+.about-image img{ max-height: 360px; }
+
+/* CARD SECTIONS (home/opportunità + consigli/trasporti + mangiare/cards) */
+.card-container,
+.trasporticard-container,
+.mangiare-grid{
+  gap: 1rem;
+  padding: 1.25rem .75rem;
+}
+.card, .trasporticard, .card-mangiare{
+  width: 100%;
+  max-width: 380px;
+  margin-inline: auto;
+}
+.card img, .trasporticard img, .card-mangiare img{
+  height: auto;               /* niente altezza fissa su mobile */
+}
+
+/* KOKO HOUSE (home) + PARCHEGGIO (consigli) + PRENOTAZIONE (koko) */
+.koko-house, .parcheggio-letojanni, .prenotazione{
+  padding: 3.5rem 1rem;
+}
+.koko-container, .contenitore-parcheggio, .prenotazione-container{
+  gap: 1.5rem;
+}
+.koko-img img, .immagine-parcheggio img, .prenotazione-img img{
+  margin-left: 0;
+  max-width: 92%;
+  margin-inline: auto;
+}
+.koko-text, .testo-parcheggio, .prenotazione-text{
+  max-width: none;
+  margin: 0;
+  text-align: center;
+}
+.koko-text h2, .testo-parcheggio h2, .prenotazione-text .subtitle{
+  font-size: clamp(1.6rem, 6vw, 2.1rem);
+}
+.prenotazione-text h2{ font-size: clamp(1.2rem, 4.5vw, 1.6rem); }
+
+/* SEZIONI con “bolle” rotonde (esperienze/cibo/luoghi/mare/escursioni ecc.) */
+.esperienze, .cibo, .luoghi, .mare, .escursioni,
+.mangiare-taormina, .mangiare-letojanni, .cena{
+  padding: 3.5rem 1rem;
+}
+.esperienze-container, .cibo-container, .luoghi-container,
+.mare-container, .escursioni-container,
+.mangiare-taormina-container, .mangiare-letojanni-container, .cena-container{
+  gap: 1.5rem;
+}
+.testo, .testo-cibo, .testo-mare,
+.testo-mangiare-taormina, .testo-mangiare-letojanni, .testo-cena{
   margin: 0;
   padding: 0;
-  list-style: none;
-
-  overflow-x: auto;            /* scroll orizzontale se non ci sta tutto */
-  white-space: nowrap;         /* una sola riga */
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;       /* Firefox: nasconde scrollbar */
-  mask-image: linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%); /* accenno di fade ai bordi */
 }
-.main-nav ul::-webkit-scrollbar{ display:none; } /* WebKit: nasconde scrollbar */
-
-.main-nav li{ flex: 0 0 auto; }                  /* ogni voce ha larghezza auto */
-.main-nav a{
-  display: inline-block;
-  padding: .35rem .55rem;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1;
-  white-space: nowrap;          /* evita "a capo" tipo "Scopri↩︎Letojanni" */
-  word-break: keep-all;
-  border-radius: .4rem;
+.testo h2, .testo-cibo h2, .testo-mare .titolo-mare,
+.mangiare-letojanni .titolo-mangiare-letojanni,
+.mangiare-taormina .testo-mangiare-taormina h2,
+.cena .testo-cena h2{
+  font-size: clamp(1.4rem, 5.6vw, 2rem);
+}
+.testo .descrizione, .testo-cibo p, .testo-mare p,
+.mangiare-taormina .descrizione, .cena .descrizione-cena,
+.mangiare-letojanni .descrizione-mangiare-letojanni{
+  font-size: 1.05rem;
+  padding-right: 0;
 }
 
-/* body: spazio sotto l'header fisso */
-body{ padding-top: 78px; }
-
-/* Supporto notch iOS: aggiunge padding nel caso di barra/safe area */
-@supports (-webkit-touch-callout: none){
-  .site-header{ padding-top: max(.5rem, env(safe-area-inset-top)); }
+/* “bolle” immagini: compattiamo e limitiamo sovrapposizioni */
+.img-grande, .img-grande-cibo, .img-grande-clima,
+.img-grande-mare{
+  width: 88% !important;
+  margin: 0 auto !important;
+  max-width: 440px;
+}
+.img-piccola, .img-piccola-cibo, .img-piccola-clima, .img-piccola-mare{
+  position: static !important;
+  width: 46% !important;
+  margin: .75rem auto 0 !important;
+  border-width: .25rem !important;
+  display:block;
 }
 
-/* Schermi stretti (iPhone 12/13/14/15 in verticale) */
-@media (max-width: 420px){
-  .main-nav ul{ gap: .5rem; }
-  .main-nav a{ font-size: .95rem; padding: .35rem .5rem; }
-  .header-logo img{ height: 38px; }
-  body{ padding-top: 74px; }
+/* CONSIGLI / COSA FARE hero con immagini a lato */
+.consigli, .cosa-fare{
+  padding: 2.5rem 1rem 1rem;
 }
+.consigli-img img, .cosa-fare-img img{
+  width: 90%;
+  margin: 0 auto;
+}
+.consigli-testo, .cosa-fare-testo{
+  margin: 0;
+  text-align: center;
+}
+.consigli-testo h2, .cosa-fare-testo h2{
+  font-size: clamp(1.6rem, 6vw, 2.2rem);
+}
+.consigli-testo .descrizione, .cosa-fare-testo .descrizione{
+  font-size: 1.05rem;
+}
+
+/* CASA – griglia spazi */
+.casa-sezione{ padding: 3.5rem 1rem; }
+.casa-grid{
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1.25rem 0;
+}
+.casa-card img{ height: auto; }
+
+/* COMFORT – griglia icone */
+.comfort{ padding: 3.5rem 1rem; }
+.comfort h2{
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.6rem, 6vw, 2rem);
+}
+.comfort-grid{
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1rem;
+  max-width: 900px;
+}
+@media (max-width: 480px){
+  .comfort-grid{ grid-template-columns: 1fr; }
+}
+.comfort-item{
+  margin-left: 0;
+  align-items: center;
+}
+.comfort-item img{
+  width: 64px; height: 64px; margin-bottom: .5rem;
+}
+
+/* UBICAZIONE */
+.ubicazione-letojanni{
+  padding: 3.5rem 1rem;
+  gap: 1.5rem;
+}
+.testo-ubicazione{ margin: 0; max-width: none; }
+.ubicazione-letojanni h2{
+  padding-right: 0;
+  font-size: clamp(1.4rem, 5.6vw, 2rem);
+}
+.testo-blu-ubicazione, .testo-scuro-ubicazione{
+  font-size: 1.05rem;
+}
+.mappa-ubicazione img{
+  max-width: 440px;
+  aspect-ratio: auto;
+}
+
+/* FOOTER */
+.site-footer{ padding: 1rem; }
+.footer-links{ margin: .25rem 0; }
+.footer-links a{ display:inline-block; padding:.25rem .5rem; }
+
+/* ====== TABLET (>=768px) – due colonne comode ====== */
+@media (min-width: 768px) and (max-width: 1023.98px){
+  .hero, .hero-letojanni, .hero-mangiare, .hero-vedere, .hero-kokohouse{
+    padding: 4.5rem 2rem 2rem;
+  }
+  .koko-container, .contenitore-parcheggio, .prenotazione-container,
+  .esperienze-container, .cibo-container, .luoghi-container,
+  .mare-container, .escursioni-container,
+  .mangiare-taormina-container, .mangiare-letojanni-container, .cena-container{
+    gap: 2rem;
+  }
+  .casa-grid{ grid-template-columns: 1fr 1fr; }
+  .comfort-grid{ grid-template-columns: repeat(3, 1fr); }
+  .card, .trasporticard, .card-mangiare{ max-width: 420px; }
+}
+
+/* ====== DESKTOP LARGO (>=1280px) – piccoli perfezionamenti ====== */
+@media (min-width: 1280px){
+  :root{ --container: min(100% - 3rem, 1280px); }
+}
+
 
 
