@@ -1,41 +1,3 @@
-/* ==== BASE RESPONSIVE & ACCESSIBILITÀ (aggiungi in cima) ==== */
-:root{
-  /* font fluido: cresce un po' su schermi grandi */
-  font-size: clamp(14px, 1.6vw, 18px);
-  --container: min(100% - 2rem, 1200px);
-}
-
-/* reset leggero */
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-img,svg,video{max-width:100%;height:auto;display:block}
-a{color:inherit;text-decoration:none}
-
-/* header fisso: spazio per non coprire il contenuto */
-body{ padding-top: 76px; }          /* mobile-first: header ~76px */
-@media (min-width: 768px){
-  body{ padding-top: 92px; }        /* tablet */
-}
-@media (min-width: 1024px){
-  body{ padding-top: 110px; }       /* desktop */
-}
-
-/* contenitore fluido riutilizzabile (se vuoi applicarlo a wrapper esistenti) */
-.container{ width: var(--container); margin-inline:auto; }
-
-/* tap target più comodi su mobile */
-button, .btn, .btn-cta, .cta-button, .btn-card, .main-nav a{
-  min-height: 44px;                 /* linee guida touch */
-}
-
-/* evita scroll orizzontali inaspettati */
-html,body{ overflow-x:hidden; }
-
-
-
-
-
-
 
 body {
   font-family: 'Inter', Arial, sans-serif;
@@ -1971,334 +1933,94 @@ p.subtitle-mare {
 
 
 
-/* ==== RESPONSIVE OVERRIDES (aggiungi in fondo al file) ==== */
+/* SPAZIO SOTTO HEADER FISSO (per non coprire il contenuto) */
+body {
+  padding-top: 80px;             /* altezza stimata header su mobile */
+}
+@media (min-width: 768px) {
+  body { padding-top: 96px; }    /* un po' più alto su schermi grandi */
+}
 
-/* ===== HEADER — FIX GLOBALE ===== */
-
-/* header fisso pulito */
-header,
-.site-header{
+/* HEADER */
+header {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  z-index: 1000;
+  top: 0; left: 0; width: 100%;
   background-color: #d6edf8;
-  box-shadow: 0 2px 8px rgba(19,92,132,.12);
+  z-index: 1000;
+  padding: 1rem 2%;
+  box-shadow: 0 0.125rem 0.3125rem rgba(19, 92, 132, 0.1);
 }
 
-/* layout base */
-.site-header{
+/* Layout base: su mobile il contenuto va a colonna (logo sopra, menu sotto) */
+.site-header {
   display: flex;
+  flex-direction: column;        /* STACK su mobile */
   align-items: center;
-  justify-content: space-between;
-  gap: .75rem;
-  padding: .75rem 1rem;
+  justify-content: center;
+  gap: 0.75rem;                  /* spazio tra logo e nav su mobile */
+  padding: 0.75rem 3%;
+  background-color: #d6edf8;
 }
 
-/* logo: dimensioni coerenti */
-.header-logo img{
-  height: 44px;         /* mobile-first */
-  max-width: 180px;
-  object-fit: contain;
+/* Logo un po' più piccolo su mobile */
+.header-logo img {
+  height: 2.5rem;                /* ~40px su mobile */
 }
 
-/* nav: reset spaziature e gestione overflow */
-.main-nav ul{
+/* NAV */
+.main-nav ul {
   list-style: none;
   display: flex;
-  align-items: center;
-  gap: .75rem;
-  margin: 0;            /* <— rimuove quel margin-right enorme */
+  flex-wrap: wrap;               /* su mobile può andare a capo */
+  gap: 0.75rem;                  /* spazio tra link su mobile */
+  margin: 0;                     /* niente margine destro su mobile */
   padding: 0;
-  overflow-x: auto;     /* se non ci sta tutto, scroll orizzontale elegante */
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+  justify-content: center;       /* centrato su mobile */
 }
 
-.main-nav a{
-  display: inline-block;
-  padding: .375rem .5rem;
-  font-weight: 700;
-  font-size: 1rem;
-  color: #013341;
+/* Link comodi da toccare su mobile */
+.main-nav a {
   text-decoration: none;
-  border-radius: .25rem;              /* migliora tap feedback */
+  color: #013341;
+  font-weight: 700;
+  font-size: 1rem;               /* ~16px su mobile */
+  display: inline-block;
+  padding: 0.4rem 0.2rem;        /* aumenta area di tap */
 }
 
-.main-nav a:hover,
-.main-nav a.active{
+.main-nav a.active,
+.main-nav a:hover {
   color: #058FAE;
-  background: rgba(5,143,174,.08);    /* evidenza leggera su hover/active */
 }
 
-/* spazio sotto l’header per non coprire i contenuti */
-body{
-  /* altezza approx header mobile; verrà aumentata con i breakpoint */
-  padding-top: 76px;
-}
-
-/* ====== TABLET ====== */
-@media (min-width: 768px){
-  .site-header{ padding: .85rem 2rem; }
-  .header-logo img{ height: 52px; }
-  .main-nav ul{ gap: 1rem; }
-  .main-nav a{ font-size: 1.0625rem; padding: .375rem .625rem; }
-  body{ padding-top: 92px; }
-}
-
-/* ====== DESKTOP ====== */
-@media (min-width: 1024px){
-  .site-header{ padding: 1rem 3rem; }
-  .header-logo img{ height: 58px; }
-  .main-nav ul{
-    gap: 1.25rem;
-    overflow: visible;      /* nessuno scroll su desktop */
-    white-space: normal;
+/* --- DA TABLET IN SU: torna allineamento orizzontale come il tuo --- */
+@media (min-width: 768px) {
+  .site-header {
+    flex-direction: row;         /* logo e nav su una riga */
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    padding: 1.25rem 3%;
   }
-  .main-nav a{ font-size: 1.125rem; }
-  body{ padding-top: 110px; }
-}
 
-
-/* HERO (tutte le varianti) */
-.hero,
-.hero-letojanni, .hero-mangiare,
-.hero-vedere, .hero-kokohouse{
-  flex-wrap: wrap;
-  padding: 3.5rem 1rem 2rem;
-  row-gap: 1.25rem;
-}
-.hero-text,
-.hero-text-letojanni, .hero-text-mangiare,
-.hero-text-vedere, .hero-text-kokohouse{
-  max-width: 100%;
-  margin: 0;
-  text-align: center;
-  padding: 0 .5rem;
-}
-.hero-text h1,
-.hero-text-letojanni h1, .hero-text-mangiare h1,
-.hero-text-vedere h1, .hero-text-kokohouse h1{
-  font-size: clamp(1.8rem, 6vw, 2.4rem);
-}
-.hero-text p,
-.hero-text-letojanni p, .hero-text-mangiare p,
-.hero-text-vedere p, .hero-text-kokohouse p{
-  font-size: 1.05rem;
-}
-.cta-button, .btn-cta{ font-size: 1rem; }
-
-.hero-img,
-.hero-img-letojanni, .hero-img-mangiare,
-.hero-img-vedere, .hero-img-kokohouse{
-  margin: 0 auto;
-  flex: 1 1 100%;
-  justify-content: center;
-  align-items: center;
-}
-.hero-img img,
-.hero-img-letojanni img, .hero-img-mangiare img,
-.hero-img-vedere img, .hero-img-kokohouse img{
-  max-width: 88%;
-  transform: none !important;
-  margin: 0 auto;
-}
-
-/* ABOUT (home) */
-.about{ padding: 3rem 1rem 0; }
-.info-box{
-  margin: 0;
-  min-width: auto;
-  gap: 1rem;
-}
-.info-item{ max-width: none; }
-.about-text{
-  margin: 1rem 0 2rem;
-  max-width: none;
-}
-.about-image{
-  margin: 1rem auto 0;
-  min-width: 0;
-}
-.about-image img{ max-height: 360px; }
-
-/* CARD SECTIONS (home/opportunità + consigli/trasporti + mangiare/cards) */
-.card-container,
-.trasporticard-container,
-.mangiare-grid{
-  gap: 1rem;
-  padding: 1.25rem .75rem;
-}
-.card, .trasporticard, .card-mangiare{
-  width: 100%;
-  max-width: 380px;
-  margin-inline: auto;
-}
-.card img, .trasporticard img, .card-mangiare img{
-  height: auto;               /* niente altezza fissa su mobile */
-}
-
-/* KOKO HOUSE (home) + PARCHEGGIO (consigli) + PRENOTAZIONE (koko) */
-.koko-house, .parcheggio-letojanni, .prenotazione{
-  padding: 3.5rem 1rem;
-}
-.koko-container, .contenitore-parcheggio, .prenotazione-container{
-  gap: 1.5rem;
-}
-.koko-img img, .immagine-parcheggio img, .prenotazione-img img{
-  margin-left: 0;
-  max-width: 92%;
-  margin-inline: auto;
-}
-.koko-text, .testo-parcheggio, .prenotazione-text{
-  max-width: none;
-  margin: 0;
-  text-align: center;
-}
-.koko-text h2, .testo-parcheggio h2, .prenotazione-text .subtitle{
-  font-size: clamp(1.6rem, 6vw, 2.1rem);
-}
-.prenotazione-text h2{ font-size: clamp(1.2rem, 4.5vw, 1.6rem); }
-
-/* SEZIONI con “bolle” rotonde (esperienze/cibo/luoghi/mare/escursioni ecc.) */
-.esperienze, .cibo, .luoghi, .mare, .escursioni,
-.mangiare-taormina, .mangiare-letojanni, .cena{
-  padding: 3.5rem 1rem;
-}
-.esperienze-container, .cibo-container, .luoghi-container,
-.mare-container, .escursioni-container,
-.mangiare-taormina-container, .mangiare-letojanni-container, .cena-container{
-  gap: 1.5rem;
-}
-.testo, .testo-cibo, .testo-mare,
-.testo-mangiare-taormina, .testo-mangiare-letojanni, .testo-cena{
-  margin: 0;
-  padding: 0;
-}
-.testo h2, .testo-cibo h2, .testo-mare .titolo-mare,
-.mangiare-letojanni .titolo-mangiare-letojanni,
-.mangiare-taormina .testo-mangiare-taormina h2,
-.cena .testo-cena h2{
-  font-size: clamp(1.4rem, 5.6vw, 2rem);
-}
-.testo .descrizione, .testo-cibo p, .testo-mare p,
-.mangiare-taormina .descrizione, .cena .descrizione-cena,
-.mangiare-letojanni .descrizione-mangiare-letojanni{
-  font-size: 1.05rem;
-  padding-right: 0;
-}
-
-/* “bolle” immagini: compattiamo e limitiamo sovrapposizioni */
-.img-grande, .img-grande-cibo, .img-grande-clima,
-.img-grande-mare{
-  width: 88% !important;
-  margin: 0 auto !important;
-  max-width: 440px;
-}
-.img-piccola, .img-piccola-cibo, .img-piccola-clima, .img-piccola-mare{
-  position: static !important;
-  width: 46% !important;
-  margin: .75rem auto 0 !important;
-  border-width: .25rem !important;
-  display:block;
-}
-
-/* CONSIGLI / COSA FARE hero con immagini a lato */
-.consigli, .cosa-fare{
-  padding: 2.5rem 1rem 1rem;
-}
-.consigli-img img, .cosa-fare-img img{
-  width: 90%;
-  margin: 0 auto;
-}
-.consigli-testo, .cosa-fare-testo{
-  margin: 0;
-  text-align: center;
-}
-.consigli-testo h2, .cosa-fare-testo h2{
-  font-size: clamp(1.6rem, 6vw, 2.2rem);
-}
-.consigli-testo .descrizione, .cosa-fare-testo .descrizione{
-  font-size: 1.05rem;
-}
-
-/* CASA – griglia spazi */
-.casa-sezione{ padding: 3.5rem 1rem; }
-.casa-grid{
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 1.25rem 0;
-}
-.casa-card img{ height: auto; }
-
-/* COMFORT – griglia icone */
-.comfort{ padding: 3.5rem 1rem; }
-.comfort h2{
-  margin: 0 0 1.25rem;
-  font-size: clamp(1.6rem, 6vw, 2rem);
-}
-.comfort-grid{
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem 1rem;
-  max-width: 900px;
-}
-@media (max-width: 480px){
-  .comfort-grid{ grid-template-columns: 1fr; }
-}
-.comfort-item{
-  margin-left: 0;
-  align-items: center;
-}
-.comfort-item img{
-  width: 64px; height: 64px; margin-bottom: .5rem;
-}
-
-/* UBICAZIONE */
-.ubicazione-letojanni{
-  padding: 3.5rem 1rem;
-  gap: 1.5rem;
-}
-.testo-ubicazione{ margin: 0; max-width: none; }
-.ubicazione-letojanni h2{
-  padding-right: 0;
-  font-size: clamp(1.4rem, 5.6vw, 2rem);
-}
-.testo-blu-ubicazione, .testo-scuro-ubicazione{
-  font-size: 1.05rem;
-}
-.mappa-ubicazione img{
-  max-width: 440px;
-  aspect-ratio: auto;
-}
-
-/* FOOTER */
-.site-footer{ padding: 1rem; }
-.footer-links{ margin: .25rem 0; }
-.footer-links a{ display:inline-block; padding:.25rem .5rem; }
-
-/* ====== TABLET (>=768px) – due colonne comode ====== */
-@media (min-width: 768px) and (max-width: 1023.98px){
-  .hero, .hero-letojanni, .hero-mangiare, .hero-vedere, .hero-kokohouse{
-    padding: 4.5rem 2rem 2rem;
+  .header-logo img {
+    height: 3.125rem;            /* 50px come avevi tu */
   }
-  .koko-container, .contenitore-parcheggio, .prenotazione-container,
-  .esperienze-container, .cibo-container, .luoghi-container,
-  .mare-container, .escursioni-container,
-  .mangiare-taormina-container, .mangiare-letojanni-container, .cena-container{
-    gap: 2rem;
+
+  .main-nav ul {
+    flex-wrap: nowrap;           /* non andare a capo */
+    gap: 1.25rem;                /* 20px */
+    margin-right: 6.25rem;       /* 100px come avevi tu */
+    justify-content: flex-end;
   }
-  .casa-grid{ grid-template-columns: 1fr 1fr; }
-  .comfort-grid{ grid-template-columns: repeat(3, 1fr); }
-  .card, .trasporticard, .card-mangiare{ max-width: 420px; }
+
+  .main-nav a {
+    font-size: 1.125rem;         /* leggermente più grande (18px) */
+    padding: 0.25rem 0;          /* area di tap ok anche su desktop */
+  }
 }
 
-/* ====== DESKTOP LARGO (>=1280px) – piccoli perfezionamenti ====== */
-@media (min-width: 1280px){
-  :root{ --container: min(100% - 3rem, 1280px); }
+/* --- DESKTOP AMPIO (facoltativo) --- */
+@media (min-width: 1200px) {
+  .main-nav a { font-size: 1.25rem; }  /* 20px come nel tuo CSS */
 }
-
-
-
-
-
-
