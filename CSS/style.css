@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Inter', Arial, sans-serif;
   line-height: 1.6;
@@ -2484,15 +2485,8 @@ html, body {
     line-height: 1.55;
     margin: 0;
   }
-}
 
-/* Schermi molto piccoli (come Letojanni) */
-@media (max-width: 360px) {
-  .consigli-testo h2 { font-size: 1.7rem !important; }
-  .consigli-img img   { width: 86vw; }
-}
 
- 
 
 /* ===== CLIMA = CIBO (DESKTOP/TABLET) ===== */
 .clima-letojanni {
@@ -2536,6 +2530,8 @@ html, body {
   border-radius: 50%;
   box-shadow: 0 8px 24px rgba(0,0,0,.12);
   border: 4px solid #fff;  /* stacco */
+}
+
 }
 
 /* ===== SOLO MOBILE (≤767px) — identico a CIBO su mobile ===== */
@@ -2687,16 +2683,6 @@ html, body {
     height: auto;
     display: inline-block;
   }
-}
-
-/* Schermi molto piccoli (≤360px) — opzionale */
-@media (max-width: 360px) {
-  .hero-text-kokohouse h1 { font-size: 1.7rem !important; }
-  .hero-img-kokohouse img  { width: 86vw; }
-}
-
-
-
 
 
 
@@ -2731,6 +2717,8 @@ html, body {
   height: auto;
   display: block;
   margin: 0;
+}
+ 
 }
 
 /* ===== SOLO MOBILE (≤767px) — come parcheggio mobile ===== */
@@ -2817,14 +2805,6 @@ html, body {
     line-height: 1.55;
     margin: 0;
   }
-}
-
-/* Schermi molto piccoli (≤360px), come la hero-letojanni */
-@media (max-width: 360px) {
-  .cosa-fare-testo h2 { font-size: 1.7rem !important; }
-  .cosa-fare-img img   { width: 86vw; }
-}
-
 
 
 
@@ -2871,6 +2851,8 @@ html, body {
   border-radius: 50%;
   box-shadow: 0 8px 24px rgba(0,0,0,.12);
   border: 4px solid #fff;        /* stacco, come escursioni */
+}
+
 }
 
 /* ===== SOLO MOBILE (≤767px) — identico a ESCURSIONI ===== */
@@ -2936,13 +2918,8 @@ html, body {
   }
 
 
-}
 
-/* ===== SCHERMI PICCOLISSIMI (≤360px) — opzionale ===== */
-@media (max-width: 360px) {
-  .img-grande-mare { width: 220px; height: 220px; }
-  .img-piccola-mare { width: 110px; height: 110px; margin-top: -52px; }
-}
+
 
 
 /* ===== ESCURSIONI = CIBO (DESKTOP/TABLET) ===== */
@@ -2987,6 +2964,8 @@ html, body {
   border-radius: 50%;
   box-shadow: 0 8px 24px rgba(0,0,0,.12);
   border: 4px solid #fff; /* stacco dalla grande */
+}
+ 
 }
 
 /* ===== SOLO MOBILE (≤767px) — identico a CIBO mobile ===== */
@@ -3101,14 +3080,6 @@ html, body {
     line-height: 1.55;
     margin: 0;
   }
-}
-
-/* Schermi molto piccoli (≤360px) — opzionale */
-@media (max-width: 360px) {
-  .hero-text-mangiare h1 { font-size: 1.7rem !important; }
-  .hero-img-mangiare img  { width: 86vw; }
-}
-
 
 
 /* ===== MANGIARE-TAORMINA = CIBO (DESKTOP/TABLET) ===== */
@@ -3152,6 +3123,7 @@ html, body {
   box-shadow: 0 8px 24px rgba(0,0,0,.12);
   border: 4px solid #fff;        /* stacco dalla grande */
 }
+}
 
 /* ===== SOLO MOBILE (≤767px) — identico a CIBO mobile ===== */
 @media (max-width: 767px) {
@@ -3171,7 +3143,7 @@ html, body {
   margin-left: 0;
   margin-right: auto;      /* sposta il collage verso sinistra */
   justify-self: start;     /* se il container è una grid */
-}
+  }
 }
 
   /* Mobile */
@@ -3201,3 +3173,7 @@ margin-bottom: 4rem;
     margin-bottom: 1rem;
   }
 }
+
+
+
+
