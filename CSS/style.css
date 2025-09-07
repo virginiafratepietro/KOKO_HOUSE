@@ -1,10 +1,21 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
 body {
   font-family: 'Inter', Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
-}
 
 /* HEADER */
 header {
@@ -655,11 +666,12 @@ header {
   position: absolute;
   top: 0;
   right: 0.625rem; /* 10px */
-  width: 12.5rem; /* 200px */
+  width: 11rem; /* 200px */
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
   border: 0.3125rem solid #d6edf8; /* 5px */
+  left: -10%;
 }
 
 /* Testo */
@@ -1933,266 +1945,1269 @@ p.subtitle-mare {
 
 
 
+/* ==================== MEDIA QUERIES ==================== */
 
-/*RESPONSIVE / MOBILE*/
-/* ==== RESPONSIVE OVERRIDES (aggiungi in fondo al file) ==== */
-
-/* HEADER */
-.site-header{
-  padding: .75rem 1rem;
-  gap: .75rem;
-}
-.header-logo img{ height: 42px; }
-.main-nav ul{
-  gap: .75rem;
-  margin-right: 0;
-  padding: 0;
-  overflow-x: auto;          /* scorrimento orizzontale se non ci sta tutto */
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-}
-.main-nav a{
-  display:inline-block;
-  padding:.25rem .5rem;
-  font-size: 1rem;
-}
-
-/* HERO (tutte le varianti) */
-.hero,
-.hero-letojanni, .hero-mangiare,
-.hero-vedere, .hero-kokohouse{
-  flex-wrap: wrap;
-  padding: 3.5rem 1rem 2rem;
-  row-gap: 1.25rem;
-}
-.hero-text,
-.hero-text-letojanni, .hero-text-mangiare,
-.hero-text-vedere, .hero-text-kokohouse{
-  max-width: 100%;
-  margin: 0;
-  text-align: center;
-  padding: 0 .5rem;
-}
-.hero-text h1,
-.hero-text-letojanni h1, .hero-text-mangiare h1,
-.hero-text-vedere h1, .hero-text-kokohouse h1{
-  font-size: clamp(1.8rem, 6vw, 2.4rem);
-}
-.hero-text p,
-.hero-text-letojanni p, .hero-text-mangiare p,
-.hero-text-vedere p, .hero-text-kokohouse p{
-  font-size: 1.05rem;
-}
-.cta-button, .btn-cta{ font-size: 1rem; }
-
-.hero-img,
-.hero-img-letojanni, .hero-img-mangiare,
-.hero-img-vedere, .hero-img-kokohouse{
-  margin: 0 auto;
-  flex: 1 1 100%;
-  justify-content: center;
-  align-items: center;
-}
-.hero-img img,
-.hero-img-letojanni img, .hero-img-mangiare img,
-.hero-img-vedere img, .hero-img-kokohouse img{
-  max-width: 88%;
-  transform: none !important;
-  margin: 0 auto;
-}
-
-/* ABOUT (home) */
-.about{ padding: 3rem 1rem 0; }
-.info-box{
-  margin: 0;
-  min-width: auto;
-  gap: 1rem;
-}
-.info-item{ max-width: none; }
-.about-text{
-  margin: 1rem 0 2rem;
-  max-width: none;
-}
-.about-image{
-  margin: 1rem auto 0;
-  min-width: 0;
-}
-.about-image img{ max-height: 360px; }
-
-/* CARD SECTIONS (home/opportunità + consigli/trasporti + mangiare/cards) */
-.card-container,
-.trasporticard-container,
-.mangiare-grid{
-  gap: 1rem;
-  padding: 1.25rem .75rem;
-}
-.card, .trasporticard, .card-mangiare{
-  width: 100%;
-  max-width: 380px;
-  margin-inline: auto;
-}
-.card img, .trasporticard img, .card-mangiare img{
-  height: auto;               /* niente altezza fissa su mobile */
-}
-
-/* KOKO HOUSE (home) + PARCHEGGIO (consigli) + PRENOTAZIONE (koko) */
-.koko-house, .parcheggio-letojanni, .prenotazione{
-  padding: 3.5rem 1rem;
-}
-.koko-container, .contenitore-parcheggio, .prenotazione-container{
-  gap: 1.5rem;
-}
-.koko-img img, .immagine-parcheggio img, .prenotazione-img img{
-  margin-left: 0;
-  max-width: 92%;
-  margin-inline: auto;
-}
-.koko-text, .testo-parcheggio, .prenotazione-text{
-  max-width: none;
-  margin: 0;
-  text-align: center;
-}
-.koko-text h2, .testo-parcheggio h2, .prenotazione-text .subtitle{
-  font-size: clamp(1.6rem, 6vw, 2.1rem);
-}
-.prenotazione-text h2{ font-size: clamp(1.2rem, 4.5vw, 1.6rem); }
-
-/* SEZIONI con “bolle” rotonde (esperienze/cibo/luoghi/mare/escursioni ecc.) */
-.esperienze, .cibo, .luoghi, .mare, .escursioni,
-.mangiare-taormina, .mangiare-letojanni, .cena{
-  padding: 3.5rem 1rem;
-}
-.esperienze-container, .cibo-container, .luoghi-container,
-.mare-container, .escursioni-container,
-.mangiare-taormina-container, .mangiare-letojanni-container, .cena-container{
-  gap: 1.5rem;
-}
-.testo, .testo-cibo, .testo-mare,
-.testo-mangiare-taormina, .testo-mangiare-letojanni, .testo-cena{
-  margin: 0;
-  padding: 0;
-}
-.testo h2, .testo-cibo h2, .testo-mare .titolo-mare,
-.mangiare-letojanni .titolo-mangiare-letojanni,
-.mangiare-taormina .testo-mangiare-taormina h2,
-.cena .testo-cena h2{
-  font-size: clamp(1.4rem, 5.6vw, 2rem);
-}
-.testo .descrizione, .testo-cibo p, .testo-mare p,
-.mangiare-taormina .descrizione, .cena .descrizione-cena,
-.mangiare-letojanni .descrizione-mangiare-letojanni{
-  font-size: 1.05rem;
-  padding-right: 0;
-}
-
-/* “bolle” immagini: compattiamo e limitiamo sovrapposizioni */
-.img-grande, .img-grande-cibo, .img-grande-clima,
-.img-grande-mare{
-  width: 88% !important;
-  margin: 0 auto !important;
-  max-width: 440px;
-}
-.img-piccola, .img-piccola-cibo, .img-piccola-clima, .img-piccola-mare{
-  position: static !important;
-  width: 46% !important;
-  margin: .75rem auto 0 !important;
-  border-width: .25rem !important;
-  display:block;
-}
-
-/* CONSIGLI / COSA FARE hero con immagini a lato */
-.consigli, .cosa-fare{
-  padding: 2.5rem 1rem 1rem;
-}
-.consigli-img img, .cosa-fare-img img{
-  width: 90%;
-  margin: 0 auto;
-}
-.consigli-testo, .cosa-fare-testo{
-  margin: 0;
-  text-align: center;
-}
-.consigli-testo h2, .cosa-fare-testo h2{
-  font-size: clamp(1.6rem, 6vw, 2.2rem);
-}
-.consigli-testo .descrizione, .cosa-fare-testo .descrizione{
-  font-size: 1.05rem;
-}
-
-/* CASA – griglia spazi */
-.casa-sezione{ padding: 3.5rem 1rem; }
-.casa-grid{
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 1.25rem 0;
-}
-.casa-card img{ height: auto; }
-
-/* COMFORT – griglia icone */
-.comfort{ padding: 3.5rem 1rem; }
-.comfort h2{
-  margin: 0 0 1.25rem;
-  font-size: clamp(1.6rem, 6vw, 2rem);
-}
-.comfort-grid{
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem 1rem;
-  max-width: 900px;
-}
-@media (max-width: 480px){
-  .comfort-grid{ grid-template-columns: 1fr; }
-}
-.comfort-item{
-  margin-left: 0;
-  align-items: center;
-}
-.comfort-item img{
-  width: 64px; height: 64px; margin-bottom: .5rem;
-}
-
-/* UBICAZIONE */
-.ubicazione-letojanni{
-  padding: 3.5rem 1rem;
-  gap: 1.5rem;
-}
-.testo-ubicazione{ margin: 0; max-width: none; }
-.ubicazione-letojanni h2{
-  padding-right: 0;
-  font-size: clamp(1.4rem, 5.6vw, 2rem);
-}
-.testo-blu-ubicazione, .testo-scuro-ubicazione{
-  font-size: 1.05rem;
-}
-.mappa-ubicazione img{
-  max-width: 440px;
-  aspect-ratio: auto;
-}
-
-/* FOOTER */
-.site-footer{ padding: 1rem; }
-.footer-links{ margin: .25rem 0; }
-.footer-links a{ display:inline-block; padding:.25rem .5rem; }
-
-/* ====== TABLET (>=768px) – due colonne comode ====== */
-@media (min-width: 768px) and (max-width: 1023.98px){
-  .hero, .hero-letojanni, .hero-mangiare, .hero-vedere, .hero-kokohouse{
-    padding: 4.5rem 2rem 2rem;
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  /* Header adjustments */
+  .main-nav ul {
+    margin-right: 2rem;
+    gap: 1rem;
   }
-  .koko-container, .contenitore-parcheggio, .prenotazione-container,
-  .esperienze-container, .cibo-container, .luoghi-container,
-  .mare-container, .escursioni-container,
-  .mangiare-taormina-container, .mangiare-letojanni-container, .cena-container{
+  
+  .hero-text {
+    max-width: 45%;
+    margin-left: 4%;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+  
+  /* About section adjustments */
+  .about-image {
+    margin-top: -25rem;
+    margin-left: 45%;
+  }
+  
+  .about-image img {
+    max-height: 30rem;
+  }
+  
+  /* Card adjustments */
+  .card-container {
     gap: 2rem;
   }
-  .casa-grid{ grid-template-columns: 1fr 1fr; }
-  .comfort-grid{ grid-template-columns: repeat(3, 1fr); }
-  .card, .trasporticard, .card-mangiare{ max-width: 420px; }
 }
 
-/* ====== DESKTOP LARGO (>=1280px) – piccoli perfezionamenti ====== */
-@media (min-width: 1280px){
-  :root{ --container: min(100% - 3rem, 1280px); }
+/* Mobile (max 767px) */
+@media (max-width: 767px) {
+  /* Header mobile styles */
+  .site-header {
+    flex-direction: column;
+    padding: 1rem 5%;
+    position: sticky;
+  }
+  
+  .header-logo {
+    margin-bottom: 0.5rem;
+  }
+  
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+    gap: 0.8rem;
+  }
+  
+  /* Hero section mobile */
+  .hero {
+    flex-direction: column-reverse;
+    padding: 7rem 5% 3rem;
+    text-align: center;
+  }
+  
+  .hero-text{
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-img {
+    margin-right: 0;
+    margin-bottom: -2rem;
+  }
+  
+  /* About section mobile */
+  .about-wrapper {
+    flex-direction: column;
+  }
+  
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .about-text {
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .info-box {
+    margin-left: 0;
+    align-items: center;
+  }
+  
+  .about-image {
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+  
+  /* Cards mobile */
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 18.75rem;
+  }
+  
+  /* Koko section mobile */
+  .koko-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .koko-text {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .koko-img {
+    margin: 0 auto;
+    max-width: 80%;
+    margin-left: -0.2rem;
+  }
+  
+  /* Footer mobile */
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Small mobile (max 480px) */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+  }
+  
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+  
+  .about-text p.highlight {
+    font-size: 1.2rem;
+  }
+  
+  .opportunita h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ==================== IMPROVEMENTS FOR ALL PAGES ==================== */
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve touch targets for mobile */
+@media (max-width: 767px) {
+  a, button, .btn, .cta-button {
+    min-height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Navigation improvements */
+  .main-nav a {
+    padding: 0.5rem 1rem;
+    display: block;
+  }
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Responsive text sizing */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  h3 {
+    font-size: 1.5rem !important;
+  }
+  
+  p {
+    font-size: 1rem !important;
+  }
+}
+
+/* Specific adjustments for circular image sections */
+@media (max-width: 767px) {
+  .esperienze-container,
+  .cibo-container,
+  .luoghi-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .immagini {
+    margin-bottom: 2rem;
+    margin-left: 6rem;
+  }
+  
+  .img-grande,
+  .img-piccola {
+    max-width: 15.625rem; /* 250px */
+  }
+  
+  .img-piccola {
+    width: 7.5rem; /* 120px */
+  }
+}
+
+/* Transport cards mobile */
+@media (max-width: 767px) {
+  .trasporticard-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .trasporticard {
+    width: 100%;
+    max-width: 18.75rem; /* 300px */
+  }
+}
+
+/* Casa grid mobile */
+@media (max-width: 767px) {
+  .casa-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Comfort grid mobile */
+@media (max-width: 767px) {
+  .comfort-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .comfort-item {
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+
+/* Ubicazione section mobile */
+@media (max-width: 767px) {
+  .ubicazione-letojanni {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 5%;
+  }
+  
+  .testo-ubicazione {
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .ubicazione-letojanni h2 {
+    padding-right: 0;
+  }
+}
+
+/* Mangiare grid mobile */
+@media (max-width: 767px) {
+  .mangiare-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-mangiare {
+    width: 100%;
+    max-width: 18.75rem; /* 300px */
+    margin: 0 auto;
+  }
+  
+  .card-mangiare .localita,
+  .card-mangiare .mongiuffi {
+    margin-left: 0;
+    text-align: center;
+    padding-left: 0;
+  }
+  
+  .card-mangiare h3,
+  .card-mangiare h4 {
+    margin-left: 0;
+    text-align: center;
+    padding-left: 0;
+  }
+  
+  .link-trip {
+    margin-left: 0;
+    text-align: center;
+  }
 }
 
 
 
+
+
+
+
+
+/* ============ HAMBURGER SOLO CSS (MOBILE) ============ */
+/* Desktop: pulsante hamburger nascosto */
+.burger { display: none; }
+
+/* Nascondi il checkbox in modo sicuro */
+.nav-toggle {
+  position: absolute;
+  left: -9999px; /* lo sposta fuori dallo schermo */
+  opacity: 0;    /* invisibile */
+}
+
+
+/* Mobile (≤767px): header compatto + hamburger */
+@media (max-width: 767px) {
+  /* header più piccolo */
+  header { padding: 0.5rem 5%; }
+  header img { max-height: 32px; height: auto; width: auto; }
+  main > section:first-child { padding-top: 0; } /* niente compensazione */
+
+  /* mostra il pulsante hamburger, stile base */
+  .burger {
+    display: inline-block;
+    font-size: 1.5rem;       /* grandezza icona */
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* menu chiuso di default */
+  header nav {
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  /* quando il checkbox è attivo, apri il menu */
+  #nav-toggle:checked ~ nav {
+    max-height: 31.25rem;     /* valore semplice e sufficiente */
+  }
+
+  /* voci del menu in colonna, senza fronzoli */
+  header nav ul {
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+  header nav li { margin: 0.25rem 0; }
+  header nav a {
+    display: block;
+    padding: 0.5rem 0;
+    text-decoration: none;
+  }
+}
+
+
+
+/* ===== HERO LETOJANNI — SOLO MOBILE ===== */
+@media (max-width: 767px) {
+  /* Stack verticale e centrato */
+  .hero-letojanni {
+    display: flex;              /* forza il layout in flex su mobile */
+    flex-direction: column;     /* dall'alto verso il basso */
+    padding: 2rem 5% 1.5rem;    /* più compatta del 7rem */
+    text-align: center;
+  }
+
+  /* Metti l'immagine sopra, a prescindere dall'ordine nell'HTML */
+  .hero-img-letojanni {
+    order: -1;
+    margin-top: -3rem;       /* centrata con spazio sotto */
+    margin-bottom: 2rem;
+    margin-right: -3rem;
+  }
+
+  /* L'immagine deve essere visibile e fluida */
+  .hero-img-letojanni img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: static !important;   /* ignora eventuali posizionamenti ereditati */
+    transform: none !important;    /* evita traslazioni che la “spariscono” */
+  }
+
+  /* Testo leggibile e centrato */
+  .hero-text-letojanni {
+    margin: 0 auto;
+    max-width: 60ch;
+  }
+  .hero-text-letojanni h1 {
+    font-size: 1.9rem !important;
+    line-height: 1.25;
+    margin: 0 0 .5rem;
+  }
+  .hero-text-letojanni p {
+    font-size: 1rem !important;
+    line-height: 1.55;
+    margin: 0;
+  }
+}
+
+/* HERO SCOPRI LETOJANNI */
+/* === CIBO = ESPERIENZE — SOLO MOBILE === */
+@media (max-width: 767px) {
+  /* stesso stack e centratura di "esperienze" */
+  .cibo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .testo-cibo {
+    order: 1;                      /* testo dopo le immagini */
+    max-width: 31.25rem;          /* 500px */
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 3.125rem;      /* 50px */
+    line-height: normal;
+    margin-left: 2rem;
+    margin-top: -2rem;
+  }
+  .testo-cibo p {
+    font-size: 1.25rem;           /* 20px */
+    color: #333;
+    line-height: 1.6;
+    padding-right: 3.125rem;      /* 50px */
+    margin-bottom: 1.25rem;       /* 20px */
+  }
+
+  .testo-cibo h2 {
+    font-size: 2.5rem;             /* 40px */
+    color: #013341;
+    margin-bottom: 1.25rem;        /* 20px */
+    line-height: normal;
+    margin-right: 2.4rem;
+  }
+
+  .testo-cibo .btn-cta {
+    margin: 1.25rem auto 0;       /* 20px top, auto centering */
+    padding-bottom: 0.2rem;
+    margin-right: 1.25rem;
+  }
+
+  /* IMMAGINI SOPRA AL TESTO come in esperienze */
+  .sapori-img-wrapper {
+    order: -1;                      /* immagini prima del testo */
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -2rem;              
+  }
+
+  /* immagine grande: cerchio centrato, dimensioni come esperienze */
+  .img-grande-cibo {
+    position: static !important;
+    transform: none !important;
+    width: 15.625rem;   /* 250px */
+    height: 15.625rem;   /* 250px */
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* immagine piccola: sovrapposta e spostata a destra, come esperienze */
+  .img-piccola-cibo {
+    position: static !important;
+    transform: none !important;
+    width: 7.5rem;   /* 120px */
+    height: 7.5rem;   /* 120px */
+    margin-top: -5rem;   /* sovrapposizione */
+    margin-left: 7rem;   /* spostamento verso destra */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0.5px 1.5px rgba(0,0,0,.12);
+    border: 4px solid #C9E1ED; /* stacco dalla grande */
+    display: block;
+  }
+}
+
+
+
+/* ===== HERO CONSIGLI — SOLO MOBILE (uguale a Letojanni) ===== */
+@media (max-width: 767px) {
+  .consigli {
+    padding: 2rem 5% 1.5rem;     /* come hero-letojanni */
+    text-align: center;
+  }
+
+  .consigli-container {
+    display: flex;
+    flex-direction: column;      /* stack verticale */
+  }
+
+  /* Immagine sopra al testo */
+  .consigli-img {
+    order: -1;                   
+    margin: 0 auto 1rem;
+  }
+  .consigli-img img {
+    display: block;
+    width: 120%;     /* stessa scala della hero-letojanni */
+    height: auto;
+    position: static !important; /* evita posizionamenti ereditati */
+    transform: none !important;
+    margin-left: -1.3rem;
+    margin-top: 1rem;
+    margin-bottom: -2rem;
+
+  }
+
+  /* Testo coerente con hero-letojanni */
+  .consigli-testo {
+    margin: 0 auto;
+    max-width: 60ch;
+  }
+  .consigli-testo h2 {
+    font-size: 1.9rem !important;
+    line-height: 1.25;
+    margin: 0 0 .5rem;
+  }
+  .consigli-testo .descrizione {
+    font-size: 1rem !important;
+    line-height: 1.55;
+    margin: 0;
+  }
+}
+
+/* Schermi molto piccoli (come Letojanni) */
+@media (max-width: 360px) {
+  .consigli-testo h2 { font-size: 1.7rem !important; }
+  .consigli-img img   { width: 86vw; }
+}
+
+ 
+
+/* ===== CLIMA = CIBO (DESKTOP/TABLET) ===== */
+.clima-letojanni {
+  position: relative;
+  padding: clamp(2rem, 4vw, 4rem) 5%;
+}
+
+.contenitore-clima {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* testo leggermente più largo (come cibo) */
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 3rem);
+}
+
+/* Testo a sinistra, immagini a destra */
+.testo-clima { max-width: 60ch; }
+.clima-img-wrapper {
+  position: relative;
+  width: clamp(260px, 36vw, 460px);
+  aspect-ratio: 1 / 1;      /* contenitore quadrato per il collage */
+  margin-left: auto;        /* allinea a destra come cibo */
+}
+
+/* Immagine grande circolare */
+.img-grande-clima {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Immagine piccola sovrapposta (in basso a destra) */
+.img-piccola-clima {
+  position: absolute;
+  width: 38%;
+  aspect-ratio: 1 / 1;
+  bottom: 6%;
+  right: 6%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  border: 4px solid #fff;  /* stacco */
+}
+
+/* ===== SOLO MOBILE (≤767px) — identico a CIBO su mobile ===== */
+@media (max-width: 767px) {
+  .clima-letojanni {
+    padding: 2rem 5% 1.5rem;
+    text-align: center;
+  }
+
+  /* Stack verticale con IMMAGINI SOPRA al testo */
+  .contenitore-clima {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .clima-img-wrapper {
+    order: -1;                   /* immagini prima del testo */
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;                 /* gestito dalle immagini */
+    aspect-ratio: auto;
+    margin-left: -3rem;
+  }
+
+  /* Grande: cerchio centrato 250x250 (come cibo) */
+  .img-grande-clima {
+    position: static !important;
+    transform: none !important;
+    width: 15.625rem;
+    height: 15.625rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Piccola: sovrapposta con -60px e +80px (come cibo) */
+  .img-piccola-clima {
+    position: static !important;
+    transform: none !important;
+    width: 120px;
+    height: 120px;
+    margin-top: -60px;   /* sovrapposizione */
+    margin-left: 80px;   /* spostamento a destra */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    border: 4px solid #C9E1ED;
+    display: block;
+  }
+
+  /* Testo coerente con cibo mobile */
+  .titolo-clima { 
+    font-size: 1.6rem !important;
+    margin-left: 1.8rrem;
+   }
+
+  .subtitle-clima,
+  .descrizione-clima { 
+    font-size: 1rem !important;
+    line-height: 1.5;
+    margin-left: 3rem;
+   }
+}
+
+
+
+
+/* === Parcheggio === */
+
+/* Desktop/Tablet */
+@media (min-width: 768px) {
+  .parcheggio-letojanni .immagine-parcheggio img {
+    width: clamp(270px, 30vw, 420px);
+    height: auto;
+    display: block;
+    margin: 0;
+  }
+  .parcheggio-letojanni .immagine-parcheggio {
+    margin-left: -0.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .parcheggio-letojanni .immagine-parcheggio {
+    margin: 0 0 1rem 3%;
+  }
+  .parcheggio-letojanni .immagine-parcheggio img {
+    width: 20rem;
+    height: auto;
+    margin-bottom: -8rem;
+  }
+}
+
+
+/* ===== HERO KOKOHOUSE — SOLO MOBILE (uguale a Letojanni) ===== */
+@media (max-width: 767px) {
+  .hero-kokohouse {
+    display: flex;              /* come Letojanni */
+    flex-direction: column;     /* immagine sopra, testo sotto */
+    text-align: center;
+  }
+
+  /* Immagine sopra al testo */
+  .hero-img-kokohouse {
+    order: -1;                  /* immagine prima del testo */
+  }
+
+  .hero-img-kokohouse img {
+    display: block;
+    width: 100%;    
+    height: auto;
+    position: static !important;
+    transform: none !important;
+    margin-right: -3rem;
+    margin-top: -1rem;
+    margin-bottom: 6rem;
+  }
+
+  /* Testo coerente con Letojanni */
+  .hero-text-kokohouse {
+    margin: 0 auto;
+    max-width: 60ch;
+  }
+  .hero-text-kokohouse h1 {
+    font-size: 1.9rem !important;
+    line-height: 1.25;
+    margin: 0 0 .5rem;
+  }
+  .hero-text-kokohouse p {
+    font-size: 1rem !important;
+    line-height: 1.55;
+    margin: 0 0 1rem;
+  }
+
+  /* CTA come in Letojanni: centrata e con icona allineata */
+  .hero-text-kokohouse .btn-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  .hero-text-kokohouse .btn-cta .icon-freccia {
+    width: 1.1em;   /* icona proporzionata al testo */
+    height: auto;
+    display: inline-block;
+  }
+}
+
+/* Schermi molto piccoli (≤360px) — opzionale */
+@media (max-width: 360px) {
+  .hero-text-kokohouse h1 { font-size: 1.7rem !important; }
+  .hero-img-kokohouse img  { width: 86vw; }
+}
+
+
+
+
+
+
+/* ===== PRENOTAZIONE = PARCHEGGIO (DESKTOP/TABLET) ===== */
+.prenotazione {
+  position: relative;
+  padding: clamp(2rem, 4vw, 4rem) 5%;
+}
+
+.prenotazione-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;          /* testo leggermente più largo */
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 3rem);
+}
+
+/* come parcheggio: TESTO a sinistra, IMMAGINE a destra */
+.prenotazione-text { 
+  grid-column: 1; 
+  max-width: 60ch;
+}
+.prenotazione-img {
+  grid-column: 2;
+  justify-self: start;                           /* stesso “feeling” di parcheggio */
+  margin-right: auto;
+  width: clamp(270px, 30vw, 420px);              /* dimensioni come parcheggio finale */
+  /* se vuoi identico anche il piccolo spostamento a sinistra: */
+  margin-left: -8px;
+}
+.prenotazione-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+/* ===== SOLO MOBILE (≤767px) — come parcheggio mobile ===== */
+@media (max-width: 767px) {
+  .prenotazione {
+    text-align: left;                             /* come parcheggio (non centrato) */
+  }
+
+  .prenotazione-container {
+    display: block;                               /* stack verticale */
+  }
+
+  /* immagine sopra al testo, leggermente spostata a sinistra */
+  .prenotazione-img {
+    margin: 0 0 1rem 3%;                          /* come parcheggio */
+    width: auto;                                   /* lascia all'img la larghezza */
+  }
+  .prenotazione-img img {
+    width: 300px;                                  /* come parcheggio (prima 220→210) */
+    height: auto;
+    display: block;
+  }
+
+  /* tipografia allineata a parcheggio mobile */
+  .prenotazione-text h2 {
+    font-size: 1.6rem !important;
+    line-height: 1.25;
+    margin-left: 11rem;
+  }
+  .prenotazione-text .subtitle,
+  .prenotazione-text .intro {
+    font-size: 1rem !important;
+    line-height: 1.5;
+    margin-left: 11rem;
+  }
+
+
+  .prenotazione .prenotazione-text .btn-cta {
+    align-self: flex-end;
+    width: auto !important;   /* override eventuale regola globale width:100% */
+    margin-left: 11rem !important;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+  }
+}
+
+
+/* ===== HERO "COSA FARE" — SOLO MOBILE (uguale a hero-letojanni) ===== */
+@media (max-width: 767px) {
+  .cosa-fare {
+    display: flex;              /* come hero-letojanni */
+    flex-direction: column;     /* immagine sopra, testo sotto */
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  /* Immagine sopra al testo */
+  .cosa-fare-img {
+    order: -1;
+    margin-top: -3rem;       /* centrata con spazio sotto */
+  }
+  .cosa-fare-img img {
+    display: block;
+    width: 100%;    /* stessa scala della hero-letojanni */
+    height: auto;
+    position: static !important;
+    transform: none !important;
+    margin-bottom: -1rem;
+  }
+
+  /* Testo coerente con hero-letojanni */
+  .cosa-fare-testo {
+    margin: 0 auto;
+    max-width: 60ch;
+  }
+  .cosa-fare-testo h2 {
+    font-size: 1.9rem !important;
+    line-height: 1.25;
+    margin: 0 0 .5rem;
+  }
+  .cosa-fare-testo .descrizione {
+    font-size: 1rem !important;
+    line-height: 1.55;
+    margin: 0;
+  }
+}
+
+/* Schermi molto piccoli (≤360px), come la hero-letojanni */
+@media (max-width: 360px) {
+  .cosa-fare-testo h2 { font-size: 1.7rem !important; }
+  .cosa-fare-img img   { width: 86vw; }
+}
+
+
+
+
+
+/* ===== MARE = ESCURSIONI (DESKTOP/TABLET) ===== */
+.mare {
+  position: relative;
+  padding: clamp(2rem, 4vw, 4rem) 5%;
+}
+
+.mare-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;  /* testo leggermente più largo */
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 3rem);
+}
+
+/* Testo a sinistra */
+.testo-mare { max-width: 60ch; }
+
+/* Collage immagini circolari a destra, come escursioni */
+.mare-img-wrapper {
+  position: relative;
+  width: clamp(260px, 36vw, 460px);
+  aspect-ratio: 1 / 1;           /* contenitore quadrato */
+  margin-left: auto;             /* allinea a destra */
+}
+
+.img-grande-mare {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.img-piccola-mare {
+  position: absolute;
+  width: 38%;
+  aspect-ratio: 1 / 1;
+  bottom: 6%;
+  right: 6%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  border: 4px solid #fff;        /* stacco, come escursioni */
+}
+
+/* ===== SOLO MOBILE (≤767px) — identico a ESCURSIONI ===== */
+@media (max-width: 767px) {
+  .mare {
+    padding: 2rem 5% 1.5rem;
+    text-align: center;
+    margin-left: -5.5rem;
+  }
+
+  .mare-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mare-img-wrapper {
+    order: -1;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;                
+    aspect-ratio: auto;
+    margin-left: 5.5rem;
+  }
+
+  .img-grande-mare {
+    position: static !important;
+    transform: none !important;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .img-piccola-mare {
+    position: static !important;
+    transform: none !important;
+    width: 120px;
+    height: 120px;
+    margin-top: -60px;    
+    margin-left: 80px;    
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    border: 4px solid #fff;
+    display: block;
+  }
+   
+
+  .mare .cta-button {
+    display: inline-flex !important;  /* sovrascrive il display:flex globale */
+    align-items: center;
+    justify-content: center;
+    width: auto !important;           /* niente 100% */
+    max-width: none !important;
+    padding: 0.5rem 0.9rem;           /* meno “azzurro” attorno al testo */
+    margin-left: -2.5rem;           /* resta centrato */
+    line-height: 1.2;
+  }
+
+
+}
+
+/* ===== SCHERMI PICCOLISSIMI (≤360px) — opzionale ===== */
+@media (max-width: 360px) {
+  .img-grande-mare { width: 220px; height: 220px; }
+  .img-piccola-mare { width: 110px; height: 110px; margin-top: -52px; }
+}
+
+
+/* ===== ESCURSIONI = CIBO (DESKTOP/TABLET) ===== */
+.escursioni {
+  position: relative;
+  padding: clamp(2rem, 4vw, 4rem) 5%;
+}
+
+.escursioni-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* testo leggermente più largo */
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 3rem);
+}
+
+/* Testo come cibo */
+.escursioni .testo { max-width: 60ch; }
+
+/* Collage immagini circolari a destra (come cibo) */
+.escursioni .immagini {
+  position: relative;
+  width: clamp(260px, 36vw, 460px);
+  aspect-ratio: 1 / 1;      /* contenitore quadrato */
+  margin-left: auto;        /* allinea a destra */
+}
+
+.escursioni .img-grande {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.escursioni .img-piccola {
+  position: absolute;
+  width: 38%;
+  aspect-ratio: 1 / 1;
+  bottom: 6%;
+  right: 6%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  border: 4px solid #fff; /* stacco dalla grande */
+}
+
+/* ===== SOLO MOBILE (≤767px) — identico a CIBO mobile ===== */
+@media (max-width: 767px) {
+  .escursioni {
+    padding: 2rem 5% 1.5rem;
+    text-align: center;
+  }
+
+  .escursioni-container {
+    display: block;               /* stack verticale */
+  }
+
+  /* IMMAGINI SOPRA al testo */
+  .escursioni .immagini {
+    order: -1;
+    margin-bottom: -1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;                  /* gestite dalle immagini */
+    aspect-ratio: auto;
+  }
+
+  /* grande: cerchio 250x250 centrato */
+  .escursioni .img-grande {
+    position: static !important;
+    transform: none !important;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* piccola: sovrapposta come in cibo */
+  .escursioni .img-piccola {
+    position: static !important;
+    transform: none !important;
+    width: 120px;
+    height: 120px;
+    margin-top: -60px;   /* sovrapposizione */
+    margin-left: 80px;   /* spostamento a destra */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    border: 4px solid #C9E1ED;
+    display: block;
+  }
+
+  /* tipografia coerente */
+  .escursioni .testo h2 {
+     font-size: 1.6rem !important; 
+     line-height: 1.25;
+     margin-left: -2.5rem;
+     }
+
+  .escursioni .testo .sottotitolo,
+  .escursioni .testo .descrizione {
+     font-size: 1rem !important; 
+     line-height: 1.5; 
+      margin-left: -2.5rem;
+      
+    }
+}
+
+/* ===== SCHERMI PICCOLISSIMI (≤360px) — opzionale ===== */
+@media (max-width: 360px) {
+  .escursioni .img-grande { width: 220px; height: 220px; }
+  .escursioni .img-piccola { width: 110px; height: 110px; margin-top: -52px; }
+}
+
+
+
+/* ===== HERO MANGIARE — SOLO MOBILE (uguale a hero-letojanni) ===== */
+@media (max-width: 767px) {
+  .hero-mangiare {
+    display: flex;              /* come Letojanni */
+    flex-direction: column;     /* immagine sopra, testo sotto */
+    padding: 2rem 5% 1.5rem;    /* stesso respiro */
+    text-align: center;
+  }
+
+  /* Immagine sopra al testo */
+  .hero-img-mangiare {
+    order: -1;
+    margin: 0 auto 1rem;
+  }
+  .hero-img-mangiare img {
+    display: block;
+    width: 100%;    /* stessa scala della hero-letojanni */
+    height: auto;
+    position: static !important;
+    transform: none !important;
+    margin-right: -3rem;
+    margin-top: -0.5rem;
+  }
+
+  /* Testo coerente con Letojanni */
+  .hero-text-mangiare {
+    margin: 0 auto;
+    max-width: 60ch;
+  }
+  .hero-text-mangiare h1 {
+    font-size: 1.9rem !important;
+    line-height: 1.25;
+    margin: 0 0 .5rem;
+  }
+  .hero-text-mangiare p {
+    font-size: 1rem !important;
+    line-height: 1.55;
+    margin: 0;
+  }
+}
+
+/* Schermi molto piccoli (≤360px) — opzionale */
+@media (max-width: 360px) {
+  .hero-text-mangiare h1 { font-size: 1.7rem !important; }
+  .hero-img-mangiare img  { width: 86vw; }
+}
+
+
+
+/* ===== MANGIARE-TAORMINA = CIBO (DESKTOP/TABLET) ===== */
+.mangiare-taormina {
+  position: relative;
+  padding: clamp(2rem, 4vw, 4rem) 5%;
+}
+.mangiare-taormina-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;  /* testo leggermente più largo */
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 3rem);
+}
+
+/* Testo a sinistra, immagini a destra (senza toccare l'HTML) */
+.testo-mangiare-taormina { grid-column: 1; max-width: 60ch; }
+.mangiare-taormina .immagini {
+  grid-column: 2;
+  position: relative;
+  width: clamp(260px, 36vw, 460px);
+  aspect-ratio: 1 / 1;          /* contenitore quadrato */
+  margin-left: auto;             /* allinea a destra come in "cibo" */
+}
+
+/* Collage circolare */
+.mangiare-taormina .img-grande {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.mangiare-taormina .img-piccola {
+  position: absolute;
+  width: 38%;
+  aspect-ratio: 1 / 1;
+  bottom: 6%;
+  right: 6%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  border: 4px solid #fff;        /* stacco dalla grande */
+}
+
+/* ===== SOLO MOBILE (≤767px) — identico a CIBO mobile ===== */
+@media (max-width: 767px) {
+  .mangiare-taormina {
+    padding: 2rem 5% 1.5rem;
+    text-align: center;
+  }
+
+  .mangiare-taormina-container {
+    display: block;              /* stack verticale */
+  }
+
+  /* IMMAGINI SOPRA al testo */
+.mangiare-taormina .immagini {
+  /* prima ~260–460px e allineata a destra */
+  width: clamp(220px, 30vw, 420px);
+  margin-left: 0;
+  margin-right: auto;      /* sposta il collage verso sinistra */
+  justify-self: start;     /* se il container è una grid */
+}
+
+  /* Mobile */
+@media (max-width: 767px) {
+  .mangiare-taormina .immagini {
+    /* invece di centrare, spostiamo leggermente a sinistra */
+    align-items: flex-start;
+    margin-left: -8%;
+  }
+  .mangiare-taormina .img-grande {
+    /* prima 250x250 */
+    width: 300px !important;
+    height: 300px !important;
+  }
+
+.mangiare-taormina .img-piccola {
+  /* prima 120x12 e margini -60 / +80 */
+  width: 110px !important;
+  height: 110px !important;
+  margin-left: -60px;    
+margin-bottom: 4rem;
+  }
+
+   .mangiare-taormina .testo-mangiare-taormina{
+    align-self: start;   /* invece di essere centrato verticalmente */
+    margin-top: -100px; 
+    margin-bottom: 1rem;
+  }
