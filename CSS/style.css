@@ -1930,3 +1930,69 @@ p.subtitle-mare {
 }
 
 
+
+
+
+
+/*RESPONSIVE / MOBILE*/
+/* ===== FIX HEADER per iPhone / mobile stretti ===== */
+
+/* Mantieni l'header compatto */
+.site-header{
+  padding: .65rem .9rem;
+  gap: .5rem;
+}
+
+/* logo un filo più piccolo su telefoni */
+.header-logo img{
+  height: 40px;
+  max-width: 160px;
+  object-fit: contain;
+}
+
+/* nav: una sola riga, scrollabile, niente a capo dentro i link */
+.main-nav ul{
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  overflow-x: auto;            /* scroll orizzontale se non ci sta tutto */
+  white-space: nowrap;         /* una sola riga */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;       /* Firefox: nasconde scrollbar */
+  mask-image: linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%); /* accenno di fade ai bordi */
+}
+.main-nav ul::-webkit-scrollbar{ display:none; } /* WebKit: nasconde scrollbar */
+
+.main-nav li{ flex: 0 0 auto; }                  /* ogni voce ha larghezza auto */
+.main-nav a{
+  display: inline-block;
+  padding: .35rem .55rem;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+  white-space: nowrap;          /* evita "a capo" tipo "Scopri↩︎Letojanni" */
+  word-break: keep-all;
+  border-radius: .4rem;
+}
+
+/* body: spazio sotto l'header fisso */
+body{ padding-top: 78px; }
+
+/* Supporto notch iOS: aggiunge padding nel caso di barra/safe area */
+@supports (-webkit-touch-callout: none){
+  .site-header{ padding-top: max(.5rem, env(safe-area-inset-top)); }
+}
+
+/* Schermi stretti (iPhone 12/13/14/15 in verticale) */
+@media (max-width: 420px){
+  .main-nav ul{ gap: .5rem; }
+  .main-nav a{ font-size: .95rem; padding: .35rem .5rem; }
+  .header-logo img{ height: 38px; }
+  body{ padding-top: 74px; }
+}
+
+
