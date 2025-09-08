@@ -3177,3 +3177,195 @@ margin-bottom: 4rem;
 
 
 
+/* ===== MANGIARE-LETOJANNI = CIBO (DESKTOP/TABLET) ===== */
+.mangiare-letojanni {
+  position: relative;
+  padding: clamp(2rem, 4vw, 4rem) 5%;
+}
+
+.mangiare-letojanni-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* testo leggermente più largo */
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 3rem);
+}
+
+/* Testo a sinistra */
+.testo-mangiare-letojanni { max-width: 60ch; }
+
+/* Collage circolare a destra (come cibo) */
+.leto-img-wrapper {
+  position: relative;
+  width: clamp(260px, 36vw, 460px);
+  aspect-ratio: 1 / 1;      /* contenitore quadrato */
+  margin-left: auto;        /* allinea a destra */
+}
+
+/* usa le tue classi img-grande-mare / img-piccola-mare ma SOLO in questa sezione */
+.mangiare-letojanni .img-grande-mare {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.mangiare-letojanni .img-piccola-mare {
+  position: absolute;
+  width: 38%;
+  aspect-ratio: 1 / 1;
+  bottom: 6%;
+  right: 6%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  border: 4px solid #fff; /* stacco dalla grande */
+}
+
+/* ===== SOLO MOBILE (≤767px) — identico a CIBO mobile ===== */
+@media (max-width: 767px) {
+  .mangiare-letojanni {
+    padding: 2rem 5% 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .mangiare-letojanni-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* IMMAGINI SOPRA al testo */
+  .leto-img-wrapper {
+    order: -1;                      /* immagini prima del testo */
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    aspect-ratio: auto;
+    margin-top: 3rem;
+    margin-bottom: -2rem;
+    margin-left: -1rem;
+  }
+
+  /* grande: cerchio 250x250 centrato */
+  .mangiare-letojanni .img-grande-mare {
+    position: static !important;
+    transform: none !important;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* piccola: sovrapposta come in cibo */
+  .mangiare-letojanni .img-piccola-mare {
+    position: static !important;
+    transform: none !important;
+    width: 120px;
+    height: 120px;
+    margin-top: -60px;   /* sovrapposizione */
+    margin-left: 80px;   /* spostata a destra */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    border: 4px solid #f5f5f5;
+    display: block;
+  }
+
+  /* tipografia coerente con "cibo" mobile */
+  .titolo-mangiare-letojanni { font-size: 1.6rem !important; }
+  .descrizione-blu-letojanni,
+  .descrizione-mangiare-letojanni {
+    font-size: 1rem !important;
+    line-height: 1.5;
+    padding: 0;
+  }
+}
+
+
+/* --- CENA: forza immagini rotonde (desktop + mobile) --- */
+/* Mobile */
+@media (max-width: 767px) {
+  .cena .immagini { 
+    order: -1;
+    margin-left: -0.1em;
+    margin-top: -3rem;
+    margin-bottom: -4rem;
+    display: flex; flex-direction: column; align-items: center;
+    aspect-ratio: auto;             /* gestito dalle img */
+  }
+  .cena .img-grande,
+  .cena .img-piccola {
+    position: static !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    max-width: none !important;    
+  }
+  .cena .img-grande {
+    width: 250px !important;
+    height: 250px !important;           /* larghezza = altezza */
+    margin: 0 auto;
+  }
+  .cena .img-piccola {
+    width: 120px !important;
+    height: 120px !important;           /* larghezza = altezza */
+    margin-top: -80px !important;       /* sovrapposizione */
+    margin-left: 15rem !important;       /* spostamento a destra */
+  }
+}
+
+
+
+
+/* ===== HERO VEDERE — SOLO MOBILE (uguale a hero-letojanni) ===== */
+@media (max-width: 767px) {
+  .hero-vedere {
+    display: flex;
+    flex-direction: column;   /* immagine sopra, testo sotto */
+    text-align: center;
+    padding-bottom: 2rem;
+    overflow: visible;
+  }
+
+  /* Immagine sopra al testo */
+  .hero-img-vedere {
+    order: -1;
+  }
+  
+  .hero-img-vedere img {
+    display: block;
+    width: 100%;  /* stessa scala della hero-letojanni */
+    height: auto;
+    position: static !important;
+    transform: none !important;
+    margin: 0 auto;           /* annulla eventuali offset */
+  }
+
+  /* Testo coerente con Letojanni */
+  .hero-text-vedere {
+    margin: 0 auto;
+    max-width: 60ch;
+  }
+  .hero-text-vedere h1 {
+    font-size: 1.9rem !important;
+    line-height: 1.25;
+    margin: 0 0 .5rem;
+  }
+  .hero-text-vedere p {
+    font-size: 1rem !important;
+    line-height: 1.55;
+    margin: 0;
+  }
+}
+
+/* Schermi molto piccoli (≤360px) — opzionale */
+@media (max-width: 360px) {
+  .hero-text-vedere h1 { font-size: 1.7rem !important; }
+  .hero-img-vedere img  { width: 86vw; }
+}
